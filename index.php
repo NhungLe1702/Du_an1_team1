@@ -10,10 +10,14 @@ switch ($url) {
     case '/':
         hienThiTrangChu();
         break;
+
     case 'trang_chu':
         hienThiTrangChu();
         break;
-    
+
+    // case 'trang_chu':
+    //     hienThiTrangChu();
+    //     break;
 
     
 
