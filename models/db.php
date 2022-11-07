@@ -7,7 +7,7 @@ define('NOT_FETCH', 0);
 
 function getConnect() {
     $connect = new PDO(
-        'mysql:host=localhost;dbname=xshop_web2041;',
+        'mysql:host=localhost;dbname=Team1_web17309;',
         'nhunglt',
         '123456'
     );
