@@ -19,7 +19,9 @@ switch ($url) {
     //     hienThiTrangChu();
     //     break;
 
-    
+
+//nhung update
+
 
     default:
         echo 'Đường dẫn không tồn tại';
