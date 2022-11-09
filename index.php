@@ -21,7 +21,7 @@ switch ($url) {
 
 
 //nhung update
-
+//truongupdate
     default:
         echo 'Đường dẫn không tồn tại';
         break;
