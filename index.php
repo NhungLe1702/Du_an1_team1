@@ -1,9 +1,11 @@
 <?php
 
 require('controllers/client.php');
+require('controllers/category.php');
 
+include('views/template/header.php');
 
-// Chỉ dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
+// Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
 
 switch ($url) {
@@ -15,12 +17,32 @@ switch ($url) {
         hienThiTrangChu();
         break;
 
-    // case 'trang_chu':
-    //     hienThiTrangChu();
-    //     break;
+    case 'trang_chu':
+        hienThiTrangChu();
+        break;
 
 
-//nhung update
+    // danh mục    
+    case 'danh_muc';
+        hienThiDanhMuc();
+        break;
+        
+    case 'them_danh_muc':
+        themMoiDanhMuc();
+        break;
+
+    case 'xoa_danh_muc':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            xoaDanhMuc($id);
+        }
+        hienThiDanhMuc();
+        break;
+
+    case 'sua_danh_muc':
+
+        break;
+    
 
 
     default:
@@ -28,5 +50,7 @@ switch ($url) {
         break;
 
 }
+
+include('views/template/footer.php');
 
 
