@@ -8,7 +8,7 @@
 
     function resgiterForm(){
         resgiter();
-        include 'views/template/my-account.php';
+        include 'views/customer/my-account.php';
     }
 
 
