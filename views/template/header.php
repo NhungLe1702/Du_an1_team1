@@ -103,11 +103,32 @@ $user = $_SESSION['user'] ?? false;
                             <div class="col-md-9 col-sm-6 col-xs-3">
                                 <div class="main-menu hidden-sm hidden-xs">
                                     <nav>
+<<<<<<< HEAD
+                                        <!-- <ul>
+                                            <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+                                            <li><a href="#">Trang chủ</a></li>
+                                            <li><a href="#">Sản Phẩm </a></li>
+                                            <li><a href="#">Giới thiệu  </a></li>
+                                            <li><a href="#">Pages</a></li>
+                                            <li><a href="#">Hỏi đáp</a></li>
+                                            <li><a href="#">Liên hệ</a></li>
+                                        </ul> -->
+
+                                        <ul>
+                                            <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+                                            <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
+                                            <li><a href="index.php?url=ds_san_pham">Sản Phẩm</a></li>
+                                            <li><a href="#">Khách hàng</a></li>
+                                            <li><a href="#">Đơn Xem</a></li>
+                                            <li><a href="#">Bình luận</a></li>
+                                            <li><a href="#">Thống kê</a></li>
+                                        </ul>
+
                                         <?php if (!empty($user['role']) && $user['role'] == 1) : ?>
                                             <ul>
                                                 <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                                 <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
-                                                <li><a href="#">Sản Phẩm</a></li>
+                                                <li><a href="index.php?url=ds_san_pham">Sản Phẩm</a></li>
                                                 <li><a href="#">Khách hàng</a></li>
                                                 <li><a href="#">Đơn Xem</a></li>
                                                 <li><a href="#">Bình luận</a></li>
