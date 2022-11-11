@@ -123,12 +123,12 @@ $user = $_SESSION['user'] ?? false;
                                             <li><a href="#">Bình luận</a></li>
                                             <li><a href="#">Thống kê</a></li>
                                         </ul>
-=======
+
                                         <?php if (!empty($user['role']) && $user['role'] == 1) : ?>
                                             <ul>
                                                 <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                                 <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
-                                                <li><a href="#">Sản Phẩm</a></li>
+                                                <li><a href="index.php?url=ds_san_pham">Sản Phẩm</a></li>
                                                 <li><a href="#">Khách hàng</a></li>
                                                 <li><a href="#">Đơn Xem</a></li>
                                                 <li><a href="#">Bình luận</a></li>
@@ -145,7 +145,6 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="#">Liên hệ</a></li>
                                             </ul>
                                         <?php endif; ?>
->>>>>>> bfa4fff7dd1ffa26160a112a2acf42b387e004d9
                                     </nav>
                                 </div>
                             </div>
