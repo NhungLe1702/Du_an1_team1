@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require('controllers/client.php');
 require('controllers/category.php');
@@ -8,7 +9,6 @@ include('views/template/header.php');
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
-
 switch ($url) {
     case '#':
         hienThiTrangChu();
@@ -23,6 +23,7 @@ switch ($url) {
         break;
 
         // Sản phẩm
+
 
         case 'ds_san_pham':
             hienThiSanPham();
@@ -53,19 +54,17 @@ switch ($url) {
             locSPtheoMaLoai();
             break;  
     
-        case 'chi_tiet_sp' :
-            chiTietSanPham();
-            break;
     
         case 'tim_kiem_san_pham':
             timKiemSanPham();
             break; 
     
-    // danh mục    
+        // danh mục    
+
     case 'danh_muc';
         hienThiDanhMuc();
         break;
-        
+
     case 'them_danh_muc':
         themMoiDanhMuc();
         break;
@@ -78,31 +77,31 @@ switch ($url) {
         hienThiDanhMuc();
         break;
 
-    case 'sua_danh_muc' :
+    case 'sua_danh_muc':
         suaDanhMuc();
-        break;    
+        break;
 
     case 'form_sua_danh_muc':
         formsuaDanhMuc();
         break;
 
-    //account 
-    // case 'my_account':
-    //     hienthiMyAccount();
-    //     break;
-    case 'resgiter':
-        resgiterForm();
+        //account 
+        // case 'my_account':
+        //     hienthiMyAccount();
+        //     break;
+    case 'register':
+        registerForm();
         break;
-
-    
-
+    case 'login':
+        loginForm();
+        break;
+    case 'logout':
+        logout();
+        break;
 
     default:
         echo 'Đường dẫn không tồn tại';
         break;
-
 }
 
 include('views/template/footer.php');
-
-

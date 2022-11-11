@@ -6,9 +6,9 @@
 		<div class="customer-login-area">
 			<div class="container">
 				<div class="row">
-					<!-- <div class="col-sm-12 col-md-6 col-xs-12">
+					<div class="col-sm-12 col-md-6 col-xs-12">
 						<div class="customer-login my-account">
-							<form method="post" class="login" action="index.php?url=resgiter">
+							<form method="post" class="login" action="index.php?url=login">
 								<div class="form-fields">
 									<h2>Login</h2>
 									<p class="form-row form-row-wide">
@@ -30,11 +30,11 @@
 								</div>
 							</form>
 						</div>
-					</div> -->
+					</div>
 
 					<div class="col-sm-12 col-md-6 col-xs-12">
 						<div class="customer-register my-account">
-							<form method="post" class="register">
+							<form method="post" class="register" action="index.php?url=register">
 								<div class="form-fields">
 									<h2>Register</h2>
                                     

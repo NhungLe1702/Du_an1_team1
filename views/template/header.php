@@ -1,5 +1,9 @@
+<?php
+$user = $_SESSION['user'] ?? false;
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +15,9 @@
     <link rel="stylesheet" href="views/template/style.css">
     <link rel="stylesheet" href="views/template/css/responsive.css">
 </head>
+
 <body>
-<div class="header home2">
+    <div class="header home2">
         <div class="header-top">
             <div class="container">
                 <div class="row">
@@ -43,11 +48,19 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-md-6 col-sm-8 col-xs-12">
                         <div class="top-bar-menu">
                             <ul>
-                                <li><a  href="index.php?url=resgiter">My Account</a></li>
-                                
+                                <?php if (!empty($user)) : ?>
+                                    <li>
+                                       <a href="#"> Hello <?= $user['user_name'] ?> </a>
+                                    </li>
+                                    <li><a href="index.php?url=logout">Log Out</a></li>
+                                <?php else : ?>
+                                    <li><a href="index.php?url=register">My Account</a></li>
+                                <?php endif; ?>
+
                             </ul>
                         </div>
                     </div>
@@ -64,9 +77,9 @@
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="search-area">
-                           <div class="search-box-inner">
+                            <div class="search-box-inner">
                                 <form action="#">
-                                   <input type="text" placeholder="Search">
+                                    <input type="text" placeholder="Search">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -74,7 +87,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="header-middle-right">
-                           <div class="login-account">
+                            <div class="login-account">
                                 <a href="#"><i class="fa fa-user"></i></a>
                             </div>
                         </div>
@@ -90,6 +103,7 @@
                             <div class="col-md-9 col-sm-6 col-xs-3">
                                 <div class="main-menu hidden-sm hidden-xs">
                                     <nav>
+<<<<<<< HEAD
                                         <!-- <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                             <li><a href="#">Trang chủ</a></li>
@@ -109,11 +123,34 @@
                                             <li><a href="#">Bình luận</a></li>
                                             <li><a href="#">Thống kê</a></li>
                                         </ul>
+=======
+                                        <?php if (!empty($user['role']) && $user['role'] == 1) : ?>
+                                            <ul>
+                                                <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+                                                <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
+                                                <li><a href="#">Sản Phẩm</a></li>
+                                                <li><a href="#">Khách hàng</a></li>
+                                                <li><a href="#">Đơn Xem</a></li>
+                                                <li><a href="#">Bình luận</a></li>
+                                                <li><a href="#">Thống kê</a></li>
+                                            </ul>
+                                        <?php else : ?>
+                                            <ul>
+                                                <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+                                                <li><a href="#">Trang chủ</a></li>
+                                                <li><a href="#">Sản Phẩm </a></li>
+                                                <li><a href="#">Giới thiệu </a></li>
+                                                <li><a href="#">Pages</a></li>
+                                                <li><a href="#">Hỏi đáp</a></li>
+                                                <li><a href="#">Liên hệ</a></li>
+                                            </ul>
+                                        <?php endif; ?>
+>>>>>>> bfa4fff7dd1ffa26160a112a2acf42b387e004d9
                                     </nav>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-9">
-                               <div class="call-us">
+                                <div class="call-us">
                                     <span><i class="fa fa-phone"></i></span> Call Us: +00965888546-32
                                 </div>
                             </div>
@@ -124,4 +161,5 @@
         </div>
     </div>
 </body>
+
 </html>
