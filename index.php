@@ -10,7 +10,7 @@ include('views/template/header.php');
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
 
 switch ($url) {
-    case '/':
+    case '#':
         hienThiTrangChu();
         break;
 
@@ -22,7 +22,45 @@ switch ($url) {
         hienThiTrangChu();
         break;
 
+        // Sản phẩm
 
+        case 'ds_san_pham':
+            hienThiSanPham();
+            break;
+        case 'them_san_pham':
+            formTaoSanPham();
+            break;
+        case 'xoa_san_pham':
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                xoaSanPham($id);
+            }
+            hienThiSanPham();
+            break;
+        case 'update_san_pham':
+            SuaSanPham();
+            break;
+    
+        case 'form_sua_san_pham':
+            formSuaSanPham();
+            break;
+        
+        case 'ds_san_pham_theo_dm':
+            laySPtheoMaLoai();
+            break;    
+        
+        case 'loc_san_pham_theo_dm':
+            locSPtheoMaLoai();
+            break;  
+    
+        case 'chi_tiet_sp' :
+            chiTietSanPham();
+            break;
+    
+        case 'tim_kiem_san_pham':
+            timKiemSanPham();
+            break; 
+    
     // danh mục    
     case 'danh_muc';
         hienThiDanhMuc();

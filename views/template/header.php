@@ -103,7 +103,7 @@
                                         <ul>
                                             <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                             <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
-                                            <li><a href="#">Sản Phẩm</a></li>
+                                            <li><a href="index.php?url=ds_san_pham">Sản Phẩm</a></li>
                                             <li><a href="#">Khách hàng</a></li>
                                             <li><a href="#">Đơn Xem</a></li>
                                             <li><a href="#">Bình luận</a></li>
