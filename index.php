@@ -39,9 +39,14 @@ switch ($url) {
         hienThiDanhMuc();
         break;
 
-    case 'sua_danh_muc':
+    case 'sua_danh_muc' :
+        suaDanhMuc();
+        break;    
 
+    case 'form_sua_danh_muc':
+        formsuaDanhMuc();
         break;
+
     
 
 

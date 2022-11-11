@@ -122,7 +122,7 @@
                             <td><?= $value['name']?></td>
                             <td style="color: white">
                               <button style="border: none; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-                                  <a href="index.php?url=sua_danh_muc&id=<?= $value['id'] ?>">Sửa</a>
+                                  <a href="index.php?url=form_sua_danh_muc&id=<?= $value['id'] ?>">Sửa</a>
                               </button>
                             </td>
 

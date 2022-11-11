@@ -45,25 +45,25 @@
             <div class="col-md-6">
               <div class="card"  >
               
-                <form class="form-horizontal" >
+                <form class="form-horizontal" action="index.php?url=them_danh_muc" method="POST">
                   <div class="card-body">
-                    <h4 class="card-title">Personal Info</h4>
+                    <h4 class="card-title" style="text-align: center;">Thêm mới thương hiệu</h4>
                     <div class="form-group row">
                       <label
                         for="fname"
                         class="col-sm-3 text-end control-label col-form-label"
-                        >First Name</label
+                        >Tên thương hiệu</label
                       >
                       <div class="col-sm-9">
                         <input
                           type="text"
                           class="form-control"
                           id="fname"
-                          placeholder="First Name Here"
+                          name="name"
                         />
                       </div>
                     </div>
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                       <label
                         for="lname"
                         class="col-sm-3 text-end control-label col-form-label"
@@ -132,11 +132,11 @@
                       <div class="col-sm-9">
                         <textarea class="form-control"></textarea>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="border-top">
                     <div class="card-body">
-                      <button type="button" class="btn btn-primary">
+                      <button name="btn_submit" type="submit" class="btn btn-primary">
                         Submit
                       </button>
                     </div>
