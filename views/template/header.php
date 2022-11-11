@@ -46,7 +46,7 @@
                     <div class="col-md-6 col-sm-8 col-xs-12">
                         <div class="top-bar-menu">
                             <ul>
-                                <li><a target="_blank" href="views/template/my-account.html">My Account</a></li>
+                                <li><a  href="index.php?url=resgiter">My Account</a></li>
                                 
                             </ul>
                         </div>

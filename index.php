@@ -2,6 +2,7 @@
 
 require('controllers/client.php');
 require('controllers/category.php');
+require('controllers/customer.php');
 
 include('views/template/header.php');
 
@@ -45,6 +46,14 @@ switch ($url) {
 
     case 'form_sua_danh_muc':
         formsuaDanhMuc();
+        break;
+
+    //account 
+    // case 'my_account':
+    //     hienthiMyAccount();
+    //     break;
+    case 'resgiter':
+        resgiterForm();
         break;
 
     
