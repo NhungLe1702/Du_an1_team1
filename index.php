@@ -48,11 +48,11 @@ switch ($url) {
         break;
     
     case 'ds_san_pham_theo_dm':
-        laySPtheoMaLoai();
+        laySPTheoten();
         break;    
     
     case 'loc_san_pham_theo_dm':
-        locSPtheoMaLoai();
+        locSPtheoten();
         break;  
 
 

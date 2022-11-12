@@ -33,20 +33,20 @@ function SuaSanPham()
     // include('views/san_pham/danh_sach.php');
 }
 
-function laySPtheoMaLoai() {
+function laySPTheoten() {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $ds_sp = laySPTheoLoai($id);
+        $ds_sp = laySPTheoten($id);
     }
     include('views/template/home.php');
 }
 
-function locSPtheoMaLoai() {
+function locSPtheoten() {
     if(isset($_POST['listOk'])) {
-        $kw_loai = $_POST['loai'];
-        $id_loai = $_POST['id_loai'];
+        $kw_ten = $_POST['ten'];
+        $id_ten = $_POST['id_ten'];
     } 
-    $ds_sp = locSPtheoLoai($kw_loai, $id_loai);
+    $ds_sp = locSPtheoten($kw_ten, $id_ten);
     include('views/product/danh_sach.php');
 }
 

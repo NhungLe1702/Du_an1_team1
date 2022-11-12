@@ -103,46 +103,42 @@ form {
             </div>
 
             <div class="form__div">
-                <label>Đơn giá</label>
-                <input type="number" name="don_gia">
-            </div>
-
-            <div class="form__div">
-                <label>Giảm giá</label>
-                <input type="number" name="giam_gia">
-            </div>
-
-            <div class="form__div">
-                <label>Image</label>
+                <label>Img</label>
                 <input type="file" name="img_upload">
             </div>
 
             <div class="form__div">
-                <label>Ngày nhập</label>
-                <input type="date" name="ngay_nhap">
+                <label>Price</label>
+                <input type="number" name="price">
             </div>
 
             <div class="form__div">
-                <label>Mô tả</label>
-
-                <textarea name="mo_ta"></textarea>
+                <label>sale</label>
+                <input type="text" name="sale">
             </div>
 
             <div class="form__div">
-                <label>Đặc biệt</label>
-                <input type="number" name="dac_biet">
+                <label>origin</label>
+                <input type="text" name="origin">
             </div>
 
             <div class="form__div">
-                <label>Số lượt xem</label>
-                <input type="number" name="luot_xem">
+                <label>description</label>
+
+                <textarea name="description"></textarea>
             </div>
 
             <div class="form__div">
-                <label>Loại</label>
-                <select name="ma_loai">
+                <label>year</label>
+                <input type="date" name="year">
+            </div>
+
+            <div class="form__div">
+                <label>category</label>
+                <input type="number" name="id_category">
+            </div>
                     <?php foreach (layDSSanPham() as $key => $value) { ?>
-                        <option value="<?php echo $value["ma_loai"] ?>"><?php echo $value["ten_loai"] ?></option>
+                        <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                     <?php } ?>
                 </select>
             </div>

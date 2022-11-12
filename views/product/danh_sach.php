@@ -180,11 +180,11 @@ button:hover a {
         
         <div class="search_product">
             <form class="search_product" action="index.php?url=loc_san_pham_theo_dm" method="post">
-                <input type="text" name="loai">
-                <select name="id_loai" id="">
+                <input type="text" name="category">
+                <select name="id_category" id="">
                     <option value="0" selected>Tất cả</option>
                     <?php foreach (layDSSanPham() as $key => $value) { ?>
-                        <option value="<?php echo $value["ma_loai"] ?>"><?php echo $value["ten_loai"] ?></option>
+                        <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                     <?php } ?>
                 </select>
                 <input class="btn_submit" type="submit" name="listOk" value="GO">
@@ -198,14 +198,13 @@ button:hover a {
                    
                     <td>Mã </td>
                     <td>Tên</td>
-                    <td>Giá</td>
-                    <td>Sale</td>
                     <td>Hình ảnh</td>
-                    <td>Ngày nhập</td>
+                    <td>Đơn giá</td>
+                    <td>Giảm giá</td>
+                    <td>Nguồn gốc</td>
                     <td>Mô tả</td>
-                    <td>Đặc biệt</td>
-                    <td>Lượt xem</td>
-                    <td>Mã loại</td>
+                    <td>năm sản xuất</td>
+                    <td>Mã thương hiệu</td>
                     <td>Active</td>
 
                 </tr>
@@ -214,19 +213,18 @@ button:hover a {
                 <?php foreach ($ds_sp as $key => $value) : ?>
                     <tr>
                         
-                        <td><?= $value['ma_hh']  ?></td>
-                        <td><?= $value['ten_hh']  ?></td>
-                        <td><?= $value['don_gia']  ?></td>
-                        <td><?= $value['giam_gia']  ?></td>
-                        <td><img src="views/template/images/san_pham/<?php echo $value['hinh'] ?>" alt=""></td>
-                        <td><?= $value['ngay_nhap']  ?></td>
-                        <td class="mo_ta"><?= $value['mo_ta']  ?></td>
-                        <td><?= $value['dac_biet']  ?></td>
-                        <td><?= $value['so_luot_xem']  ?></td>
-                        <td><?= $value['ma_loai']  ?></td>
+                        <td><?= $value['id']  ?></td>
+                        <td><?= $value['name']  ?></td>
+                        <td><img src="views/template/images/san_pham/<?php echo $value['image'] ?>" alt=""></td>
+                        <td><?= $value['price']  ?></td>
+                        <td><?= $value['sale']  ?></td>
+                        <td><?= $value['origin']  ?></td>
+                        <td class="description"><?= $value['description']  ?></td>
+                        <td><?= $value['year']  ?></td>
+                        <td><?= $value['id_category']  ?></td>
                         <td>
-                            <button><a href="index.php?url=xoa_san_pham&id=<?= $value['ma_hh'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a></button>
-                            <button><a href="index.php?url=form_sua_san_pham&id=<?= $value['ma_hh'] ?>">Sửa</a></button>
+                            <button><a href="index.php?url=xoa_san_pham&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a></button>
+                            <button><a href="index.php?url=form_sua_san_pham&id=<?= $value['id'] ?>">Sửa</a></button>
                         </td>
                     </tr>
                 <?php endforeach ?>
