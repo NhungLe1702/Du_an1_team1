@@ -4,13 +4,14 @@ session_start();
 require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
+// require('controllers/product.php');
 
 include('views/template/header.php');
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
 switch ($url) {
-    case '#':
+    case '/':
         hienThiTrangChu();
         break;
 
@@ -22,44 +23,44 @@ switch ($url) {
         hienThiTrangChu();
         break;
 
-        // Sản phẩm
+    // Sản phẩm
 
 
-        case 'ds_san_pham':
-            hienThiSanPham();
-            break;
-        case 'them_san_pham':
-            formTaoSanPham();
-            break;
-        case 'xoa_san_pham':
-            if (isset($_GET['id'])) {
-                $id = $_GET['id'];
-                xoaSanPham($id);
-            }
-            hienThiSanPham();
-            break;
-        case 'update_san_pham':
-            SuaSanPham();
-            break;
+    case 'ds_san_pham':
+        hienThiSanPham();
+        break;
+    case 'them_san_pham':
+        formTaoSanPham();
+        break;
+    case 'xoa_san_pham':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            xoaSanPham($id);
+        }
+        hienThiSanPham();
+        break;
+    case 'update_san_pham':
+        SuaSanPham();
+        break;
+
+    case 'form_sua_san_pham':
+        formSuaSanPham();
+        break;
     
-        case 'form_sua_san_pham':
-            formSuaSanPham();
-            break;
-        
-        case 'ds_san_pham_theo_dm':
-            laySPtheoMaLoai();
-            break;    
-        
-        case 'loc_san_pham_theo_dm':
-            locSPtheoMaLoai();
-            break;  
+    case 'ds_san_pham_theo_dm':
+        laySPtheoMaLoai();
+        break;    
     
-    
-        case 'tim_kiem_san_pham':
-            timKiemSanPham();
-            break; 
-    
-        // danh mục    
+    case 'loc_san_pham_theo_dm':
+        locSPtheoMaLoai();
+        break;  
+
+
+    case 'tim_kiem_san_pham':
+        timKiemSanPham();
+        break; 
+
+    // danh mục    
 
     case 'danh_muc';
         hienThiDanhMuc();
@@ -85,6 +86,8 @@ switch ($url) {
         formsuaDanhMuc();
         break;
 
+    // Khách hàng 
+
     case 'register':
         registerForm();
         break;
@@ -95,6 +98,18 @@ switch ($url) {
 
     case 'logout':
         logOutUser();
+        break;
+
+    case 'khach_Hang':
+        hienThiKhachHang();
+        break;
+
+    case 'xoa_khach_hang':
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+            xoaKhachHang($id) ;
+        }
+        hienThiKhachHang();
         break;
 
     default:

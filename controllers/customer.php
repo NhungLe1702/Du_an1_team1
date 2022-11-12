@@ -15,3 +15,11 @@
         logOut();
         echo('<script>window.location.href="index.php?url=trang_chu"</script>');
     }
+
+    function hienThiKhachHang() {
+        $ds = danhSachKhachHang();
+        include('views/customer/danh_sach.php');
+    }
+
+    
+?>

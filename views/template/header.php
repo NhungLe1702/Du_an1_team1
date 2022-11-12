@@ -54,7 +54,7 @@ $user = $_SESSION['user'] ?? false;
                             <ul>
                                 <?php if (!empty($user)) : ?>
                                     <li>
-                                       <a href="#"> Hello <?= $user['user_name'] ?> </a>
+                                       <a href="#"> Hello <?= $user['name'] ?> </a>
                                     </li>
                                     <li><a href="index.php?url=logout">Log Out</a></li>
                                 <?php else : ?>
@@ -101,28 +101,56 @@ $user = $_SESSION['user'] ?? false;
                     <div class="row">
                         <div class="mgeamenu-full-width">
                             <div class="col-md-9 col-sm-6 col-xs-3">
-                                <div class="main-menu hidden-sm hidden-xs">
+                                
+                            <div class="main-menu hidden-sm hidden-xs">
+
+                                <?php if (isset($_SESSION['user'])) {
+                                    extract($_SESSION['user']);
+                                ?>
+
+                                    <?php if($role == 1) { ?>
+                                        <nav>
+                                            <ul>
+                                                <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+                                                <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
+                                                <li><a href="#">Sản Phẩm</a></li>
+                                                <li><a href="index.php?url=khach_Hang">Khách hàng</a></li>
+                                                <li><a href="#">Đơn Xem</a></li>
+                                                <li><a href="#">Bình luận</a></li>
+                                                <li><a href="#">Thống kê</a></li>
+                                            </ul>
+                                        </nav>
+                                    <?php } else { ?>
+                                        <nav>
+                                            <ul>
+                                                <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+                                                <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
+                                                <li><a href="#">Sản Phẩm </a></li>
+                                                <li><a href="#">Giới thiệu  </a></li>
+                                                <li><a href="#">Pages</a></li>
+                                                <li><a href="#">Hỏi đáp</a></li>
+                                                <li><a href="#">Liên hệ</a></li>
+                                            </ul>   
+                                        </nav>
+                                    <?php } ?>
+
+                                <?php } else { ?>
                                     <nav>
-<<<<<<< HEAD
-                                        <!-- <ul>
+                                        <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
-                                            <li><a href="#">Trang chủ</a></li>
+                                            <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
                                             <li><a href="#">Sản Phẩm </a></li>
                                             <li><a href="#">Giới thiệu  </a></li>
                                             <li><a href="#">Pages</a></li>
                                             <li><a href="#">Hỏi đáp</a></li>
                                             <li><a href="#">Liên hệ</a></li>
-                                        </ul> -->
-
-                                        <ul>
-                                            <li><a href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
-                                            <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
-                                            <li><a href="index.php?url=ds_san_pham">Sản Phẩm</a></li>
-                                            <li><a href="#">Khách hàng</a></li>
-                                            <li><a href="#">Đơn Xem</a></li>
-                                            <li><a href="#">Bình luận</a></li>
-                                            <li><a href="#">Thống kê</a></li>
                                         </ul>
+                                    </nav>
+                                <?php } ?>    
+                                </div>
+
+                                <!-- <div class="main-menu hidden-sm hidden-xs">
+                                    <nav>
 
                                         <?php if (!empty($user['role']) && $user['role'] == 1) : ?>
                                             <ul>
@@ -146,7 +174,7 @@ $user = $_SESSION['user'] ?? false;
                                             </ul>
                                         <?php endif; ?>
                                     </nav>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-9">
                                 <div class="call-us">

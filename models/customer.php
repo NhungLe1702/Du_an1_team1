@@ -38,4 +38,18 @@
     function logOut() {
         unset($_SESSION['user']);
     }
+
+    function danhSachKhachHang() {
+        $sql = "SELECT * FROM customer";
+        $dskh = getData($sql, FETCH_ALL);
+        return $dskh;
+    }
+
+    function xoaKhachHang($id) {
+        $sql = "DELETE  FROM customer WHERE id = '$id'";
+        $xoa_kh = pdo_execute($sql);
+    }
+
+
+
 ?>
