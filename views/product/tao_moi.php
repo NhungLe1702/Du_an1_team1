@@ -29,7 +29,7 @@
           <div class="button_insert">
 
             <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-              <a href="index.php?url=ds_san_pham">Danh sách</a>
+              <a href="index.php?url=san_pham">Danh sách</a>
             </button>
 
           </div>

@@ -31,8 +31,16 @@ switch ($url) {
     case 'them_san_pham':
         formTaoSanPham();
         break;
-    
-    
+     case 'xoa_san_pham':
+       if (isset($_GET['id'])) {
+       $id = $_GET['id'];
+        xoaSanPham($id);
+     }
+     hienThiSanPham();
+       break;
+       case 'form_sua_san_pham':
+        formSuaSanPham();
+        break;
 
     // danh mục    
 
