@@ -54,7 +54,7 @@ $user = $_SESSION['user'] ?? false;
                             <ul>
                                 <?php if (!empty($user)) : ?>
                                     <li>
-                                       <a href="#"> Hello <?= $user['name'] ?> </a>
+                                       <a href="index.php?url=edit_thongtin&id=<?= $user['id'] ?>"> Hello <?= $user['name'] ?> </a>
                                     </li>
                                     <li><a href="index.php?url=logout">Log Out</a></li>
                                 <?php else : ?>

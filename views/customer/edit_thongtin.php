@@ -6,7 +6,7 @@
 		<div class="customer-login-area">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12 col-md-6 col-xs-12">
+					<!-- <div class="col-sm-12 col-md-6 col-xs-12">
 						<div class="customer-login my-account">
 							<form method="post" class="login" action="index.php?url=login">
 								<div class="form-fields">
@@ -21,7 +21,7 @@
 									</p>
 								</div>
 								<div class="form-action">
-									<p class="lost_password"> <a href="index.php?url=forget">Lost your password?</a></p>
+									<p class="lost_password"> <a href="#">Lost your password?</a></p>
 									<div class="actions-log">
 										<input type="submit" class="button" name="login" value="Login">
 									</div>
@@ -30,37 +30,37 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="col-sm-12 col-md-6 col-xs-12">
 						<div class="customer-register my-account">
-							<form method="post" class="register" action="index.php?url=register">
+							<form method="post" class="register" action="">
 								<div class="form-fields">
-									<h2>Register</h2>
-                                    
+									<h2>EDIT </h2>
+                                    <input type="hidden" name="id" value="<?= $user['id'] ?>">
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Full Name <span class="required">*</span></label>
-										<input type="text" class="input-text" name="name" id="reg_email" value="">
+										<input type="text" class="input-text" name="name" id="reg_email" value="<?= $user['name'] ?>">
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">User Name <span class="required">*</span></label>
-										<input type="text" class="input-text" name="user_name" id="reg_email" value="">
+										<input type="text" class="input-text" name="user_name" id="reg_email" value="<?= $user['user_name'] ?>">
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Address <span class="required">*</span></label>
-										<input type="text" class="input-text" name="address" id="reg_email" value="">
+										<input type="text" class="input-text" name="address" id="reg_email" value="<?= $user['address'] ?>">
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Phone <span class="required">*</span></label>
-										<input type="number" class="input-text" name="phone" id="reg_email" value="">
+										<input type="number" class="input-text" name="phone" id="reg_email" value="<?= $user['phone'] ?>">
 									</p>
 									<p class="form-row form-row-wide">
 										<label for="reg_email">Email address <span class="required">*</span></label>
-										<input type="email" class="input-text" name="email" id="reg_email" value="">
+										<input type="email" class="input-text" name="email" id="reg_email" value="<?= $user['email'] ?>">
 									</p>
 									<p class="form-row form-row-wide">
                                         <label for="reg_password">Password <span class="required">*</span></label>
-										<input type="password" class="input-text" name="password" id="reg_password">
+										<input type="text" class="input-text" name="password" id="reg_password" value="<?= $user['password'] ?>">
 									</p>
 									<div style="left: -999em; position: absolute;">
 										<label for="trap">Anti-spam</label>
@@ -69,7 +69,7 @@
 								</div>
 								<div class="form-action">
 									<div class="actions-log">
-										<input type="submit" class="button" name="register" value="Register">
+										<input type="submit" class="button" name="update_thongtin" value="Update">
 									</div>
 								</div>
 							</form>
