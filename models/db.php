@@ -7,9 +7,15 @@ define('NOT_FETCH', 0);
 
 function getConnect() {
     $connect = new PDO(
+<<<<<<< HEAD
         'mysql:host=localhost;dbname=Team1_web17309;',
         'nhunglt',
         '123456'
+=======
+        'mysql:host=localhost;dbname=duan1;',
+        'root',
+        ''
+>>>>>>> b5e2a92e6b2eec1d239d4c2663794829cadb987e
     );
     return $connect;
 }
