@@ -67,9 +67,14 @@
               <div class="button_insert">
 
                 <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+<<<<<<< HEAD
                   <a href="index.php?url=them_danh_muc">Thêm mới</a>
                 </button>
 
+=======
+                  <a href="index.php?url=them_san_pham">Thêm mới</a>
+                </button>
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
               </div>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
@@ -85,8 +90,11 @@
           </div>
         </div>
 
+<<<<<<< HEAD
         
 
+=======
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
         <div class="container-fluid">
           
           <div class="row">
@@ -109,6 +117,7 @@
                         <tr>
 
                           <th>ID</th>
+<<<<<<< HEAD
                           <th>Tên</th>
                           <th>Hình ảnh</th>
                           <th>Đơn giá</th>
@@ -119,6 +128,16 @@
                           <th>Thương hiệu</th>
                           <th>Hành động</th>
                           <th>Hành động</th>
+=======
+                          <th>Tên thương hiệu</th>
+                          <th>Image</th>
+                          <th>Đơn giá</th>
+                          <th>sale</th>
+                          <th>nguồn gốc</th>
+                          <th>mô tả</th>
+                          <th>năm sản xuất</th>
+                          <th>Id_thương hiệu</th>
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
                           
                         </tr>
                       </thead>
@@ -127,13 +146,21 @@
                           <tr>
                             <td><?= $value['id']?></td>
                             <td><?= $value['name']?></td>
+<<<<<<< HEAD
                             <td><?= $value['image']?></td>
+=======
+                            <td><img src="views/template/image/product/ <?= $value['image'] ?>" alt="" style ="width:20%"></td>
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
                             <td><?= $value['price']?></td>
                             <td><?= $value['sale']?></td>
                             <td><?= $value['origin']?></td>
                             <td><?= $value['description']?></td>
                             <td><?= $value['year']?></td>
                             <td><?= $value['id_category']?></td>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
                             <td style="color: white">
                               <button style="border: none; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
                                   <a href="index.php?url=form_sua_danh_muc&id=<?= $value['id'] ?>">Sửa</a>
@@ -148,7 +175,11 @@
                           
                           </tr>
                         <?php endforeach ?>
+<<<<<<< HEAD
                       </tfoot>
+=======
+                        </tbody>
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
                     </table>
                   </div>
                 </div>

@@ -1,12 +1,16 @@
 <?php
 require('models/product.php');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
 function hienThiSanPham()
 {
     $ds = layDSSanPham();
     include('views/product/danh_sach.php');
 }
+<<<<<<< HEAD
 
 // function formTaoSanPham()
 // {
@@ -58,5 +62,13 @@ function hienThiSanPham()
 // }
 
 
+=======
+function formTaoSanPham()
+{
+    $them_sp = themMoiSanPham();
+    include('views/product/tao_moi.php');
+}
+
+>>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
 ?>
 
