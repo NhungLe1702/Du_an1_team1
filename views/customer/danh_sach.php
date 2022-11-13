@@ -66,9 +66,9 @@
               <!-- <h4 class="page-title">Danh sách</h4> -->
               <div class="button_insert">
 
-                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                <!-- <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
                   <a href="index.php?url=them_danh_muc">Thêm mới</a>
-                </button>
+                </button> -->
 
               </div>
               <div class="ms-auto text-end">
@@ -115,6 +115,7 @@
                           <th>Số điện thoại</th>
                           <th>Email</th>
                           <th>Mật khẩu</th>
+                          <th>Vai trò</th>
                           <th>Hành động</th>
                           
                         </tr>
@@ -129,6 +130,7 @@
                             <td><?= $value['phone']?></td>
                             <td><?= $value['email']?></td>
                             <td><?= $value['password']?></td>
+                            <td><?= $value['role']?></td>
 
                             <td>
                               <button style="border: none; padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">

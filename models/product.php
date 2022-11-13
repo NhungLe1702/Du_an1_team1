@@ -1,7 +1,4 @@
-<?php
-// Model này đại diện cho bảng san_pham trong DB và sẽ thực hiện các hàm
-// tương tác với bảng đó
-
+<?php 
 // Lấy hàm getData từ db
     require_once('models/db.php');
 

@@ -26,7 +26,7 @@
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-12 d-flex no-block align-items-center">
-          <div class="button_insert">
+          <div class="button_insert" style="text-align: center">
 
             <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
               <a href="index.php?url=danh_muc">Danh sách</a>
@@ -43,10 +43,10 @@
 
         <div class="row" >
           
-            <div class="col-md-6">
+            <div class="col-md-6" style="margin: 0 auto">
               <div class="card ">
               
-                <form class="form-horizontal" action="index.php?url=them_danh_muc" method="POST">
+                <form class="form-horizontal" action="index.php?url=them_danh_muc" method="POST" >
                   <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Thêm mới thương hiệu</h4>
                     <div class="form-group row">
