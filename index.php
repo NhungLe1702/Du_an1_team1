@@ -4,7 +4,7 @@ session_start();
 require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
-// require('controllers/product.php');
+ require('controllers/product.php');
 
 include('views/template/header.php');
 
