@@ -25,10 +25,12 @@ switch ($url) {
 
     // Sản phẩm
 
-    // case 'san_pham':
-    //     hienThiSanPham();
-    //     break;
-    
+    case 'san_pham':
+        hienThiSanPham();
+        break;
+    case 'them_san_pham':
+        formTaoSanPham();
+        break;
     
     
 

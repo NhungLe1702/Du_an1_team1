@@ -8,11 +8,6 @@
         $product = getData($sql, FETCH_ALL);
         return $product;
     }
-<<<<<<< HEAD
-
-    
-?>
-=======
     //themsp
     function themMoiSanPham()
 {
@@ -60,4 +55,3 @@
 
 
   
->>>>>>> 2537fc155ff23853e5d87cf7aca4a1c48912e46f
