@@ -99,6 +99,14 @@ switch ($url) {
     case 'logout':
         logOutUser();
         break;
+    case 'edit_thongtin':
+        edit_thongtin();
+        break;
+
+     case 'forget':
+            forget();
+            break;
+        // quan li khach hang cua admin
 
     case 'khach_Hang':
         hienThiKhachHang();

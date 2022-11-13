@@ -87,7 +87,7 @@
         $error = [];
         if (isset($_POST["btn_save"])) {
             $id = $_POST['id'];
-            $ten = $_POST['name'];
+            $name = $_POST['name'];
             $img = $_FILES['img_upload']['name'];
             $price = $_POST['price'];
             $sale = $_POST['sale'];
