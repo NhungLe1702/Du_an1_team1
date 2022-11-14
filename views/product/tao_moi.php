@@ -153,7 +153,7 @@
                       >
                       <div class="col-sm-9">
                         <input
-                          type="date" name ="year"
+                          type="number" name ="year"
                           class="form-control"
                           id="cono1"
                         />

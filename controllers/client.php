@@ -6,4 +6,8 @@
         
         require('views/template/home.php');
     }
+
+    function sanPhamClient() {
+        require('views/client/shop-right-sidebar.php');
+    }
 ?>

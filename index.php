@@ -22,16 +22,17 @@ switch ($url) {
     case 'trang_chu':
         hienThiTrangChu();
         break;
-
+    case 'san_pham':
+        sanPhamClient();
+        
     // Sản phẩm
 
-    case 'san_pham':
+    case 'hien_thi_san_pham':
         hienThiSanPham();
         break;
     case 'them_san_pham':
         formTaoSanPham();
         break;
-<<<<<<< HEAD
     
     case 'xoa_san_pham':
         if (isset($_GET['id'])) {
@@ -49,18 +50,6 @@ switch ($url) {
         suaSanPham() ;
         break;
     
-=======
-     case 'xoa_san_pham':
-       if (isset($_GET['id'])) {
-       $id = $_GET['id'];
-        xoaSanPham($id);
-     }
-     hienThiSanPham();
-       break;
-       case 'form_sua_san_pham':
-        formSuaSanPham();
-        break;
->>>>>>> b4f7a51ca7d3d21b97ea362f0fded0ab9d901cea
 
     // danh mục    
 
