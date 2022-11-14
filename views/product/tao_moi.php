@@ -26,10 +26,10 @@
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-12 d-flex no-block align-items-center">
-          <div class="button_insert">
+          <div class="button_insert" style="text-align: center">
 
             <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-              <a href="index.php?url=ds_san_pham">Danh sách</a>
+              <a href="index.php?url=san_pham">Danh sách</a>
             </button>
 
           </div>
@@ -43,18 +43,20 @@
 
         <div class="row" >
           
-            <div class="col-md-6">
+            <div class="col-md-6" style="margin: 0 auto">
               <div class="card ">
               
-                <form class="form-horizontal" action="index.php?url=them_san_pham" method="POST" enctype="multipart/form-data">
+                <form class="form-horizontal" action="index.php?url=them_san_pham" method="POST" enctype="multipart/form-data" >
+
                   <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Thêm mới sản phẩm</h4>
+
                     <div class="form-group row">
                       <label
                         for="fname"
                         class="col-sm-3 text-end control-label col-form-label"
-                        >Tên sản phẩm</label
-                      >
+                        >Tên sản phẩm</label>
+
                       <div class="col-sm-9">
                         <input
                           type="text"
@@ -64,7 +66,8 @@
                         />
                       </div>
                     </div>
-                     <div class="form-group row">
+
+                    <div class="form-group row">
                       <label
                         for="lname"
                         class="col-sm-3 text-end control-label col-form-label"
@@ -78,6 +81,7 @@
                         />
                       </div>
                     </div>
+
                     <div class="form-group row">
                       <label
                         for="lname"
@@ -92,6 +96,7 @@
                         />
                       </div>
                     </div>
+
                     <div class="form-group row">
                       <label
                         for="lname"
@@ -106,6 +111,7 @@
                         />
                       </div>
                     </div>
+
                     <div class="form-group row">
                       <label
                         for="email1"
@@ -120,6 +126,7 @@
                         />
                       </div>
                     </div>
+
                     <div class="form-group row">
                       <label
                         for="cono1"
@@ -127,14 +134,17 @@
                         >Mô tả</label
                       >
                       <div class="col-sm-9">
-                        <input
+                        <!-- <input
                           type="text" name = "description"
                           class="form-control"
                           id="cono1"
-                         
-                        />
+                          
+                        /> -->
+
+                        <textarea  class="form-control"  name="description" id="" cols="78" rows="6"></textarea>
                       </div>
                     </div>
+
                     <div class="form-group row">
                       <label
                         for="cono1"
@@ -146,35 +156,37 @@
                           type="date" name ="year"
                           class="form-control"
                           id="cono1"
-                         
                         />
                       </div>
-                      </div>   
-                    </div> 
+                    </div>   
+
                     <div class="form-group row">
                       <label
                         for="cono1"
                         class="col-sm-3 text-end control-label col-form-label"
-                        >Mã thương hiệu</label
+                        >Thương hiệu</label
                       >
                       <div class="col-sm-9">
-                        <input
-                          type="text" name ="id_category"
-                          class="form-control"
-                          id="cono1"
-                         
-                        />
+                        
+                          <select id = "cono1" class="form-control" name="id_category">
+                            <?php foreach (danhSach() as $key => $value) { ?>
+                                <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
+                            <?php } ?>
+                          </select>
+
                       </div>
-                      </div>   
-                    </div> 
+                    </div>   
+                      
                   </div>
+
                   <div class="border-top">
                     <div class="card-body">
-                      <button name="btn_save" type="submit" value ="Save" class="btn btn-primary">
+                      <button name="btn_save" type="submit" class="btn btn-primary">
                         Submit
                       </button>
                     </div>
                   </div>
+                   
                 </form>
               
               </div>

@@ -20,6 +20,6 @@
     }
 
     function suaDanhMuc() {
-        $up = hamSuaSanPham();
+        $up = hamSuaDanhMuc();
     }
 ?>

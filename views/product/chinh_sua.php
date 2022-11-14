@@ -42,10 +42,10 @@
         
         <div class="row" >
           
-            <div class="col-md-6">
+            <div class="col-md-6" style="margin: 0 auto;">
               <div class="card"  >
               
-                <form class="form-horizontal" action="index.php?url=sua_danh_muc" method="POST">
+                <form class="form-horizontal" action="index.php?url=sua_san_pham" method="POST">
                   <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Chỉnh sửa thương hiệu</h4>
 
@@ -70,7 +70,7 @@
                       <label
                         for="fname"
                         class="col-sm-3 text-end control-label col-form-label" 
-                        >Tên thương hiệu</label
+                        >Tên</label
                       >
                       <div class="col-sm-9">
                         <input
@@ -83,8 +83,113 @@
                       </div>
                     </div>
 
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Hình ảnh</label
+                      >
+                      <div class="col-sm-9">
+                        
+                        <img name="img_upload" src="views/template/image/product/<?= $lay_mot['image'] ?>" alt="">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Đơn giá</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="price"
+                          value="<?= $lay_mot['price']?>"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Giảm giá</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="sale"
+                          value="<?= $lay_mot['sale']?>"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Nguồn gốc</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="origin"
+                          value="<?= $lay_mot['origin']?>"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Mô tả</label
+                      >
+                      <div class="col-sm-9">
+                        <textarea  class="form-control" name="description" id="" cols="78" rows="4" ><?= $lay_mot['description']?></textarea>
+                      </div>
+                    </div>
                     
-                    
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Năm sản xuất</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="year"
+                          value="<?= $lay_mot['year']?>"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Thương hiệu</label
+                      >
+                      <div class="col-sm-9">
+                        <select class="form-control" name="id_category">
+                            <?php foreach (danhSach() as $key => $value) { ?>
+                                <option value="<?php echo $value["id"] ?>" <?php echo ($value["id"] == $lay_mot['id_category']) ? 'selected' : "" ?>>
+                                    <?php echo $value["name"] ?>
+                                </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
                   </div>
                   <div class="border-top">
                     <div class="card-body">

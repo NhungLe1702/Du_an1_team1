@@ -32,6 +32,21 @@ switch ($url) {
         formTaoSanPham();
         break;
     
+    case 'xoa_san_pham':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            xoaSanPham($id);
+        }
+        hienThiSanPham();
+        break;
+
+    case 'form_sua_san_pham':
+        formSuaSanPham();
+        break;
+
+    case 'sua_san_pham':
+        suaSanPham() ;
+        break;
     
 
     // danh mục    
@@ -100,6 +115,6 @@ switch ($url) {
         break;
 }
 
-// commit test nhé
+
 
 include('views/template/footer.php');

@@ -30,7 +30,7 @@
         return $lm;
     }
 
-    function hamSuaSanPham() {
+    function hamSuaDanhMuc() {
         if(isset($_POST['btn_submit'])) {
             $id = $_POST["id"];
             $name = $_POST["name"];
