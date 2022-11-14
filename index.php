@@ -22,8 +22,10 @@ switch ($url) {
     case 'trang_chu':
         hienThiTrangChu();
         break;
+
     case 'san_pham':
         sanPhamClient();
+        break;
         
     // Sản phẩm
 

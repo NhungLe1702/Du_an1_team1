@@ -15,10 +15,13 @@ function register()
         $sql = "INSERT INTO customer(name,user_name,address,phone,email,password)
                         VALUE('$name','$user_name','$address',$phone,'$email','$password')";
         $register = pdo_execute($sql);
+        echo "<script> alert('Đăng kí tài khoản thành công')</script>";
     }
+    
 }
 function login()
 {
+    // $thongbao = 'Đăng nhập không thành công.';
     if (isset($_POST['login'])) {
         $user_name = $_POST['user_name'];
         $password = $_POST['password'];
@@ -30,8 +33,12 @@ function login()
             echo ('<script>window.location.href="index.php?url=trang_chu"</script>');
             exit();
         } else {
+            // if(isset($thongbao))  echo $thongbao ;
+            echo "<script> alert('Sai tài khoản hoặc mật khẩu')</script>";
         }
+
     }
+    
 }
 
 function logOut()
@@ -81,10 +88,8 @@ function update_thongtin_khachhang()
         pdo_execute($sql);
         unset($_POST);
         unset($_REQUEST);
-        echo ('
-                <script>
-                    location.href = "?url=trang_chu";
-                </script>');
+        echo "<script> alert('Thay đổi thông tin thành công')</script>";
+        echo ('<script>location.href = "?url=trang_chu";</script>');
     }
 }
 

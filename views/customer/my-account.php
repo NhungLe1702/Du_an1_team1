@@ -28,9 +28,14 @@
 									<label for="rememberme" class="inline"> 
 									<input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember me </label>
 								</div>
+								
 							</form>
+							
 						</div>
+						
 					</div>
+					
+					
 
 					<div class="col-sm-12 col-md-6 col-xs-12">
 						<div class="customer-register my-account">
