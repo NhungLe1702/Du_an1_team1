@@ -30,7 +30,7 @@
           <div class="button_insert">
 
             <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
-              <a href="index.php?url=danh_muc">Danh sách</a>
+              <a href="index.php?url=san_pham">Danh sách</a>
             </button>
 
           </div>
@@ -45,9 +45,13 @@
             <div class="col-md-6" style="margin: 0 auto;">
               <div class="card"  >
               
+<<<<<<< HEAD
                 <form class="form-horizontal" action="index.php?url=sua_san_pham" method="POST">
+=======
+                <form class="form-horizontal" action="index.php?url=form_sua_san_pham" method="POST">
+>>>>>>> b4f7a51ca7d3d21b97ea362f0fded0ab9d901cea
                   <div class="card-body">
-                    <h4 class="card-title" style="text-align: center;">Chỉnh sửa thương hiệu</h4>
+                    <h4 class="card-title" style="text-align: center;">Chỉnh sửa sản phẩm</h4>
 
                     <div class="form-group row">
                       <label
@@ -61,7 +65,7 @@
                           class="form-control"
                           id="fname"
                           name="id"
-                          value="<?= $lay_mot['id']?>"
+                          value="<?= $lay_sp['id'];?>"
                         />
                       </div>
                     </div>
@@ -78,7 +82,119 @@
                           class="form-control"
                           id="fname"
                           name="name"
-                          value="<?= $lay_mot['name']?>"
+                          value="<?= $lay_sp['name'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Img</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="fname"
+                          name="image"
+                          value="<?= $lay_sp['image'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Đơn giá</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="fname"
+                          name="price"
+                          value="<?= $lay_sp['price'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >sale</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="fname"
+                          name="sale"
+                          value="<?= $lay_sp['sale'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >nguồn gốc</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="origin"
+                          value="<?= $lay_sp['origin'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Mô tả</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="description"
+                          value="<?= $lay_sp['description'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Năm sản xuất</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="fname"
+                          name="year"
+                          value="<?= $lay_sp['year'];?>"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label" 
+                        >Id thương hiệu</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fname"
+                          name="id_category"
+                          value="<?= $lay_sp['id_category'];?>"
                         />
                       </div>
                     </div>
@@ -193,7 +309,7 @@
                   </div>
                   <div class="border-top">
                     <div class="card-body">
-                      <button name="btn_submit" type="submit" class="btn btn-primary">
+                      <button name="btn_save" type="submit" value="<?php echo $lay_sp['id'] ?>" class="btn btn-primary">
                         Update
                       </button>
                     </div>
