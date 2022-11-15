@@ -26,6 +26,14 @@ switch ($url) {
     case 'san_pham':
         sanPhamClient();
         break;
+
+    case 'chi_tiet_san_pham':
+        chiTietSanPham();
+        break;
+
+    case 'ds_san_pham_theo_dm':
+        laySPtheoMaLoai();
+        break;
         
     // Sản phẩm
 

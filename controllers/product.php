@@ -3,7 +3,7 @@
 
     function hienThiSanPham()
     {
-        $ds = layDSSanPham();
+        $ds_sp = layDSSanPham();
         include('views/product/danh_sach.php');
     }
 
