@@ -1,17 +1,14 @@
 <?php
 session_start();
+require_once('models/db.php');
 
 require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
 require('controllers/product.php');
-<<<<<<< HEAD
-require('controllers/hour.php');
 
-=======
-require('controllers/contact.php');
-require('controllers/q_a.php');
->>>>>>> c58240846f792931c33e197abe24edb282e5773c
+
+
 include('views/template/header.php');
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
@@ -28,6 +25,10 @@ switch ($url) {
     case 'trang_chu':
         hienThiTrangChu();
         break;
+    
+    case 'hoi_dap':
+        hoiDap();
+        break;  
 
     case 'san_pham':
         sanPhamClient();
@@ -40,6 +41,11 @@ switch ($url) {
     case 'ds_san_pham_theo_dm':
         laySPtheoMaLoai();
         break;
+
+    case 'contact':
+        contact();
+        break;    
+
 
     //Khung giờ
     
@@ -128,9 +134,7 @@ switch ($url) {
         forget();
         break;
 
-    case 'contact':
-        contact();
-        break;
+    
 
     // quan li khach hang cua admin
 
@@ -146,9 +150,7 @@ switch ($url) {
         hienThiKhachHang();
         break;
 
-    case 'q_a':
-        queans();
-        break;       
+         
 
     default:
         echo 'Đường dẫn không tồn tại';

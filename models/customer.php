@@ -1,6 +1,6 @@
 <?php
 
-include_once('models/db.php');
+// include_once('models/db.php');
 
 function register()
 {

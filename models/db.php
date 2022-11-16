@@ -5,16 +5,27 @@ define('FETCH_ALL', 2);
 define('FETCH_ONE', 1);
 define('NOT_FETCH', 0);
 
-function getConnect() {
-    $connect = new PDO(
-
-        'mysql:host=localhost;dbname=duan1;',
-        'root',
-        ''
-
-    );
-    return $connect;
+if(!function_exists('getConnect')) {
+    function getConnect() {
+        $connect = new PDO(
+            'mysql:host=localhost;dbname=Team1_web17309;',
+            'nhunglt',
+            '123456'
+        );
+        return $connect;
+    }
 }
+
+// function getConnect() {
+//     $connect = new PDO(
+
+//         'mysql:host=localhost;dbname=Team1_web17309;',
+//         'nhunglt',
+//         '123456'
+
+//     );
+//     return $connect;
+// }
 
 // Nhận vào tham số là câu truy vấn, tham số thứ 2 là cách lấy dũ liệu
 function getData($sql, $fetchType) {

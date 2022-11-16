@@ -1,5 +1,5 @@
 <?php
-    include('models/db.php');
+    // include('models/db.php');
 
     function danhSachDanhMuc() {
         $sql = "SELECT * FROM category";
