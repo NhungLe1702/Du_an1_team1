@@ -56,7 +56,8 @@ $user = $_SESSION['user'] ?? false;
                                     <li>
                                        <a href="index.php?url=edit_thongtin&id=<?= $user['id'] ?>"> Hello <?= $user['name'] ?> </a>
                                     </li>
-                                    <li><a href="index.php?url=logout">Log Out</a></li>
+                                    <!-- <li><a href="index.php?url=logout">Log Out</a></li> -->
+                                    <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
                                 <?php else : ?>
                                     <li><a href="index.php?url=register">My Account</a></li>
                                 <?php endif; ?>
