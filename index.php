@@ -5,7 +5,8 @@ require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
 require('controllers/product.php');
-
+require('controllers/contact.php');
+require('controllers/q_a.php');
 include('views/template/header.php');
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
@@ -22,8 +23,18 @@ switch ($url) {
     case 'trang_chu':
         hienThiTrangChu();
         break;
+
     case 'san_pham':
         sanPhamClient();
+        break;
+
+    case 'chi_tiet_san_pham':
+        chiTietSanPham();
+        break;
+
+    case 'ds_san_pham_theo_dm':
+        laySPtheoMaLoai();
+        break;
         
     // Sản phẩm
 
@@ -98,6 +109,10 @@ switch ($url) {
         forget();
         break;
 
+    case 'contact':
+        contact();
+        break;
+
     // quan li khach hang cua admin
 
     case 'khach_Hang':
@@ -111,6 +126,10 @@ switch ($url) {
         }
         hienThiKhachHang();
         break;
+
+    case 'q_a':
+        queans();
+        break;       
 
     default:
         echo 'Đường dẫn không tồn tại';

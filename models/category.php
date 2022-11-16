@@ -1,7 +1,7 @@
 <?php
     include('models/db.php');
 
-    function danhSach() {
+    function danhSachDanhMuc() {
         $sql = "SELECT * FROM category";
         $dsdm = getData($sql, FETCH_ALL);
         return $dsdm;

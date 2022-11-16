@@ -117,7 +117,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach($ds as $key => $value) :   ?>
+                        <?php foreach($ds_sp as $key => $value) :   ?>
                           <tr>
                             <td><?= $value['id']?></td>
                             <td><?= $value['name']?></td>
@@ -145,6 +145,7 @@
                           
                           </tr>
                         <?php endforeach ?>
+                        
                         </tbody>
                     </table>
                   </div>

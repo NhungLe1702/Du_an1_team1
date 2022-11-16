@@ -2,7 +2,7 @@
     require('models/category.php');
 
     function hienThiDanhMuc() {
-        $ds = danhSach();
+        $ds_dm = danhSachDanhMuc();
         include('views/category/danh_sach.php');
     }
 

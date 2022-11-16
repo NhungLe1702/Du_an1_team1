@@ -20,6 +20,7 @@
     
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 
 <body>
@@ -28,13 +29,13 @@
     <div class="breadcrumbs-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                     <ul>
                         <li><a href="index.html">Home</a> <span><i class="fa fa-angle-right"></i></span></li>
                         <li><a href="index.html">Products</a> <span><i class="fa fa-angle-right"></i></span></li>
                         <li>Bikes & Frames</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -45,21 +46,7 @@
             <div class="row">
                 <div class="col-md-9 col-sm-8 col-xs-12">
                     <div class="shop-item-filter">
-                        <div class="toolber-form left">
-                           <p class="filter-title">sort by: </p>
-                            <div class="filter-form">
-                                <form action="#">
-                                    <select>
-                                        <option value="Defauld">Default</option>
-                                        <option value="Newest">Newest items</option>
-                                        <option value="Trending">Trending items</option>
-                                        <option value="Best">Best sellers</option>
-                                        <option value="Price">Price: low to high</option>
-                                        <option value="Price">Price: high to high</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
+                        
                         <div class="toolber-form  middle">
                            <p class="filter-title">Show: </p>
                             <div class="filter-form show-form">
@@ -75,10 +62,10 @@
                         </div>
                         <!--tab-list start-->
                         <div class="shop-tab">
-                            <ul role="tablist">
+                            <!-- <ul role="tablist">
                                 <li role="presentation" class="active"><a href="#grid-view" aria-controls="grid-view" role="tab" data-toggle="tab"><i class="fa fa-th"></i></a></li>
                                 <li role="presentation"><a href="#list-view" aria-controls="list-view" role="tab" data-toggle="tab"><i class="fa fa-th-list"></i></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <!--tab-list end-->
                     </div>
@@ -86,275 +73,55 @@
                     <div class="row">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="grid-view">
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <span class="price">off <br>30%</span>
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/1.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Classic-MR866</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
+
+                                <!-- Đổ ra sản phẩm người dùng -->
+                               <?php foreach( $ds_sp as $key => $value) :   ?>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="single-product text-center">
+                                            
+                                            <div class="single-product-inner">
+                                                <div class="product-img" style="height: 170px ;">
+                                                    <img src="views/template/image/product/<?=$value['image'] ?>" alt="">
                                                 </div>
-                                                <div class="price-box">
-                                                    <div class="old-price"><span>$300.00</span></div>
-                                                    <div class="new-price"><span>$210.00</span></div>
+                                                <div class="product-details">
+                                                    <div class="name" style="height: 50px ; margin-bottom: 10px ;">
+                                                        <h3>
+                                                            <a href="index.php?url=chi_tiet_san_pham&id=<?php echo $value['id']?>&id_category=<?php echo $value['id_category']?>">
+                                                                <?=$value['name'] ?>
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    
+                                                    <div class="revew">
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star-o"></i></a>
+                                                    </div>
+                                                    <div class="price-box">
+                                                        <div class="old-price"><span><?= number_format($value['price'])?></span></div>
+                                                        <div class="new-price">
+                                                            <span>
+                                                                <?php echo number_format(($value['price'] - $value['sale'] ))  ?>
+                                                            </span></div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
+                                                <div class="product-hover">
+                                                    <ul>
+                                                        <!-- <li><a href="#" class="add-to-cart">Add to cart</a></li> -->
+                                                        <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
+                                                        <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <span class="price">off <br>20%</span>
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/2.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Express-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                   <div class="old-price"><span>$300.00</span></div>
-                                                    <div class="new-price"><span>$260.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <span class="price">off <br>50%</span>
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/3.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Ladies-MR8O8</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="old-price"><span>$400.00</span></div>
-                                                    <div class="new-price"><span>$200.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/5.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Express-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="new-price"><span>$210.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/6.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Classic-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="new-price"><span>$350.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/7.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Modern-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="new-price"><span>$1100.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/5.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Express-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="new-price"><span>$210.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/6.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Classic-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="new-price"><span>$350.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="single-product text-center">
-                                        <div class="single-product-inner">
-                                            <div class="product-img">
-                                                <a href="#"><img src="img/product/7.png" alt=""></a>
-                                            </div>
-                                            <div class="product-details">
-                                                <h3><a href="#">Dot Bike Modern-MR868</a></h3>
-                                                <div class="revew">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <div class="new-price"><span>$1100.00</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="product-hover">
-                                                <ul>
-                                                    <li><a href="#" class="add-to-cart">Add to cart</a></li>
-                                                    <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
-                                                    <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                                <?php endforeach ?>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="list-view">
+
+                            <!-- <div role="tabpanel" class="tab-pane" id="list-view">
                                 <div class="col-md-12 col-sm-12 col-xs-12 product-list">
                                     <div class="row">
                                         <div class="col-md-4">
@@ -592,9 +359,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
                         </div>
                     </div>
+
                     <div class="pagination-box">
                         <div class="row">
                             <div class="col-md-12">
@@ -612,10 +381,12 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
+                
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="price-slider-box">
-                        <div class="price-filter">
+                        <!-- <div class="price-filter">
                             <div class="price-slider-title">
                                 <h6>Min / Max Price</h6>
                             </div>
@@ -630,43 +401,23 @@
                                 </div>
                                 <div id="price-slider" class="price-slider"></div>
                             </form>
-                        </div><!-- /.price-filter -->
+                        </div> -->
+                        <!-- /.price-filter -->
                     </div>
+                    
                     <div class="categoryies-option">
-                        <h4>CATEGORIES</h4>
+                        <h4>Hãng xe</h4>
                         <ul>
-                            <li>
-                                <input id="Road" type="checkbox" name="Road">
-                                <label for="Road">Road bike<span> (15)</span></label>
-                            </li>
-                            <li>
-                                <input id="moundain" type="checkbox" name="moundain">
-                                <label for="moundain">Mountain bike<span> (13)</span></label>
-                            </li>
-                            <li>
-                                <input id="folding" type="checkbox" name="folding">
-                                <label for="folding">folding bike<span> (13)</span></label>
-                            </li>
-                            <li>
-                                <input id="Children" type="checkbox" name="Children">
-                                <label for="Children">Children Bike<span> (21)</span></label>
-                            </li>
-                            <li>
-                                <input id="Fixed" type="checkbox" name="Fixed">
-                                <label for="Fixed">Fixed Gear <span> (10)</span></label>
-                            </li>
-                            <li>
-                                <input id="Tricycle" type="checkbox" name="Tricycle">
-                                <label for="Tricycle">Tricycle <span> (14)</span></label>
-                            </li>
-                            <li>
-                                <input id="Accessories" type="checkbox" name="Accessories">
-                                <label for="Accessories">Accessories <span> (35)</span></label>
-                            </li>
-                            <li>
-                                <input id="Cycling" type="checkbox" name="Cycling">
-                                <label for="Cycling">Cycling Components <span> (5)</span></label>
-                            </li>
+                            <?php foreach(danhSachDanhMuc() as $key => $value) : ?>
+                                <li style="padding-left:  20px; color: black!important;">
+                                    <!-- <input id="Road" type="checkbox" name="Road"> -->
+                                    <label for="Road">
+                                        <a style="color: #666666; hover: text-decorated: underline;" href="index.php?url=ds_san_pham_theo_dm&id=<?php echo $value['id'] ?>"><?=$value['name']?><span> (15)</span></a>
+                                        
+                                    </label>
+                                </li>
+                            <?php endforeach ?>
+
                         </ul>
                     </div>
                     <div class="categoryies-option color-box">

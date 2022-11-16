@@ -29,7 +29,7 @@
           <div class="button_insert" style="text-align: center">
 
             <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-              <a href="index.php?url=san_pham">Danh sách</a>
+              <a href="index.php?url=hien_thi_san_pham">Danh sách</a>
             </button>
 
           </div>
@@ -134,13 +134,6 @@
                         >Mô tả</label
                       >
                       <div class="col-sm-9">
-                        <!-- <input
-                          type="text" name = "description"
-                          class="form-control"
-                          id="cono1"
-                          
-                        /> -->
-
                         <textarea  class="form-control"  name="description" id="" cols="78" rows="6"></textarea>
                       </div>
                     </div>
@@ -169,7 +162,7 @@
                       <div class="col-sm-9">
                         
                           <select id = "cono1" class="form-control" name="id_category">
-                            <?php foreach (danhSach() as $key => $value) { ?>
+                            <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
                                 <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                             <?php } ?>
                           </select>
