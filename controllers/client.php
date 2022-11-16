@@ -2,7 +2,7 @@
     // require('models/product.php');
 
     require_once('models/client.php');
-    
+
     function hienThiTrangChu() {
         require('views/template/home.php');
     }
@@ -33,12 +33,15 @@
     
     function hoiDap(){
         showHoiDap();
-        include('views/client/q_a.php');
-        
+        include('views/client/q_a.php'); 
     }
 
     function contact(){
         viewContact();
         include('views/client/contact.php');
+    }
+
+    function formDatLich() {
+        include('views/client/dat_lich.php');
     }
 ?>

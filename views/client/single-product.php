@@ -96,10 +96,10 @@
                                     </div>
                                 </div>
 
-                                <form action="#">
+                                <form action="">
                                     <div class="quantity">
                                         <span class="single-product-btn">
-                                            <a href="#">Đặt lịch xem xe</a>
+                                            <a href="index.php?url=dat_lich">Đặt lịch xem xe</a>
                                         </span>
                                     </div>
                                 </form>

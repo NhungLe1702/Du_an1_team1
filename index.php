@@ -45,7 +45,9 @@ switch ($url) {
     case 'contact':
         contact();
         break;    
-
+    case 'dat_lich':
+        formDatLich();
+        break;
 
     //Khung giờ
     
