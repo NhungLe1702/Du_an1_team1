@@ -66,9 +66,10 @@
               <!-- <h4 class="page-title">Danh sách</h4> -->
               <div class="button_insert">
 
-                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
-                  <a href="index.php?url=them_san_pham">Thêm mới</a>
-                </button>
+                <!-- <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                  <a href="index.php?url=them_danh_muc">Thêm mới</a>
+                </button> -->
+
               </div>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
@@ -83,6 +84,8 @@
             </div>
           </div>
         </div>
+
+        
 
         <div class="container-fluid">
           
@@ -104,52 +107,41 @@
                     
                       <thead>
                         <tr>
+
                           <th>ID</th>
-                          <th>Tên</th>
+                          <th>Id sản phẩm</th>
+                          <th>Tên sản phẩm</th>
                           <th>Hình ảnh</th>
-                          <th>Đơn giá</th>
-                          <th>sale</th>
-                          <th>nguồn gốc</th>
-                          <th>mô tả</th>
-                          <th>năm sản xuất</th>
-                          <th>Id_thương hiệu</th>
-                          <th>Hành động</th>
+                          <th>Giờ bắt đầu</th>
+                          <th>Giờ kết thúc</th>
+                          <th>hành động</th>
+                          <th>hành động</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach($ds_sp as $key => $value) :   ?>
+                        <?php foreach($ds_kg as $key => $value) :   ?>
                           <tr>
                             <td><?= $value['id']?></td>
+                            <td><?= $value['id_product']?></td>
                             <td><?= $value['name']?></td>
-                            <td style="padding:10px 0;"><img src="views/template/image/product/<?php echo $value['image'] ?>" alt="" style ="width:50%"></td>
-                            <td><?= $value['price']?></td>
-                            <td><?= $value['sale']?></td>
-                            <td><?= $value['origin']?></td>
-                            <td><?= $value['description']?></td>
-                            <td><?= $value['year']?></td>
-                            <td>
-                              <?= $value['id_category']?>
-                            </td>
-                            
+                            <td style="padding:10px 0;"><img src="views/template/image/product/<?php echo $value['image'] ?>" alt="" style ="width:30%"></td>
+                            <td><?= $value['hour_start']?></td>
+                            <td><?= $value['hour_end']?></td>
                             <td style="color: white">
-                              <button style="border: none;margin-top:6px ; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-                                  <a href="index.php?url=form_sua_san_pham&id=<?= $value['id'] ?>">Sửa</a>
+                              <button style="border: none; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
+                                  <a href="index.php?url=form_sua_danh_muc&id=<?= $value['id'] ?>">Sửa</a>
                               </button>
-                            
-                              <button style="border: none;margin-top:6px ; padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                  <a href="index.php?url=xoa_san_pham&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a>
-                              </button>
-                              
-                              <!-- <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                  <a href="index.php?url=form_them_khung_gio&id=<?= $value['id'] ?>" >Thêm giờ </a>
-                              </button> -->
+                            </td>
 
+                            <td>
+                              <button style="border: none; padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
+                                  <a href="index.php?url=xoa_danh_muc&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a>
+                              </button>
                             </td>
                           
                           </tr>
                         <?php endforeach ?>
-                        
-                        </tbody>
+                      </tfoot>
                     </table>
                   </div>
                 </div>

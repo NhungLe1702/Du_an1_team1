@@ -5,6 +5,7 @@ require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
 require('controllers/product.php');
+require('controllers/hour.php');
 
 include('views/template/header.php');
 
@@ -34,6 +35,20 @@ switch ($url) {
     case 'ds_san_pham_theo_dm':
         laySPtheoMaLoai();
         break;
+
+    //Khung giờ
+    
+    // case 'khung_gio':
+    //     dsKhungGio();
+    //     break;
+
+    // case 'form_them_khung_gio':
+    //     formTaoKhungGio();
+    //     break;
+
+    // case 'them_khung_gio' :
+    //     themMoiKhungGio();
+    //     break;
         
     // Sản phẩm
 

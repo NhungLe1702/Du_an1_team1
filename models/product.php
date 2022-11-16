@@ -2,8 +2,7 @@
 // Lấy hàm getData từ db
     require_once('models/db.php');
 
-    function layDSSanPham() 
-    {
+    function layDSSanPham() {
         $sql = "SELECT * FROM product ORDER BY id DESC ";
         $product = getData($sql, FETCH_ALL);
         return $product;
@@ -106,6 +105,12 @@
         $sql = "SELECT * FROM product WHERE id_category = '$id'";
         $product = getData($sql, FETCH_ALL);
         return $product;
+    }
+
+    function layTenDanhMuc($id_category) {
+        $sql = "SELECT name FROM category WHERE id = '$id_category'";
+        $cname = getData($sql, FETCH_ONE);
+        return $cname;
     }
 
 ?>

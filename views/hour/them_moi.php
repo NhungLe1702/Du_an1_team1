@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style> 
-    .form-horizontal{
-      flex: 1;
-    }
+    
   </style>
   <link
       rel="stylesheet"
@@ -22,15 +20,16 @@
     <link href="views/template/css/dist/css/style.min.css" rel="stylesheet" />
 </head>
 <body>
-<div class="page-wrapper" style="margin: 0;">
-      
+<div class="page-wrapper " >
+<!-- style="margin: 0;" -->
+<!-- margin-left:500px; -->
       <div class="page-breadcrumb">
         <div class="row">
           <div class="col-12 d-flex no-block align-items-center">
-          <div class="button_insert">
+          <div class="button_insert" style="text-align: center">
 
-            <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
-              <a href="index.php?url=danh_muc">Danh sách</a>
+            <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
+              <a href="index.php?url=hien_thi_san_pham">Danh sách</a>
             </button>
 
           </div>
@@ -38,30 +37,32 @@
         </div>
       </div>
       
-      <div class="container-fluid">
-        
+      <div class="container-fluid" >
+      
+      <!-- style="text-align:center; margin-left:500px;" -->
+
         <div class="row" >
           
-            <div class="col-md-6">
-              <div class="card"  >
+            <div class="col-md-6" style="margin: 0 auto">
+              <div class="card ">
               
-                <form class="form-horizontal" action="index.php?url=sua_danh_muc" method="POST">
+                <form class="form-horizontal" action="index.php?url=them_khung_gio" method="POST" >
                   <div class="card-body">
-                    <h4 class="card-title" style="text-align: center;">Chỉnh sửa thương hiệu</h4>
-
+                    <h4 class="card-title" style="text-align: center;">Thêm mới khung giờ</h4>
+                    
                     <div class="form-group row">
                       <label
                         for="fname"
-                        class="col-sm-3 text-end control-label col-form-label" 
-                        >ID</label
+                        class="col-sm-3 text-end control-label col-form-label"
+                        >Id sản phẩm</label
                       >
                       <div class="col-sm-9">
                         <input
-                          type="text"
+                          type="number"
                           class="form-control"
                           id="fname"
-                          name="id"
-                          value="<?= $lay_mot['id']?>" 
+                          name="id_product"
+                          value="<?php if(isset($id)) echo $id?>" 
                         />
                       </div>
                     </div>
@@ -69,30 +70,46 @@
                     <div class="form-group row">
                       <label
                         for="fname"
-                        class="col-sm-3 text-end control-label col-form-label" 
-                        >Tên thương hiệu</label
+                        class="col-sm-3 text-end control-label col-form-label"
+                        >Giờ bắt đầu</label
                       >
                       <div class="col-sm-9">
                         <input
-                          type="text"
+                         
+                          type="time"
                           class="form-control"
                           id="fname"
-                          name="name"
-                          value="<?= $lay_mot['name']?>"
+                          name="bat_dau"
                         />
                       </div>
                     </div>
 
-                    
-                    
+                    <div class="form-group row">
+                      <label
+                        for="fname"
+                        class="col-sm-3 text-end control-label col-form-label"
+                        >Giờ kết thúc</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="time"
+                          class="form-control"
+                          id="fname"
+                          name="ket_thuc"
+                        />
+                      </div>
+                    </div>
+
                   </div>
+
                   <div class="border-top">
                     <div class="card-body">
                       <button name="btn_submit" type="submit" class="btn btn-primary">
-                        Update
+                        Submit
                       </button>
                     </div>
                   </div>
+                   
                 </form>
               
               </div>
@@ -107,3 +124,5 @@
     </div>
 </body>
 </html>
+
+

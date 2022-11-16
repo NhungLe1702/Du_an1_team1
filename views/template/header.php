@@ -115,6 +115,7 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=danh_muc">Thương hiệu</a></li>
                                                 <li><a href="index.php?url=hien_thi_san_pham">Sản Phẩm</a></li>
                                                 <li><a href="index.php?url=khach_Hang">Khách hàng</a></li>
+                                                <!-- <li><a href="index.php?url=khung_gio">Khung giờ</a></li> -->
                                                 <li><a href="#">Đơn Xem</a></li>
                                                 <li><a href="#">Bình luận</a></li>
                                                 <li><a href="#">Thống kê</a></li>

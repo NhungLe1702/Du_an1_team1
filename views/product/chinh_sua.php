@@ -61,7 +61,7 @@
                           class="form-control"
                           id="fname"
                           name="id"
-                          value="<?= $lay_mot['id'];?>"
+                          value="<?= $lay_mot['id'];?>" 
                         />
                       </div>
                     </div>
@@ -183,7 +183,7 @@
                       >
                       <div class="col-sm-9">
                         <select class="form-control" name="id_category">
-                            <?php foreach (danhSach() as $key => $value) { ?>
+                            <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
                                 <option value="<?php echo $value["id"] ?>" <?php echo ($value["id"] == $lay_mot['id_category']) ? 'selected' : "" ?>>
                                     <?php echo $value["name"] ?>
                                 </option>
