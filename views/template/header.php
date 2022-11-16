@@ -129,8 +129,8 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                                 <li><a href="#">Giới thiệu  </a></li>
                                                 <li><a href="#">Pages</a></li>
-                                                <li><a href="#">Hỏi đáp</a></li>
-                                                <li><a href="#">Liên hệ</a></li>
+                                                <li><a href="index.php?url=q_a">Hỏi đáp</a></li>
+                                                <li><a href="index.php?url=contact">Liên hệ</a></li>
                                             </ul>   
                                         </nav>
                                     <?php } ?>
@@ -140,11 +140,11 @@ $user = $_SESSION['user'] ?? false;
                                         <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                             <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
-                                            <li><a href="">Sản Phẩm </a></li>
+                                            <li><a href="index.php?url=login">Sản Phẩm </a></li>
                                             <li><a href="#">Giới thiệu  </a></li>
                                             <li><a href="#">Pages</a></li>
-                                            <li><a href="#">Hỏi đáp</a></li>
-                                            <li><a href="#">Liên hệ</a></li>
+                                            <li><a href="index.php?url=login">Hỏi đáp</a></li>
+                                            <li><a href="index.php?url=contact">Liên hệ</a></li>
                                         </ul>
                                     </nav>
                                 <?php } ?>    

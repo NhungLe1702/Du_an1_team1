@@ -5,8 +5,13 @@ require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
 require('controllers/product.php');
+<<<<<<< HEAD
 require('controllers/hour.php');
 
+=======
+require('controllers/contact.php');
+require('controllers/q_a.php');
+>>>>>>> c58240846f792931c33e197abe24edb282e5773c
 include('views/template/header.php');
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
@@ -123,6 +128,10 @@ switch ($url) {
         forget();
         break;
 
+    case 'contact':
+        contact();
+        break;
+
     // quan li khach hang cua admin
 
     case 'khach_Hang':
@@ -136,6 +145,10 @@ switch ($url) {
         }
         hienThiKhachHang();
         break;
+
+    case 'q_a':
+        queans();
+        break;       
 
     default:
         echo 'Đường dẫn không tồn tại';

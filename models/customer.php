@@ -43,6 +43,7 @@ function login()
 
 function logOut()
 {
+    echo  ("<script>confirm('Đăng xuất?')</script>" );
     unset($_SESSION['user']);
 }
 
