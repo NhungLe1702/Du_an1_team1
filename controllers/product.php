@@ -25,5 +25,12 @@
         $up = hamSuaSanPham();
     }
 
+    function thongKeSanPham() {
+        $tk = hamthongKeSanPham();
+        include('views/product/thong_ke.php');
+    }
+
+    
+
 ?>
 

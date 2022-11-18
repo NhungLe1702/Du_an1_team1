@@ -113,6 +113,21 @@
         return $cname;
     }
 
+    function hamthongKeSanPham() {
+        $sql = " SELECT ca.id as id_category , 
+                        ca.name as name, COUNT(pr.id) as so_luong, 
+                        MIN(pr.price) gia_min, 
+                        MAX(pr.price) gia_max, 
+                        AVG(pr.price) gia_avg
+        FROM product pr
+        JOIN category ca ON ca.id=pr.id_category
+        GROUP BY ca.id, ca.name ";
+        $thong_ke_sp = getData($sql, FETCH_ALL);
+        return $thong_ke_sp;
+    }
+
+    
+
 ?>
 
 

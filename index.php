@@ -6,8 +6,7 @@ require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
 require('controllers/product.php');
-
-
+require('controllers/view_order_admin.php');
 
 include('views/template/header.php');
 
@@ -34,6 +33,12 @@ switch ($url) {
         sanPhamClient();
         break;
 
+    case 'thong_ke_san_pham':
+        thongKeSanPham();
+        break;
+
+      
+
     case 'chi_tiet_san_pham':
         chiTietSanPham();
         break;
@@ -42,11 +47,31 @@ switch ($url) {
         laySPtheoMaLoai();
         break;
 
-    case 'contact':
+    case 'lien_he':
         contact();
         break;    
-    case 'dat_lich':
+    case 'dat_lich_client':
         formDatLich();
+        break;
+
+    case 'tao_don_xem_client':
+        tao_don_xem();
+        break;
+
+    case 'don_xem_admin':
+        don_xem_admin();
+        break;
+
+    case 'update_view_order':
+        update_view_order();
+        break;
+
+    case 'xoa_don_xem':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            xoaDonXem($id);
+        }
+        don_xem_admin();
         break;
 
     //Khung giờ
@@ -87,6 +112,7 @@ switch ($url) {
     case 'sua_san_pham':
         suaSanPham() ;
         break;
+    
     
 
     // danh mục    

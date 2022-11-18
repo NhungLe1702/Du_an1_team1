@@ -42,13 +42,14 @@
         
         <div class="row" >
           
-            <div class="col-md-6">
+            <div class="col-md-6" style="margin: 0 auto;">
               <div class="card"  >
               
                 <form class="form-horizontal" action="index.php?url=sua_danh_muc" method="POST">
                   <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Chỉnh sửa thương hiệu</h4>
-
+                    
+                    <input type="hidden" name="id" value="<?= $lay_mot['id'] ?>">
                     <div class="form-group row">
                       <label
                         for="fname"
@@ -60,7 +61,8 @@
                           type="text"
                           class="form-control"
                           id="fname"
-                          name="id"
+                         
+                          disabled
                           value="<?= $lay_mot['id']?>" 
                         />
                       </div>

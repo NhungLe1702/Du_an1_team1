@@ -56,7 +56,7 @@ $user = $_SESSION['user'] ?? false;
                                     <li>
                                        <a href="index.php?url=edit_thongtin&id=<?= $user['id'] ?>"> Hello <?= $user['name'] ?> </a>
                                     </li>
-                                    <!-- <li><a href="index.php?url=logout">Log Out</a></li> -->
+                                    
                                     <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
                                 <?php else : ?>
                                     <li><a href="index.php?url=register">My Account</a></li>
@@ -117,9 +117,9 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=hien_thi_san_pham">Sản Phẩm</a></li>
                                                 <li><a href="index.php?url=khach_Hang">Khách hàng</a></li>
                                                 <!-- <li><a href="index.php?url=khung_gio">Khung giờ</a></li> -->
-                                                <li><a href="#">Đơn Xem</a></li>
+                                                <li><a href="index.php?url=don_xem_admin">Đơn Xem</a></li>
                                                 <li><a href="#">Bình luận</a></li>
-                                                <li><a href="#">Thống kê</a></li>
+                                                <li><a href="index.php?url=thong_ke_san_pham">Thống kê</a></li>
                                             </ul>
                                         </nav>
                                     <?php } else { ?>
@@ -129,7 +129,8 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
                                                 <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                                 <li><a href="#">Giới thiệu  </a></li>
-                                                <li><a href="#">Pages</a></li>
+                                                
+                                                <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li>
                                                 <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
                                                 <li><a href="index.php?url=contact">Liên hệ</a></li>
                                             </ul>   
