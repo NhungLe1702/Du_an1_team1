@@ -112,7 +112,9 @@ switch ($url) {
     case 'sua_san_pham':
         suaSanPham() ;
         break;
-    
+    case 'tim_kiem_SP':
+        timKiemSanPham();
+        break;
     
 
     // danh mục    

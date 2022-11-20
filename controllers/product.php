@@ -30,6 +30,14 @@
         include('views/product/thong_ke.php');
     }
 
+    function timKiemSanPham() {
+        if(isset($_POST['tim_kiem'])) {
+            $kw = $_POST['kw'];
+            
+        } 
+        $ds_sp = timKiem($kw);
+        include('views/client/shop-right-sidebar.php');
+    }
     
 
 ?>

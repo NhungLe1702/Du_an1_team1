@@ -79,9 +79,9 @@ $user = $_SESSION['user'] ?? false;
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="search-area">
                             <div class="search-box-inner">
-                                <form action="#">
-                                    <input type="text" placeholder="Search">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                <form action="index.php?url=tim_kiem_SP" method="post">
+                                    <input type="text" placeholder="Search" name="kw">
+                                    <button type="submit" name="tim_kiem"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -96,6 +96,7 @@ $user = $_SESSION['user'] ?? false;
                 </div>
             </div>
         </div>
+
         <div class="header-bottom sticky-header">
             <div class="header-bottom-inner">
                 <div class="container">
