@@ -71,13 +71,29 @@
                       <label
                         for="lname"
                         class="col-sm-3 text-end control-label col-form-label"
-                        >Img</label
+                        >Hình ảnh</label
                       >
                       <div class="col-sm-9">
                         <input
                           type="file"  name = "img_upload"
                           class="form-control"
                           id="lname"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="lname"
+                        class="col-sm-3 text-end control-label col-form-label"
+                        >Ảnh mô tả</label
+                      >
+                      <div class="col-sm-9">
+                        <input
+                          type="file"  name = "images[]"
+                          class="form-control"
+                          id="lname"
+                          multiple="multiple"
                         />
                       </div>
                     </div>

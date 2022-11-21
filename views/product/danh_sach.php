@@ -84,23 +84,39 @@
           </div>
         </div>
 
+        
+
         <div class="container-fluid">
           
           <div class="row">
             <div class="col-12">
-              
-            
 
               <div class="card">
                 <div class="card-body">
                   <!-- <h5 class="card-title">Basic Datatable</h5> -->
                   
                   <div class="table-responsive">
-                    
+                  
+                     
+                    <div class="col-sm-12 col-md-6">
+                      <form class="search_product" action="index.php?url=loc_san_pham_theo_dm" method="post">
+                         
+                          <select name="id_category" id="">
+                              <option value="0" selected>Tất cả</option>
+                              <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
+                                  <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
+                              <?php } ?>
+                          </select>
+                          <input class="btn_submit" type="submit" name="listOk" value="GO">
+                      </form>
+                    </div>
+                      
+                  
+                  
+                
                     <table
                       id="zero_config"
-                      class="table table-striped table-bordered"
-                    >
+                      class="table table-striped table-bordered">
                     
                       <thead>
                         <tr>
@@ -116,6 +132,7 @@
                           <th>Hành động</th>
                         </tr>
                       </thead>
+
                       <tbody>
                         <?php foreach($ds_sp as $key => $value) :   ?>
                           <tr>
@@ -151,6 +168,7 @@
                         
                         </tbody>
                     </table>
+
                   </div>
                 </div>
               </div>

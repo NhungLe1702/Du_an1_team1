@@ -11,12 +11,12 @@
     <!-- Place favicon.ico in the root directory -->
     <link href="img/apple-touch-icon.png" type="img/x-icon" rel="shortcut icon">
     <!-- All css files are included here. -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/asset.css">
-    <link rel="stylesheet" href="css/nivo-slider.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="views/template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="views/template/css/asset.css">
+    <link rel="stylesheet" href="views/template/css/nivo-slider.css">
+    <link rel="stylesheet" href="views/template/css/jquery-ui.css">
+    <link rel="stylesheet" href="views/template/style.css">
+    <link rel="stylesheet" href="views/template/css/responsive.css">
     
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -39,42 +39,27 @@
                     <!--sigle-product-area-->
                     <div class="sigle-product-area">
                        <div class="row">
+                            
                             <div class="col-md-7 col-sm-6 col-xs-12">
                                  <div class="single-product-tab">
                                     <div class="zoomWrapper">
                                         <div id="img-1" class="zoomWrapper single-zoom">
                                             <a href="#">
-                                                <img id="zoom1" src="views/template/image/product/<?= $lay_sp['image'] ?>" data-zoom-image="views/template/image/product/<?php echo $lay_sp['image'] ?>" alt="big-1">
+                                                <img id="zoom1" src="views/template/image/product/<?= $lay_sp['image'] ?>" data-zoom-image="views/template/image/product/<?= $lay_sp['image'] ?>" alt="big-1">
                                             </a>
                                         </div>
-                                        <!-- <div class="single-zoom-thumb">
+
+                                        <div class="single-zoom-thumb">
                                             <ul class="s-tab-zoom" id="gallery_01">
-                                                <li>
-                                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="img/single-product/1.jpg" data-zoom-image="img/single-product/1.jpg"><img src="img/single-product/s1.png" alt="zo-th-1" /></a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#" class="elevatezoom-gallery" data-image="img/single-product/2.jpg" data-zoom-image="img/single-product/2.jpg"><img src="img/single-product/s2.png" alt="zo-th-2"></a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#" class="elevatezoom-gallery" data-image="img/single-product/3.jpg" data-zoom-image="img/single-product/3.jpg"><img src="img/single-product/s3.png" alt="ex-big-3" /></a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#" class="elevatezoom-gallery" data-image="img/single-product/4.jpg" data-zoom-image="img/single-product/4.jpg"><img src="img/single-product/s4.png" alt="zo-th-4"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="img/single-product/1.jpg" data-zoom-image="img/single-product/1.jpg"><img src="img/single-product/s1.png" alt="zo-th-1" /></a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#" class="elevatezoom-gallery" data-image="img/single-product/2.jpg" data-zoom-image="img/single-product/2.jpg"><img src="img/single-product/s2.png" alt="zo-th-2"></a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#" class="elevatezoom-gallery" data-image="img/single-product/3.jpg" data-zoom-image="img/single-product/3.jpg"><img src="img/single-product/s3.png" alt="ex-big-3" /></a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="#" class="elevatezoom-gallery" data-image="img/single-product/4.jpg" data-zoom-image="img/single-product/4.jpg"><img src="img/single-product/s4.png" alt="zo-th-4"></a>
-                                                </li>
+                                                
+                                                <?php foreach($lay_img as $key => $value ) :?>
+                                                    <li>
+                                                        <a href="#" class="elevatezoom-gallery active" data-update="" data-image="img/single-product/1.jpg" data-zoom-image="img/single-product/1.jpg"><img src="views/template/image/Anh_phu/<?= $value['image']?>" alt="zo-th-1" /></a>
+                                                    </li>
+
+                                                <?php endforeach;?>
                                             </ul>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div> 
                             </div>
@@ -96,13 +81,13 @@
                                     </div>
                                 </div>
 
-                                <form action="">
+                                <!-- <form action="">
                                     <div class="quantity">
                                         <span class="single-product-btn">
                                             <a href="index.php?url=dat_lich_client&id=<?=$lay_sp['id']?>">Đặt lịch xem xe</a>
                                         </span>
                                     </div>
-                                </form>
+                                </form> -->
 
                                 <div class="product-det-tab">
                                     <!-- Nav tabs stat-->
@@ -129,24 +114,6 @@
                                                     
                                                 </li>
                                             </ul>
-                                            <!-- <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>Năm sản xuất</th>
-                                                        <th>Xuất xứ</th>
-                                                        <th>Hãng xe</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td><?= $lay_sp['year'] ?></td>
-                                                        <td><?= $lay_sp['origin'] ?></td>
-                                                        <td><?= $lay_sp['id_category'] ?></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table> -->
-
                                         </div>
                                         
                                     </div>
@@ -156,10 +123,7 @@
                                     <img src="img/socul-img.png" alt="">
                                 </div>
                             </div>
-
-
                        </div>
-
 
                        <div class="related-product-area">
                            <div class="row">
@@ -176,22 +140,6 @@
                                         <div class="tab-content">
                                             <div style="line-height: 25px;" role="tabpanel" class="cont-pd tab-pane active" id="Description">
                                                 <?= $lay_sp['description'] ?>
-                                                <!-- <ul>
-                                                    <li > 
-                                                        <label>Năm sản xuất: <span><?= $lay_sp['year'] ?></span></label>
-                                                    </li>
-
-                                                    <li>
-                                                        <label>Xuất xứ: <span> <?= $lay_sp['origin'] ?></span></label>
-                                                    </li>
-
-                                                    <li>
-                                                    <label>Hãng xe: <span> <?= $lay_sp['id_category'] ?></span></label>
-                                                        
-                                                    </li>
-                                                </ul> -->
-                                                
-
                                             </div>
                                             
                                         </div>
@@ -204,8 +152,76 @@
                             </div>
                        </div>
 
-                      
+                       <div class="related-product-area" style="padding-top: 0;">
+                           <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="related-title">Đặt lịch xem xe</h4>
+                                </div>
+                           </div>
+                           <div class="row">
+                                <div class="single-product-page-list">
+                                    <div class="single_product-list">
+                                       
+                                            <div class="customer-register my-account">
+                                                <form method="post" class="register" action="index.php?url=register">
+                                                    <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
+                                                        <!-- <h2>Register</h2> -->
+                                                        
+                                                        <p class="form-row form-row-wide">
+                                                            <label for="reg_email">Họ tên <span class="required">*</span></label>
+                                                            <input placeholder="Họ và tên" type="text" class="input-text" name="name" id="reg_email" value="">
+                                                        </p>
+                                                        <!-- <p class="form-row form-row-wide">
+                                                            <label for="reg_email">User Name <span class="required">*</span></label>
+                                                            <input type="text" class="input-text" name="user_name" id="reg_email" value="">
+                                                        </p> -->
+                                                        <p class="form-row form-row-wide">
+                                                            <label for="reg_email">Địa chỉ <span class="required">*</span></label>
+                                                            <input placeholder="Địa chỉ" type="text" class="input-text" name="address" id="reg_email" value="">
+                                                        </p>
+                                                        <p class="form-row form-row-wide">
+                                                            <label for="reg_email">Số điện thoại <span class="required">*</span></label>
+                                                            <input placeholder="Số điện thoại" type="number" class="input-text" name="phone" id="reg_email" value="">
+                                                        </p>
+                                                        <p class="form-row form-row-wide">
+                                                            <label for="reg_email">Email <span class="required">*</span></label>
+                                                            <input placeholder="Nhập địa chỉ email chính xác để nhận mail từ website" type="email" class="input-text" name="email" id="reg_email" value="">
+                                                        </p>
 
+                                                        <p class="form-row form-row-wide">
+                                                            <label for="reg_email">Ngày xem <span class="required">*</span></label>
+                                                            <input  type="date" class="input-text" name="email" id="reg_email" value="">
+                                                        </p>
+                                                        <p class="form-row form-row-wide">
+                                                            <label for="reg_email">Giờ xem <span class="required">*</span></label>
+                                                            <input  type="time" class="input-text" name="email" id="reg_email" value="">
+                                                        </p>
+                                                        <!-- <p class="form-row form-row-wide">
+                                                            <label for="reg_password">Password <span class="required">*</span></label>
+                                                            <input type="password" class="input-text" name="password" id="reg_password">
+                                                        </p> -->
+                                                        <div style="left: -999em; position: absolute;">
+                                                            <label for="trap">Anti-spam</label>
+                                                            <input type="text" name="email_2" id="trap" tabindex="-1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
+                                                        <div class="actions-log" style="float:left;">
+                                                            <input  type="submit" class="button" name="register" value="Đặt lịch">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        
+
+                                    
+
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                       </div>
 
                        <div class="related-product-area">
                            <div class="row">
@@ -359,12 +375,12 @@
     <!-- Placed js at the end of the document so the pages load faster -->
     
     <!-- All js plugins included in this file. -->
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nivo.slider.pack.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mail.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/active.js"></script>
+    <script src="views/template/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="views/template/js/bootstrap.min.js"></script>
+    <script src="views/template/js/jquery.nivo.slider.pack.js"></script>
+    <script src="views/template/js/owl.carousel.min.js"></script>
+    <script src="views/template/js/mail.js"></script>
+    <script src="views/template/js/plugins.js"></script>
+    <script src="views/template/js/active.js"></script>
 
 </body>

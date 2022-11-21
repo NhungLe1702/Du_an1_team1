@@ -82,11 +82,11 @@
                           type="text"  name = "name_customer"
                           class="form-control"
                           id="lname"
-                          value="<?= $_SESSION['user']['name'] ?>" disabled
+                         
                         />
                       </div>
                     </div>
-
+                    <!-- value="<?= $_SESSION['user']['name'] ?>" disabled -->
                     <div class="form-group row">
                       <label
                         for="lname"

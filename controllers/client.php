@@ -14,11 +14,15 @@
 
     function chiTietSanPham() {
         if (isset($_GET['id'])) {
+
             $id = $_GET['id'];
             $id_category = $_GET['id_category'];
+            $lay_img = layAnhMoTa($id);
+           
             $lay_sp = layMotSanPham($id);
             $laysp_cung_loai = laySanPhamCungLoai($id, $id_category);
             $lay_ten_danh_muc = layTenDanhMuc($id_category);
+
         }
         require('views/client/single-product.php');
     }

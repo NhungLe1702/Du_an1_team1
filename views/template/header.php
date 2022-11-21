@@ -79,9 +79,9 @@ $user = $_SESSION['user'] ?? false;
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="search-area">
                             <div class="search-box-inner">
-                                <form action="#">
-                                    <input type="text" placeholder="Search">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                <form action="index.php?url=tim_kiem_SP" method="post">
+                                    <input type="text" placeholder="Search" name="kw">
+                                    <button type="submit" name="tim_kiem"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                                 <li><a href="#">Giới thiệu  </a></li>
                                                 
-                                                <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li>
+                                                <!-- <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li> -->
                                                 <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
                                                 <li><a href="index.php?url=contact">Liên hệ</a></li>
                                             </ul>   
@@ -142,9 +142,27 @@ $user = $_SESSION['user'] ?? false;
                                         <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                             <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
-                                            <li><a href="index.php?url=login">Sản Phẩm </a></li>
+
+                                            <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
+                                                <ul class="mega-menu">
+                                                    <!-- <li><a class="title" href="#">Feature pages</a> -->
+                                                        <ul class="mega_submenu" >
+                                                            <?php foreach(danhSachDanhMuc() as $key => $value) : ?>
+                                                                <li style="padding-left:  20px; color: black!important;">
+                                                                    <!-- <input id="Road" type="checkbox" name="Road"> -->
+                                                                    <label for="Road">
+                                                                        <a  href="index.php?url=ds_san_pham_theo_dm&id=<?php echo $value['id'] ?>"><?=$value['name']?></a>
+                                                                    </label>
+                                                                </li>
+                                                            <?php endforeach ?>    
+                                                       </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                             <li><a href="#">Giới thiệu  </a></li>
-                                            <li><a href="#">Pages</a></li>
+                                           
                                             <li><a href="index.php?url=login">Hỏi đáp</a></li>
                                             <li><a href="index.php?url=contact">Liên hệ</a></li>
                                         </ul>
