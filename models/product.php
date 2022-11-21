@@ -179,7 +179,6 @@
         $thong_ke_sp = getData($sql, FETCH_ALL);
         return $thong_ke_sp;
     }
-
     function timKiem($kw) {
         $sql = "SELECT * FROM product WHERE 1";
         if($kw != "") {

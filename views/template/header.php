@@ -96,6 +96,7 @@ $user = $_SESSION['user'] ?? false;
                 </div>
             </div>
         </div>
+
         <div class="header-bottom sticky-header">
             <div class="header-bottom-inner">
                 <div class="container">
