@@ -50,6 +50,7 @@
             ";
         }
         if (isset($_GET['id'])) {
+
             $id = $_GET['id'];
             $id_category = $_GET['id_category'];
             $lay_img = layAnhMoTa($id);
