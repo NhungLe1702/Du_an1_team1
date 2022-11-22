@@ -131,7 +131,7 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                                 <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
                                                 
-                                                <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li>
+                                                <!-- <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li> -->
                                                 <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
                                                 <li><a href="index.php?url=lien_he">Liên hệ</a></li>
                                             </ul>   
@@ -148,6 +148,29 @@ $user = $_SESSION['user'] ?? false;
                                             <li><a href="index.php?url=pages">Pages</a></li>
                                             <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
                                             <li><a href="index.php?url=lien_he">Liên hệ</a></li>
+
+                                            <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
+                                                <ul class="mega-menu">
+                                                    <!-- <li><a class="title" href="#">Feature pages</a> -->
+                                                        <ul class="mega_submenu" >
+                                                            <?php foreach(danhSachDanhMuc() as $key => $value) : ?>
+                                                                <li style="padding-left:  20px; color: black!important;">
+                                                                    <!-- <input id="Road" type="checkbox" name="Road"> -->
+                                                                    <label for="Road">
+                                                                        <a  href="index.php?url=ds_san_pham_theo_dm&id=<?php echo $value['id'] ?>"><?=$value['name']?></a>
+                                                                    </label>
+                                                                </li>
+                                                            <?php endforeach ?>    
+                                                       </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
+                                            <li><a href="#">Giới thiệu  </a></li>
+                                           
+                                            <li><a href="index.php?url=login">Hỏi đáp</a></li>
+                                            <li><a href="index.php?url=contact">Liên hệ</a></li>
                                         </ul>
                                     </nav>
                                 <?php } ?>    

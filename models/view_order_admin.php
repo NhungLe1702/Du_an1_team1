@@ -1,7 +1,6 @@
 <?php
    function view_donxem_admin(){
-    $sql = "
-        SELECT 
+    $sql = " SELECT 
             view_order.id,
             customer.name as customer_name,
             product.name as product_name,
@@ -28,8 +27,7 @@
   }
 
   function getDonXem($id) {
-    $sql = "
-        SELECT 
+    $sql = " SELECT 
             view_order.id,
             customer.name as customer_name,
             product.name as product_name,
@@ -44,9 +42,23 @@
     return getData($sql, FETCH_ONE);
   }
 
-  function xoaDonXem($id){
-    $sql = "DELETE FROM view_order WHERE id = '$id'";
-    $xoa_dx = pdo_execute($sql);
+    function xoaDonXem($id){
+        $sql = "DELETE FROM view_order WHERE id = '$id'";
+        $xoa_dx = pdo_execute($sql);
+    }
+
+    function locDonXem($id) {
+        if($id == 4) {
+            $sql = "SELECT * FROM view_order";
+        }
+        // echo $id;
+        $sql= "SELECT * FROM view_order WHERE status = '$id'";
+        $loc = getData($sql, FETCH_ALL);
+        
+        // echo '<pre>';
+        // var_dump($loc) ;
+        // die();
+        return $loc;
     }
 
 

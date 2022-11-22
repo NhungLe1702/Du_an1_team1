@@ -31,9 +31,6 @@
         
     }
 
-
-
-
     function hienThiKhachHang() {
         $ds = danhSachKhachHang();
         include('views/customer/danh_sach.php');

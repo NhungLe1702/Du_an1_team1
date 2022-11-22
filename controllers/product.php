@@ -38,6 +38,15 @@
         $ds_sp = timKiem($kw);
         include('views/client/shop-right-sidebar.php');
     }
+
+    function locSPtheoMaLoai() {
+        if(isset($_POST['listOk'])) {
+            $id_category = $_POST['id_category'];
+        } 
+        $ds_sp = locSPtheoLoai( $id_category);
+        include('views/product/danh_sach.php');
+    }
+
     
 
 ?>

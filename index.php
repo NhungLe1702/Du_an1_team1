@@ -8,7 +8,11 @@ require('controllers/customer.php');
 require('controllers/product.php');
 require('controllers/view_order_admin.php');
 
-include('views/template/header.php');
+
+    include('views/template/header.php');
+
+
+
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
@@ -37,8 +41,6 @@ switch ($url) {
         thongKeSanPham();
         break;
 
-      
-
     case 'chi_tiet_san_pham':
         chiTietSanPham();
         break;
@@ -56,6 +58,10 @@ switch ($url) {
     case 'gioi_thieu':
         gioi_thieu();
         break;
+    case 'contact':
+        contact();
+        break;
+    
     case 'dat_lich_client':
         formDatLich();
         break;
@@ -78,6 +84,10 @@ switch ($url) {
             xoaDonXem($id);
         }
         don_xem_admin();
+        break;
+
+    case 'loc_don_xem_theo_status':
+        locDonXemTheoStatus();
         break;
 
     //Khung giờ
@@ -118,8 +128,13 @@ switch ($url) {
     case 'sua_san_pham':
         suaSanPham() ;
         break;
+    
     case 'tim_kiem_SP':
         timKiemSanPham();
+        break;
+        
+    case 'loc_san_pham_theo_dm':
+        locSPtheoMaLoai();
         break;
     
 

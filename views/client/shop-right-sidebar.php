@@ -73,7 +73,7 @@
                                         <div class="single-product text-center">
                                             
                                             <div class="single-product-inner">
-                                                <div class="product-img" style="height: 170px ;">
+                                                <div class="product-img" style="height: 190px ;">
                                                     <img src="views/template/image/product/<?=$value['image'] ?>" alt="">
                                                 </div>
                                                 <div class="product-details">
