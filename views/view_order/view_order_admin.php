@@ -99,6 +99,20 @@
                   
                   <div class="table-responsive">
                     
+                    <div class="col-sm-12 col-md-6">
+                      <form class="search_product" action="index.php?url=loc_don_xem_theo_status" method="post">
+                         
+                          <select name="id_status" id="">
+                              <option value="4" selected>Tất cả</option>
+                              <option value="0">0. Chưa xem</option>
+                              <option value="1">1. Đã xem</option>
+                              <option value="2">2 .Đã đặt cọc</option>
+                              
+                          </select>
+                          <input class="btn_submit" type="submit" name="listOk" value="GO">
+                      </form>
+                    </div>
+
                     <table
                       id="zero_config"
                       class="table table-striped table-bordered"
@@ -117,18 +131,23 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach($don_xem as $key => $value) :   ?>
-                          <tr>
+                        <?php foreach(view_donxem_admin() as $key => $value) :   ?>
+                          <?php $mangStatus = getStatus( $value['status'])?>
+                          <tr style="background-color:<?php echo $mangStatus[1]?>;">
+                            
                             <td><?= $value['id']?></td>
                             <td><?= $value['customer_name']?></td>
                             <td><?= $value['product_name']?></td>
                             <td><?= $value['time']?></td>
                             <td><?= $value['date']?></td>
-                            <td><?= getStatus( $value['status'])?></td>
-                            <td><?= $value['created_at']?></td>
-                          
+
+                           
+                            <td >
+                              <?= $mangStatus[0]  ?>
+                            </td>
                             
-                            <td style="color: white">
+                            <td><?= $value['created_at']?></td>
+                            <td >
                               <button style="border: none;margin-top:6px ; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
                                   <a href="index.php?url=update_view_order&id=<?= $value['id'] ?>">Sửa</a>
                               </button>

@@ -9,8 +9,8 @@ if(!function_exists('getConnect')) {
     function getConnect() {
         $connect = new PDO(
             'mysql:host=localhost;dbname=Team1_web17309;',
-            'root',
-            ''
+            'nhunglt',
+            '123456'
         );
         return $connect;
     }

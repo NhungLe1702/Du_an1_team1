@@ -41,8 +41,6 @@ switch ($url) {
         thongKeSanPham();
         break;
 
-      
-
     case 'chi_tiet_san_pham':
         chiTietSanPham();
         break;
@@ -53,7 +51,12 @@ switch ($url) {
 
     case 'lien_he':
         contact();
-        break;    
+        break;  
+        
+    case 'contact':
+    
+        break;
+        
     case 'dat_lich_client':
         formDatLich();
         break;
@@ -78,8 +81,8 @@ switch ($url) {
         don_xem_admin();
         break;
 
-    case 'contact':
-        
+    case 'loc_don_xem_theo_status':
+        locDonXemTheoStatus();
         break;
 
     //Khung giờ

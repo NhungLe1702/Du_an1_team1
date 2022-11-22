@@ -51,11 +51,9 @@
 
                 $target_dir = "views/template/image/Anh_phu/";
                 // $target_file = $target_dir . $images_name;
-
                 // echo '<pre>';
                 // var_dump($_FILES["images"]["tmp_name"]);
                 // die();
-
                 foreach($images_name as $key => $value) {
                     move_uploaded_file($_FILES["images"]["tmp_name"][$key], $target_dir.$value);
                 }
@@ -72,22 +70,10 @@
                 // $query = $conn -> prepare($sql);
                 // $query -> execute();
                 // $last_id = $conn->lastInsertId();
-
                 // echo $last_id;
-
-                // $last_id = $add_sp->lastInsertId();
-
-
-
-                // $sql_last_id = "SELECT last_insert_id()";
-                // $last_id =  getData($sql_last_id, FETCH_ALL);
-
                 // echo '<pre>';
                 // var_dump($images_name);
                 // die();
-
-            
-                
                 foreach($images_name as $key => $value) {
                     $sql = "INSERT INTO image_product(id_product, image) VALUES($last_id, '$value')";
                     $add_img = pdo_execute($sql);
@@ -189,7 +175,7 @@
     }
 
     function locSPtheoLoai( $id_category) {
-        $sql = "SELECT * FROM product WHERE 1";
+        $sql = "SELECT * FROM product ";
         if($id_category > 0) {
             $sql= "SELECT * FROM product WHERE id_category = '$id_category'";
         }
