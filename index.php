@@ -50,6 +50,12 @@ switch ($url) {
     case 'lien_he':
         contact();
         break;    
+    case 'pages':
+        pages();
+        break;
+    case 'gioi_thieu':
+        gioi_thieu();
+        break;
     case 'dat_lich_client':
         formDatLich();
         break;

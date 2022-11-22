@@ -38,9 +38,16 @@
 
     function contact(){
         viewContact();
-        include('views/client/contact.php');
+        include('views/client/lien_he.php');
     }
-
+    function pages(){
+        showpages();
+        include('views/client/pages.php');
+    }
+    function gioi_thieu(){
+        showgioithieu();
+        include('views/client/gioithieu.php');
+    }
     function formDatLich() {
         if (isset($_GET['id'])  ) {
             $id = $_GET['id'];

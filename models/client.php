@@ -9,7 +9,12 @@
     function viewContact(){
     
     }
+    function showpages(){
 
+    }
+    function showgioithieu(){
+        
+    }
     // function them_don_xem($customer_id, $product_id, $time, $date) {
     //     $sql = "
     //         INSERT INTO view_order (customer_id, product_id, time, date)
