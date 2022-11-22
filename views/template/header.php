@@ -143,7 +143,7 @@ $user = $_SESSION['user'] ?? false;
                                         <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                             <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
-                                            <li><a href="index.php?url=login">Sản Phẩm </a></li>
+                                            <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                             <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
                                             <li><a href="index.php?url=pages">Pages</a></li>
                                             <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
@@ -166,11 +166,7 @@ $user = $_SESSION['user'] ?? false;
                                                 </ul>
                                             </li>
 
-                                            <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
-                                            <li><a href="#">Giới thiệu  </a></li>
-                                           
-                                            <li><a href="index.php?url=login">Hỏi đáp</a></li>
-                                            <li><a href="index.php?url=contact">Liên hệ</a></li>
+                        
                                         </ul>
                                     </nav>
                                 <?php } ?>    
