@@ -5,15 +5,15 @@ define('FETCH_ALL', 2);
 define('FETCH_ONE', 1);
 define('NOT_FETCH', 0);
 
-function getConnect() {
-    $connect = new PDO(
-
-        'mysql:host=localhost;dbname=duan1;',
-        'root',
-        ''
-
-    );
-    return $connect;
+if(!function_exists('getConnect')) {
+    function getConnect() {
+        $connect = new PDO(
+            'mysql:host=localhost;dbname=duan1;',
+            'root',
+            ''
+        );
+        return $connect;
+    }
 }
 
 // Nhận vào tham số là câu truy vấn, tham số thứ 2 là cách lấy dũ liệu
@@ -39,6 +39,23 @@ function pdo_execute($sql){
         $conn = getConnect();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
+    }
+    catch(PDOException $e){
+        throw $e;
+    }
+    finally{
+        unset($conn);
+    }
+} 
+
+function pdo_execute_get_last_id($sql){
+    //$sql_args = array_slice(func_get_args(), 1);
+    try{
+        $conn = getConnect();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        return $conn->lastInsertId();
+    
     }
     catch(PDOException $e){
         throw $e;

@@ -48,7 +48,7 @@
                 <form class="form-horizontal" action="index.php?url=sua_san_pham" method="POST">
                   <div class="card-body">
                     <h4 class="card-title" style="text-align: center;">Chỉnh sửa sản phẩm</h4>
-
+                    <input type="hidden" name="id" value="<?= $lay_mot['id'] ?>">
                     <div class="form-group row">
                       <label
                         for="fname"
@@ -60,7 +60,7 @@
                           type="text"
                           class="form-control"
                           id="fname"
-                          name="id"
+                          disabled
                           value="<?= $lay_mot['id'];?>" 
                         />
                       </div>
@@ -95,6 +95,8 @@
                         <img name="img_upload" src="views/template/image/product/<?= $lay_mot['image'] ?>" alt="">
                       </div>
                     </div>
+
+                   
 
                     <div class="form-group row">
                       <label

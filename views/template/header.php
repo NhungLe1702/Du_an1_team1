@@ -56,7 +56,8 @@ $user = $_SESSION['user'] ?? false;
                                     <li>
                                        <a href="index.php?url=edit_thongtin&id=<?= $user['id'] ?>"> Hello <?= $user['name'] ?> </a>
                                     </li>
-                                    <li><a href="index.php?url=logout">Log Out</a></li>
+                                    
+                                    <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
                                 <?php else : ?>
                                     <li><a href="index.php?url=register">My Account</a></li>
                                 <?php endif; ?>
@@ -78,9 +79,9 @@ $user = $_SESSION['user'] ?? false;
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="search-area">
                             <div class="search-box-inner">
-                                <form action="#">
-                                    <input type="text" placeholder="Search">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                <form action="index.php?url=tim_kiem_SP" method="post">
+                                    <input type="text" placeholder="Search" name="kw">
+                                    <button type="submit" name="tim_kiem"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -95,6 +96,7 @@ $user = $_SESSION['user'] ?? false;
                 </div>
             </div>
         </div>
+
         <div class="header-bottom sticky-header">
             <div class="header-bottom-inner">
                 <div class="container">
@@ -116,9 +118,9 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=hien_thi_san_pham">Sản Phẩm</a></li>
                                                 <li><a href="index.php?url=khach_Hang">Khách hàng</a></li>
                                                 <!-- <li><a href="index.php?url=khung_gio">Khung giờ</a></li> -->
-                                                <li><a href="#">Đơn Xem</a></li>
+                                                <li><a href="index.php?url=don_xem_admin">Đơn Xem</a></li>
                                                 <li><a href="#">Bình luận</a></li>
-                                                <li><a href="#">Thống kê</a></li>
+                                                <li><a href="index.php?url=thong_ke_san_pham">Thống kê</a></li>
                                             </ul>
                                         </nav>
                                     <?php } else { ?>
@@ -127,10 +129,11 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                                 <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
                                                 <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
-                                                <li><a href="#">Giới thiệu  </a></li>
-                                                <li><a href="#">Pages</a></li>
-                                                <li><a href="index.php?url=q_a">Hỏi đáp</a></li>
-                                                <li><a href="index.php?url=contact">Liên hệ</a></li>
+                                                <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
+                                                
+                                                <!-- <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li> -->
+                                                <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
+                                                <li><a href="index.php?url=lien_he">Liên hệ</a></li>
                                             </ul>   
                                         </nav>
                                     <?php } ?>
@@ -140,11 +143,30 @@ $user = $_SESSION['user'] ?? false;
                                         <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                             <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
-                                            <li><a href="index.php?url=login">Sản Phẩm </a></li>
-                                            <li><a href="#">Giới thiệu  </a></li>
-                                            <li><a href="#">Pages</a></li>
-                                            <li><a href="index.php?url=login">Hỏi đáp</a></li>
-                                            <li><a href="index.php?url=contact">Liên hệ</a></li>
+                                            <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
+                                            <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
+                                            <li><a href="index.php?url=pages">Pages</a></li>
+                                            <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
+                                            <li><a href="index.php?url=lien_he">Liên hệ</a></li>
+
+                                            <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
+                                                <ul class="mega-menu">
+                                                    <!-- <li><a class="title" href="#">Feature pages</a> -->
+                                                        <ul class="mega_submenu" >
+                                                            <?php foreach(danhSachDanhMuc() as $key => $value) : ?>
+                                                                <li style="padding-left:  20px; color: black!important;">
+                                                                    <!-- <input id="Road" type="checkbox" name="Road"> -->
+                                                                    <label for="Road">
+                                                                        <a  href="index.php?url=ds_san_pham_theo_dm&id=<?php echo $value['id'] ?>"><?=$value['name']?></a>
+                                                                    </label>
+                                                                </li>
+                                                            <?php endforeach ?>    
+                                                       </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                        
                                         </ul>
                                     </nav>
                                 <?php } ?>    

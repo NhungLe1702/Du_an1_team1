@@ -25,5 +25,29 @@
         $up = hamSuaSanPham();
     }
 
+    function thongKeSanPham() {
+        $tk = hamthongKeSanPham();
+        include('views/product/thong_ke.php');
+    }
+
+    function timKiemSanPham() {
+        if(isset($_POST['tim_kiem'])) {
+            $kw = $_POST['kw'];
+            
+        } 
+        $ds_sp = timKiem($kw);
+        include('views/client/shop-right-sidebar.php');
+    }
+
+    function locSPtheoMaLoai() {
+        if(isset($_POST['listOk'])) {
+            $id_category = $_POST['id_category'];
+        } 
+        $ds_sp = locSPtheoLoai( $id_category);
+        include('views/product/danh_sach.php');
+    }
+
+    
+
 ?>
 

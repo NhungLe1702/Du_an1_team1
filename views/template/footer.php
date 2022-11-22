@@ -95,5 +95,12 @@
             </div>
         </div>
     </div>
+    <script>
+        function confirmLogOut() {
+            if (confirm('Đăng xuất?')) {
+                window.location.href = 'index.php?url=logout';
+            }
+        }
+    </script>
 </body>
 </html>

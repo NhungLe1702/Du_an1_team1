@@ -1,18 +1,24 @@
 <?php
 session_start();
+require_once('models/db.php');
+
+
+require 'libs/PHPMailer/src/Exception.php';
+require 'libs/PHPMailer/src/PHPMailer.php';
+require 'libs/PHPMailer/src/SMTP.php';
+require 'libs/sendMail.php';
 
 require('controllers/client.php');
 require('controllers/category.php');
 require('controllers/customer.php');
 require('controllers/product.php');
-<<<<<<< HEAD
-require('controllers/hour.php');
+require('controllers/view_order_admin.php');
 
-=======
-require('controllers/contact.php');
-require('controllers/q_a.php');
->>>>>>> c58240846f792931c33e197abe24edb282e5773c
-include('views/template/header.php');
+
+    include('views/template/header.php');
+
+
+
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
@@ -28,9 +34,17 @@ switch ($url) {
     case 'trang_chu':
         hienThiTrangChu();
         break;
+    
+    case 'hoi_dap':
+        hoiDap();
+        break;  
 
     case 'san_pham':
         sanPhamClient();
+        break;
+
+    case 'thong_ke_san_pham':
+        thongKeSanPham();
         break;
 
     case 'chi_tiet_san_pham':
@@ -39,6 +53,49 @@ switch ($url) {
 
     case 'ds_san_pham_theo_dm':
         laySPtheoMaLoai();
+        break;
+
+    case 'lien_he':
+        contact();
+        break;    
+    case 'pages':
+        pages();
+        break;
+    case 'gioi_thieu':
+        gioi_thieu();
+        break;
+    case 'contact':
+        contact();
+        break;
+    // case 'xu_ly_dat_lich':
+    //     xuLyDatLich();
+    //     break;
+    case 'dat_lich_client':
+        formDatLich();
+        break;
+
+    // case 'tao_don_xem_client':
+    //     tao_don_xem();
+    //     break;
+
+    case 'don_xem_admin':
+        don_xem_admin();
+        break;
+
+    case 'update_view_order':
+        update_view_order();
+        break;
+
+    case 'xoa_don_xem':
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            xoaDonXem($id);
+        }
+        don_xem_admin();
+        break;
+
+    case 'loc_don_xem_theo_status':
+        locDonXemTheoStatus();
         break;
 
     //Khung giờ
@@ -78,6 +135,14 @@ switch ($url) {
 
     case 'sua_san_pham':
         suaSanPham() ;
+        break;
+    
+    case 'tim_kiem_SP':
+        timKiemSanPham();
+        break;
+        
+    case 'loc_san_pham_theo_dm':
+        locSPtheoMaLoai();
         break;
     
 
@@ -128,9 +193,7 @@ switch ($url) {
         forget();
         break;
 
-    case 'contact':
-        contact();
-        break;
+    
 
     // quan li khach hang cua admin
 
@@ -146,9 +209,7 @@ switch ($url) {
         hienThiKhachHang();
         break;
 
-    case 'q_a':
-        queans();
-        break;       
+         
 
     default:
         echo 'Đường dẫn không tồn tại';
