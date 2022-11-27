@@ -25,7 +25,7 @@ $user = $_SESSION['user'] ?? false;
                         <div class="currency">
                             <ul>
                                 <li>
-                                    <a href="#">$ USD <i class="fa fa-caret-down"></i></a>
+                                    <a href="#">₫ VND <i class="fa fa-caret-down"></i></a>
                                     <ul class="currency-menu">
                                         <li><a href="#">$ USD</a></li>
                                         <li><a href="#">€ EUR</a></li>
@@ -37,7 +37,7 @@ $user = $_SESSION['user'] ?? false;
                         <div class="language">
                             <ul>
                                 <li>
-                                    <a href="#"><img src="views/template/img/currency/c1.png" alt=""> English <i class="fa fa-caret-down"></i></a>
+                                    <a href="#"><img src="views/template/img/currency/c5.png" alt="" style="width: 5%" > VIET NAM <i class="fa fa-caret-down"></i></a>
                                     <ul class="language-menu">
                                         <li><a href="#"><img src="views/template/img/currency/c1.png" alt=""> English</a></li>
                                         <li><a href="#"><img src="views/template/img/currency/c2.png" alt=""> Arabic</a></li>
@@ -142,9 +142,13 @@ $user = $_SESSION['user'] ?? false;
                                     <nav>
                                         <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
+<<<<<<< HEAD
                                             <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
                                             
 
+=======
+                                            <li><a href="index.php?url=trang_chu">Trang chủ</a></li>    
+>>>>>>> 7954aa566cbf378906278c8d085062ad704b4320
                                             <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
                                                 <ul class="mega-menu">
                                                     <!-- <li><a class="title" href="#">Feature pages</a> -->
@@ -166,6 +170,10 @@ $user = $_SESSION['user'] ?? false;
                                             <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
                                             <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
                                             <li><a href="index.php?url=lien_he">Liên hệ</a></li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7954aa566cbf378906278c8d085062ad704b4320
                                         </ul>
                                     </nav>
                                 <?php } ?>    
