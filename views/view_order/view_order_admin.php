@@ -68,9 +68,9 @@
               <!-- <h4 class="page-title">Danh sách</h4> -->
               <div class="button_insert">
 
-                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                <!-- <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
                   <a href="index.php?url=them_san_pham">Thêm mới</a>
-                </button>
+                </button> -->
               </div>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
@@ -140,12 +140,8 @@
                             <td><?= $value['product_name']?></td>
                             <td><?= $value['time']?></td>
                             <td><?= $value['date']?></td>
-
-                           
                             <td >
                               <?= $mangStatus[0]  ?>
-                            </td>
-                            
                             <td><?= $value['created_at']?></td>
                             <td >
                               <button style="border: none;margin-top:6px ; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
@@ -156,10 +152,17 @@
                                   <a href="index.php?url=xoa_don_xem&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a>
                               </button>
                               
+                              <?php if($mangStatus[0] == 'Đã đặt cọc' ) {?>
+                                <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
+                                    <a id='btn'  href="index.php?url=in_hoa_don&id=<?= $value['id'] ?>" >In hoá đơn </a>
+                                  
+                                    <!-- <input type='button' id='btn'  value='In hoá đơn' onclick='printDiv();'> -->
+                                </button>
+                              <?php }?>
+
                               <!-- <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
                                   <a href="index.php?url=form_them_khung_gio&id=<?= $value['id'] ?>" >Thêm giờ </a>
                               </button> -->
-
                             </td>
                           
                           </tr>
@@ -179,8 +182,70 @@
       </div>
       
     </div>
-    
-    
+
+    <!-- <div style="visibility: hidden" id='DivIdToPrint'>
+
+        <style type="text/css">
+        body{
+        font-size:16px;
+                line-height:24px;
+                font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+                color:#555;
+        }
+        .table_border tr td{
+                border:1px solid #555 !important;
+            }
+        </style>    
+        <table cellpadding="0" cellspacing="0">
+            <table style="border:0;width:100%;">
+            <tr><td colspan="2" align="center"><b>SHREE RANG AUTO CARE</b></td></tr>	
+            <tr><td colspan="2" align="center">Dhanori Char Rasta, Gandevi, Navsari, 396360</td></tr>
+            <tr><td colspan="2" align="center"><b>Contact:</b> +91 90994 95757</td></tr>
+            <tr><td><b>Cust.Name:</b> Divyesh Patel </td><td align="right"><b>Bill No.:</b> # 12345</td></tr>
+            <tr><td><b>Mob.No:</b> 9726820585 </td><td align="right"><b>Bill Dt.:</b> </td></tr>
+            <tr><td colspan="2" align="center"><b>INVOICE</b></td></tr>
+            <tr class="heading" style="background:#eee;border-bottom:1px solid #ddd;font-weight:bold;">
+                <td>
+                    Type of work
+                </td>
+                <td align="right">
+                    Amount
+                </td>
+            </tr>
+              <tr class="itemrows">
+                  <td>
+                      <b>Washing</b>
+                      <br>
+                      <i>This is test</i>
+                  </td>
+                  <td align="right">
+                      500
+                  </td>
+              </tr>
+            <tr class="total">
+                <td></td>
+                <td align="right">
+                   <b>Grand&nbsp;Total&nbsp;:&nbsp;500</b>
+                </td>
+            </tr>
+			<tr><td colspan="2" align="center">Thank You ! Visit Again</td></tr>
+            </table>
+        </table>
+		
+				
+    </div>
+    <script type="text/javascript">
+      function printDiv() {
+        var divToPrint = document.getElementById('DivIdToPrint');
+        var newWin = window.open('', 'Print-Window');
+        newWin.document.open();
+        newWin.document.write('<html><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
+        newWin.document.close();
+        setTimeout(function() {
+          newWin.close();
+        }, 10);
+      }
+    </script> -->
     <script src="views/template/css/assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="views/template/css/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

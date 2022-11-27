@@ -43,7 +43,7 @@
 
             </ul>
         </div>
-        <div class="categoryies-option color-box">
+        <!-- <div class="categoryies-option color-box">
             <h4>color</h4>
             <ul>
                 <li>
@@ -109,7 +109,7 @@
                     <label for="stock">In stock <span> (30)</span></label>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

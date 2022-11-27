@@ -44,17 +44,17 @@
   function getStatus($status) {
     if($status == 0) {
       // Chưa xem là màu xanh
-      return ['Chưa xem', '#B5DA2F'];
+      return ['Chưa xem', '#accf2db8'];
     }
 
     if($status == 1) {
       // Đã xem là màu vàng
-      return ['Đã xem', '#FEFE33'];
+      return ['Đã xem', '#fefe34b0'];
     }
 
     if($status == 2) {
       // Đã đặt cọc là màu đỏ
-      return ['Đã đặt cọc', '#ff6f69'];
+      return ['Đã đặt cọc', '#f26a649e'];
     }
    }
 
@@ -62,9 +62,23 @@
     if(isset($_POST['listOk'])) {
       $id = $_POST['id_status'];
     }
+
+    echo $id;
+    die();
     
     $loc_dx = locDonXem($id);
     include('views/view_order/view_order_admin.php');
    }
+
+   function inHoaDon() {
+    if (isset($_GET['id'])) {
+      $id = $_GET['id'];
+      $hoa_don = hoaDon($id);
+    }
+    include('views/view_order/bill.php');
+    
+   }
+
+   
 
 ?>
