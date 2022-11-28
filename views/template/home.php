@@ -141,7 +141,7 @@
                     <div class="featured-containet">
                         <h2>The first all fat-tire, <br/>bullfrog trike is here.</h2>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies tesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, et a, venenatis enim justo, rhoncus ut, et a, venenatis.</p>
-                        <a href="#">Shop Now</a>
+                        <a href="index.php?url=san_pham">Shop Now</a>
                     </div>
                 </div>
             </div>

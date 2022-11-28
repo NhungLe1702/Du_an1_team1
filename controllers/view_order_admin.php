@@ -23,6 +23,9 @@
         cap_nhat_view_order($viewOrderId, $status);
     }
       $don_xem = view_donxem_admin();
+      // echo "<pre>";
+      // echo print_r($don_xem);
+      // die();
       include('views/view_order/view_order_admin.php');
    }
 
@@ -55,6 +58,11 @@
     if($status == 2) {
       // Đã đặt cọc là màu đỏ
       return ['Đã đặt cọc', '#ff6f69'];
+    }
+
+    if($status == 3) {
+      // Đã đặt cọc là màu đỏ
+      return ['Đã Mua', '#87CEFA'];
     }
    }
 

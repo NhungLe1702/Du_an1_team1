@@ -106,7 +106,8 @@
                               <option value="4" selected>Tất cả</option>
                               <option value="0">0. Chưa xem</option>
                               <option value="1">1. Đã xem</option>
-                              <option value="2">2 .Đã đặt cọc</option>
+                              <option value="2">2. Đã đặt cọc</option>
+                              <option value="3">3. Đã Mua</option>
                               
                           </select>
                           <input class="btn_submit" type="submit" name="listOk" value="GO">
@@ -201,7 +202,11 @@
       /****************************************
        *       Basic Table                   *
        ****************************************/
-      $("#zero_config").DataTable();
+      $("#zero_config").DataTable(
+        {
+          sorting: false
+        }
+      );
     </script>
   </body>
 </html>

@@ -38,7 +38,7 @@
             $sql = "SELECT * FROM customer WHERE user_name = '$user_name' and password = '$password'";
             $user = getData($sql, FETCH_ONE);
             if (!empty($user)) {
-                $_SESSION['user'] = $user;
+                $_SESSION['user'] = $user; // nếu có user thì lưu vào biến SEESION 
                 echo ('<script>window.location.href="index.php?url=trang_chu"</script>');
                 exit();
             } else {
