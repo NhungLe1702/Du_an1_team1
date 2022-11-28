@@ -161,62 +161,64 @@
                            <div class="row">
                                 <div class="single-product-page-list">
                                     <div class="single_product-list">
-                                       
-                                            <div class="customer-register my-account">
-                                                <form method="post" class="register">
-                                                    <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
-                                                        <!-- <h2>Register</h2> -->
-                                                        <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="reg_email">Họ tên <span class="required">*</span></label>
-                                                            <input placeholder="Họ và tên" type="text" class="input-text" name="name" id="reg_email" value="<?= $_SESSION['user']['name'] ?? '' ?>">
-                                                        </p>
-                                                        <!-- <p class="form-row form-row-wide">
-                                                            <label for="reg_email">User Name <span class="required">*</span></label>
-                                                            <input type="text" class="input-text" name="user_name" id="reg_email" value="">
-                                                        </p> -->
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="reg_email">Địa chỉ <span class="required">*</span></label>
-                                                            <input placeholder="Địa chỉ" type="text" class="input-text" name="address" id="reg_email" value="<?= $_SESSION['user']['address'] ?? '' ?>">
-                                                        </p>
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="reg_email">Số điện thoại <span class="required">*</span></label>
-                                                            <input placeholder="Số điện thoại" type="number" class="input-text" name="phone" id="reg_email" value="<?= $_SESSION['user']['phone'] ?? '' ?>">
-                                                        </p>
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="reg_email">Email <span class="required">*</span></label>
-                                                            <input placeholder="Nhập địa chỉ email chính xác để nhận mail từ website" type="email" class="input-text" name="email" id="reg_email" value="<?= $_SESSION['user']['email'] ?? '' ?>">
-                                                        </p>
+                                        <div class="customer-register my-account">
+                                            <form method="post" class="register" id="form-1">
+                                                <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
+                                                    <!-- <h2>Register</h2> -->
+                                                    <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
+                                                    <p class="form-row form-row-wide">
+                                                        <label for="name">Họ tên </label>
+                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                    </p>
+                                                    <!-- <p class="form-row form-row-wide">
+                                                        <label for="reg_email">User Name <span class="required">*</span></label>
+                                                        <input type="text" class="input-text" name="user_name" id="reg_email" value="">
+                                                    </p> -->
+                                                    <p class="form-row form-row-wide">
+                                                        <label for="address">Địa chỉ </label>
+                                                        <input id="address" placeholder="Địa chỉ" type="text" class="input-text" name="address"  value="<?= $_SESSION['user']['address'] ?? '' ?>" onblur="checkDiaChi()">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                    </p>
+                                                    <p class="form-row form-row-wide">
+                                                        <label for="phone">Số điện thoại </label>
+                                                        <input id="phone" placeholder="Số điện thoại" type="number" class="input-text" name="phone"  value="<?= $_SESSION['user']['phone'] ?? '' ?>" onblur="checkPhone()">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                    </p>
+                                                    <p class="form-row form-row-wide">
+                                                        <label for="email">Email </label>
+                                                        <input id="email" placeholder="Nhập địa chỉ email chính xác để nhận mail từ website" type="email" class="input-text" name="email"  value="<?= $_SESSION['user']['email'] ?? '' ?>" onblur="checkEmail()">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                    </p>
 
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="reg_email">Giờ xem <span class="required">*</span></label>
-                                                            <input  type="time" class="input-text" name="time" id="reg_email" value="">
-                                                        </p>
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="reg_email">Ngày xem <span class="required">*</span></label>
-                                                            <input  type="date" class="input-text" name="date" id="reg_email" value="">
-                                                        </p>
-                                                        <!-- <p class="form-row form-row-wide">
-                                                            <label for="reg_password">Password <span class="required">*</span></label>
-                                                            <input type="password" class="input-text" name="password" id="reg_password">
-                                                        </p> -->
-                                                        <div style="left: -999em; position: absolute;">
-                                                            <label for="trap">Anti-spam</label>
-                                                            <input type="text" name="email_2" id="trap" tabindex="-1">
-                                                        </div>
+                                                    <p class="form-row form-row-wide">
+                                                        <label for="date">Ngày xem </label>
+                                                        <input id="date"  type="date" class="input-text" name="date"  value="" onblur="checkDate()">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                    </p>
+
+                                                    <p class="form-row form-row-wide">
+                                                        <label for="time">Giờ xem </label>
+                                                        <input id="hour"  type="time" class="input-text" name="time"  value="" onblur="checkTime()">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                    </p>
+                                                    <!-- <p class="form-row form-row-wide">
+                                                        <label for="reg_password">Password <span class="required">*</span></label>
+                                                        <input type="password" class="input-text" name="password" id="reg_password">
+                                                    </p> -->
+                                                    <div style="left: -999em; position: absolute;">
+                                                        <label for="trap">Anti-spam</label>
+                                                        <input type="text" name="email_2" id="trap" tabindex="-1">
                                                     </div>
-                                                    <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
-                                                        <div class="actions-log" style="float:left;">
-                                                            <input  type="submit" class="button" name="dat_lich" value="Đặt lịch">
-                                                        </div>
+                                                </div>
+                                                
+                                                <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
+                                                    <div class="actions-log" style="float:left;">
+                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch">
                                                     </div>
-                                                </form>
-                                            </div>
-                                        
-
-                                    
-
-                                        
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                     
                                 </div>
@@ -268,7 +270,7 @@
                                                     </div>
                                                     <div class="product-hover">
                                                         <ul>
-                                                            <!-- <li><a href="#" class="add-to-cart">Add to cart</a></li> -->
+                                                            
                                                             <li><a title="Add to Wishlist" href="#" class="add-to-cart"><i class="fa fa-check-square-o"></i></a></li>
                                                             <li><a title="Add to compare" href="#" class="add-to-cart"><i class="fa fa-signal"></i></a></li>
                                                         </ul>
@@ -286,22 +288,133 @@
                             </div>
                        </div>
                     </div>
-                    <!--sigle-product-area-->
                 </div>
-
-
-
-                
 
                 <?php include('views/template/aside.php') ?>
             </div>
         </div>
     </div>
-    <!--single-product-area end-->
-   
-    
-    <!-- Placed js at the end of the document so the pages load faster -->
-    
+
+    <script>
+
+        function checkTen() {
+            var name = document.querySelector('#name');
+            
+            var ten = document.getElementById("name").value;
+
+            let parent = name.parentElement;
+            let span = parent.querySelector('span');
+
+            if(ten == "" || ten == null) {
+                parent.classList.add('error');
+                span.innerText = 'Vui lòng nhập thông tin';
+            } else {
+                span.innerText = '';
+            }
+        }
+
+        function checkDiaChi() {
+            // Kiểm tra địa chỉ ko được trống
+            var address = document.querySelector('#address');
+            var dia_chi = document.getElementById("address").value;
+
+            let parent = address.parentElement;
+            let span = parent.querySelector('span');
+
+            if(dia_chi == "" || dia_chi == null) {
+                parent.classList.add('error');
+                span.innerText = 'Vui lòng nhập thông tin';
+            } else {
+                span.innerText = '';
+            }
+        }
+
+        function checkPhone() {
+            // Kiểm tra số điện thoại
+            var phone = document.querySelector('#phone');
+            var sdt = document.getElementById("phone").value;
+            var sdt_l = document.getElementById("phone");
+            let parent = phone.parentElement;
+            let span = parent.querySelector('span');
+
+            if(sdt == "" || sdt == null) {
+                parent.classList.add('error');
+                span.innerText = 'Vui lòng nhập thông tin';
+            } else {
+                span.innerText = '';
+            } 
+        }
+
+        function checkEmail() {
+            var email = document.querySelector('#email');
+            var dc_email = document.getElementById("email").value;
+            let parent = email.parentElement;
+            let span = parent.querySelector('span');
+            ktEmail = /^\w(\.?[\w+])*@\w(\.?[\w+])*\.[a-z]{2,4}$/i;
+
+            if(dc_email == "" || dc_email == null) {
+                parent.classList.add('error');
+                span.innerText = 'Vui lòng nhập thông tin';
+            } else {
+                if(!ktEmail.test(dc_email)) {
+                   span.innerText = 'Bạn nhập không đúng định dạng email!';
+                } else {
+                    span.innerText = '';
+                }
+               
+            } 
+        }
+
+        function checkDate() {
+            var date = document.querySelector('#date');
+            var ngay = document.getElementById("date").value;
+
+            let parent = date.parentElement;
+            let span = parent.querySelector('span');
+
+            var today = new Date();
+            var date_now = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            if(ngay < date_now) {
+                parent.classList.add('error');
+                span.innerText = 'Ngày không hợp lệ';
+            } else {
+                span.innerText = '';
+            }
+        }
+
+        function checkTime() {
+            var hour = document.querySelector('#hour');
+            var gio = document.getElementById("hour").value;
+
+            let parent = hour.parentElement;
+            let span = parent.querySelector('span');
+
+            var today = new Date();
+            var time = today.getHours() + ":" + today.getMinutes() ;
+            // span.innerText = time;
+            // span.innerText = gio;
+
+            if(gio <= time) {
+                parent.classList.add('error');
+                span.innerText = 'Giờ không hợp lệ';
+            } else {
+                span.innerText = '';
+            }
+        }
+
+        function checkBtn() {
+
+        
+            if(span.innerText != '') {
+                document.getElementById("submit_btn").disable = true;
+            }
+        
+        }
+
+        
+     </script>
+
+    <script src="views/template/js/validator.js"></script>
     <!-- All js plugins included in this file. -->
     <script src="views/template/js/vendor/jquery-1.12.0.min.js"></script>
     <script src="views/template/js/bootstrap.min.js"></script>

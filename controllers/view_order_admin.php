@@ -62,11 +62,7 @@
     if(isset($_POST['listOk'])) {
       $id = $_POST['id_status'];
     }
-
-    echo $id;
-    die();
-    
-    $loc_dx = locDonXem($id);
+    $don_xem = locDonXem($id);
     include('views/view_order/view_order_admin.php');
    }
 

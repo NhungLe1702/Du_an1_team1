@@ -131,7 +131,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php foreach(view_donxem_admin() as $key => $value) :   ?>
+                        <?php foreach($don_xem as $key => $value) :   ?>
                           <?php $mangStatus = getStatus( $value['status'])?>
                           <tr style="background-color:<?php echo $mangStatus[1]?>;">
                             
