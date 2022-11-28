@@ -2,6 +2,7 @@
    function view_donxem_admin(){
     $sql = " SELECT 
             view_order.id,
+            view_order.customer_id,
             customer.name as customer_name,
             product.name as product_name,
             view_order.time,
@@ -48,17 +49,53 @@
     }
 
     function locDonXem($id) {
-        if($id == 4) {
-            $sql = "SELECT * FROM view_order";
+        if($id <> 5) {
+            $sql = " SELECT 
+            view_order.id,
+            view_order.customer_id,
+            customer.name as customer_name,
+            product.name as product_name,
+            view_order.time,
+            view_order.date,
+            view_order.status,
+            view_order.created_at
+            FROM view_order
+            join customer on customer.id = view_order.customer_id
+            join product on product.id = view_order.product_id WHERE status = '$id' ";
+            
+        } else {
+            $sql = " SELECT 
+            view_order.id,
+            view_order.customer_id,
+            customer.name as customer_name,
+            product.name as product_name,
+            view_order.time,
+            view_order.date,
+            view_order.status,
+            view_order.created_at
+            FROM view_order
+            join customer on customer.id = view_order.customer_id
+            join product on product.id = view_order.product_id ";
         }
-        // echo $id;
-        $sql= "SELECT * FROM view_order WHERE status = '$id'";
-        $loc = getData($sql, FETCH_ALL);
+
+        return getData($sql, FETCH_ALL);
         
-        // echo '<pre>';
-        // var_dump($loc) ;
-        // die();
-        return $loc;
+    }
+
+    function hoaDon($id) {
+        $sql=" SELECT  
+                    view_order.id,
+                    customer.email as customer_email,
+                    customer.name as customer_name,
+                    customer.phone as customer_phone,
+                    product.name as product_name,
+                    product.price as price
+                FROM view_order
+                join customer on customer.id = view_order.customer_id
+                join product on product.id = view_order.product_id
+                where view_order.id = '{$id}'
+            ";
+        return getData($sql, FETCH_ONE);
     }
 
 

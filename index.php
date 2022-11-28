@@ -98,6 +98,10 @@ switch ($url) {
         locDonXemTheoStatus();
         break;
 
+    case 'in_hoa_don':
+        inHoaDon();
+        break;
+
     //Khung giờ
     
     // case 'khung_gio':

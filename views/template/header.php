@@ -142,7 +142,9 @@ $user = $_SESSION['user'] ?? false;
                                     <nav>
                                         <ul>
                                             <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
-                                            <li><a href="index.php?url=trang_chu">Trang chủ</a></li>    
+                                            <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
+                                            
+
                                             <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
                                                 <ul class="mega-menu">
                                                     <!-- <li><a class="title" href="#">Feature pages</a> -->
@@ -164,7 +166,6 @@ $user = $_SESSION['user'] ?? false;
                                             <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
                                             <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
                                             <li><a href="index.php?url=lien_he">Liên hệ</a></li>
-
                                         </ul>
                                     </nav>
                                 <?php } ?>    

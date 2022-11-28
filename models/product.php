@@ -3,7 +3,13 @@
     // require_once('models/db.php');
 
     function layDSSanPham() {
-        $sql = "SELECT * FROM product ORDER BY id DESC ";
+        $sql = "
+        SELECT 
+            *
+        FROM product
+        WHERE
+        product.id NOT IN (SELECT DISTINCT view_order.product_id FROM view_order WHERE view_order.status IN (2, 4))
+        ORDER BY id DESC ";
         $product = getData($sql, FETCH_ALL);
         return $product;
     }
