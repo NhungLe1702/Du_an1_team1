@@ -402,15 +402,7 @@
             }
         }
 
-        function checkBtn() {
-
         
-            if(span.innerText != '') {
-                document.getElementById("submit_btn").disable = true;
-            }
-        
-        }
-
         
      </script>
 
