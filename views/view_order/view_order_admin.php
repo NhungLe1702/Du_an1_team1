@@ -103,13 +103,13 @@
                       <form class="search_product" action="index.php?url=loc_don_xem_theo_status" method="post">
                          
                           <select name="id_status" id="">
-                              <option value="5" selected>Tất cả</option>
+                            
                               <option value="0">0. Chưa xem</option>
                               <option value="1">1. Đã xem</option>
                               <option value="2">2. Đã đặt cọc</option>
                               <option value="3">3. Đã Hủy</option>
                               <option value="4">4. Đã Mua</option>
-                              
+                              <option value="5" selected>Tất cả</option>
                           </select>
                           <input class="btn_submit" type="submit" name="listOk" value="GO">
                       </form>
