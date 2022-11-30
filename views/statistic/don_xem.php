@@ -1,5 +1,11 @@
 <?php
-
+  $status = [
+    '0' => 'Chưa xem',
+    '1' => 'Đã xem',
+    '2' => 'Đã đặt cọc',
+    '3' => 'Đã hủy đơn',
+    '4' => 'Đã mua'
+  ];
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +71,15 @@
             <div class="col-12 d-flex no-block align-items-center">
               <!-- <h4 class="page-title">Danh sách</h4> -->
               <div class="button_insert">
-
+                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                  <a href="index.php?url=thong_ke_san_pham">Sản phẩm</a>
+                </button>
+                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                  <a href="index.php?url=thong_ke_don_xem">Đơn xem</a>
+                </button>
+                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                  <a href="index.php?url=thong_ke_doanh_thu">Doanh thu</a>
+                </button>
                 
               </div>
               <div class="ms-auto text-end">
@@ -87,47 +101,47 @@
           <div class="row">
             <div class="col-12">
               
-            
-
               <div class="card">
                 <div class="card-body">
                   <!-- <h5 class="card-title">Basic Datatable</h5> -->
                   
                   <div class="table-responsive">
-                  <h4 class="card-title" style="text-align: center;">Thống kê sản phẩm</h4>
+                  <h4 class="card-title" style="text-align: center;">Thống kê đơn xem</h4>
                     <table
                       id="zero_config"
-                      class="table table-striped table-bordered"
-                    >
+                      class="table table-striped table-bordered">
                     
                       <thead>
                         <tr>
-                          <th>ID thương hiệu</th>
-                          <th>Tên</th>
-                          
-                          <th>Số lượng sản phẩm</th>
-                          <th>Giá thấp nhất</th>
-                          <th>Giá cao nhất</th>
-                          <th>Giá trung bình</th>
-                          
-                          
+                          <th>Trạng thái đơn</th>
+                          <th>Số lượng đơn</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php foreach($tk as $key => $value) :   ?>
                          
                           <tr>
-                            <td><?= $value['id_category']?></td>
-                            <td><?= $value['name']?></td>
-                            
-                            <td><?= $value['so_luong']?></td>
-                            <td><?= number_format($value['gia_min'])?></td>
-                            <td><?= number_format($value['gia_max'])?></td>
-                            <td><?= number_format($value['gia_avg'])?></td>
-                            
-                            
-                            
-                          
+                            <td>
+                              
+                              <?php 
+                                if($value['status'] == 0) {
+                                  echo "Chưa xem";
+                                }
+                                if($value['status'] == 1) {
+                                  echo "Đã xem";
+                                }
+                                if($value['status'] == 2) {
+                                  echo "Đã đặt cọc ";
+                                }
+                                if($value['status'] == 3) {
+                                  echo "Đã huỷ đơn";
+                                }
+                                if($value['status'] == 4) {
+                                  echo "Đã mua";
+                                }
+                              ?>
+                            </td>
+                            <td><?= $value['so_luong_don']?></td>
                           </tr>
                         <?php endforeach ?>
                         
@@ -136,10 +150,15 @@
                   </div>
                 </div>
               </div>
+
+             
+
             </div>
           </div>
           
         </div>
+
+        
 
        
       </div>

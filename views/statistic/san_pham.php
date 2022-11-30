@@ -65,10 +65,16 @@
             <div class="col-12 d-flex no-block align-items-center">
               <!-- <h4 class="page-title">Danh sách</h4> -->
               <div class="button_insert">
-
                 <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
-                  <a href="index.php?url=them_san_pham">Thêm mới</a>
+                  <a href="index.php?url=thong_ke_san_pham">Sản phẩm</a>
                 </button>
+                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                  <a href="index.php?url=thong_ke_don_xem">Đơn xem</a>
+                </button>
+                <button style="border: none; padding:8px 12px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold; ">
+                  <a href="index.php?url=thong_ke_doanh_thu">Doanh thu</a>
+                </button>
+                
               </div>
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
@@ -84,98 +90,66 @@
           </div>
         </div>
 
-        
-
         <div class="container-fluid">
           
           <div class="row">
             <div class="col-12">
-
+              
               <div class="card">
                 <div class="card-body">
                   <!-- <h5 class="card-title">Basic Datatable</h5> -->
                   
                   <div class="table-responsive">
-                  
-                     
-                    <div class="col-sm-12 col-md-6">
-                      <form class="search_product" action="index.php?url=loc_san_pham_theo_dm" method="post">
-                         
-                          <select name="id_category" id="">
-                              <option value="0" selected>Tất cả</option>
-                              <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
-                                  <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
-                              <?php } ?>
-                          </select>
-                          <input class="btn_submit" type="submit" name="listOk" value="GO">
-                      </form>
-                    </div>
-                      
-                  
-                  
-                
+                  <h4 class="card-title" style="text-align: center;">Thống kê sản phẩm</h4>
                     <table
                       id="zero_config"
                       class="table table-striped table-bordered">
                     
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th>ID thương hiệu</th>
                           <th>Tên</th>
-                          <th>Hình ảnh</th>
-                          <th>Đơn giá</th>
-                          <th>sale</th>
-                          <th>nguồn gốc</th>
-                          <th>mô tả</th>
-                          <th>năm sản xuất</th>
-                          <th>Id_thương hiệu</th>
-                          <th>Hành động</th>
+                          
+                          <th>Số lượng sản phẩm</th>
+                          <th>Giá thấp nhất</th>
+                          <th>Giá cao nhất</th>
+                          <th>Giá trung bình</th>
+                          
+                          
                         </tr>
                       </thead>
-
                       <tbody>
-                        <?php foreach($ds_sp as $key => $value) :   ?>
+                        <?php foreach($tk as $key => $value) :   ?>
+                         
                           <tr>
-                            <td><?= $value['id']?></td>
+                            <td><?= $value['id_category']?></td>
                             <td><?= $value['name']?></td>
-                            <td style="padding:10px 0;"><img src="views/template/image/product/<?php echo $value['image'] ?>" alt="" style ="width:50%"></td>
-                            <td><?= number_format($value['price'])?></td>
-                            <td><?= number_format($value['sale'])?></td>
-                            <td><?= $value['origin']?></td>
-                            <td><?= $value['description']?></td>
-                            <td><?= $value['year']?></td>
-                            <td>
-                              <?= $value['id_category']?>
-                            </td>
                             
-                            <td style="color: white">
-                              <button style="border: none;margin-top:6px ; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-                                  <a href="index.php?url=form_sua_san_pham&id=<?= $value['id'] ?>">Sửa</a>
-                              </button>
+                            <td><?= $value['so_luong']?></td>
+                            <td><?= number_format($value['gia_min'])?></td>
+                            <td><?= number_format($value['gia_max'])?></td>
+                            <td><?= number_format($value['gia_avg'])?></td>
                             
-                              <button style="border: none;margin-top:6px ; padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                  <a href="index.php?url=xoa_san_pham&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a>
-                              </button>
-                              
-                              <!-- <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                  <a href="index.php?url=form_them_khung_gio&id=<?= $value['id'] ?>" >Thêm giờ </a>
-                              </button> -->
-
-                            </td>
+                            
+                            
                           
                           </tr>
                         <?php endforeach ?>
                         
                         </tbody>
                     </table>
-
                   </div>
                 </div>
               </div>
+
+             
+
             </div>
           </div>
           
         </div>
+
+        
 
        
       </div>
@@ -200,14 +174,10 @@
     <script src="views/template/css/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
     <script src="views/template/css/assets/extra-libs/DataTables/datatables.min.js"></script>
     <script>
-     
-      // $("#zero_config").DataTable();
-
-      $("#zero_config").DataTable(
-        {
-          sorting: false
-        }
-      );
+      /****************************************
+       *       Basic Table                   *
+       ****************************************/
+      $("#zero_config").DataTable();
     </script>
   </body>
 </html>

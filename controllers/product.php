@@ -27,7 +27,7 @@
 
     function thongKeSanPham() {
         $tk = hamthongKeSanPham();
-        include('views/product/thong_ke.php');
+        include('views/statistic/san_pham.php');
     }
 
     function timKiemSanPham() {
