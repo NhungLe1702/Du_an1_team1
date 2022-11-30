@@ -214,7 +214,7 @@
                                                 
                                                 <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
                                                     <div class="actions-log" style="float:left;">
-                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch">
+                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch" >
                                                     </div>
                                                 </div>
                                             </form>
@@ -296,6 +296,9 @@
     </div>
 
     <script>
+
+        const submitButton = document.getElementById("submit_btn");
+        
 
         function checkTen() {
             var name = document.querySelector('#name');
@@ -401,8 +404,6 @@
                 span.innerText = '';
             }
         }
-
-        
         
      </script>
 

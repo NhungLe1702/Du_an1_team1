@@ -1,4 +1,8 @@
 <?php
+
+
+  
+
    function view_donxem_admin(){
     $sql = " SELECT 
             view_order.id,
@@ -96,6 +100,26 @@
                 where view_order.id = '{$id}'
             ";
         return getData($sql, FETCH_ONE);
+    }
+
+    function hamthongKeDonXem() {
+        $sql =" SELECT DISTINCT status , 
+                COUNT(status) as so_luong_don
+                FROM view_order GROUP BY  status ";
+        $thong_ke_dx = getData($sql, FETCH_ALL);
+        return $thong_ke_dx;
+    }
+
+    function hamthongKeDoanhThu() {
+        $sql =" SELECT  product.name as product_name, 
+                        view_order.product_id, 
+                        SUM(product.price) as doanh_thu
+                FROM product 
+                INNER JOIN view_order ON product.id = view_order.product_id 
+                WHERE status = 4 
+                GROUP BY product.name, view_order.product_id; ";
+        $thong_ke_dt = getData($sql, FETCH_ALL);
+        return $thong_ke_dt;
     }
 
 

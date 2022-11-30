@@ -3,16 +3,13 @@
     // require_once('models/db.php');
 
     function layDSSanPham() {
-        $sql = "
-        SELECT 
-            *
-        FROM product
-        WHERE
-        product.id NOT IN (SELECT DISTINCT view_order.product_id FROM view_order WHERE view_order.status IN (2, 4))
+        $sql = " SELECT * FROM product
+        WHERE product.id NOT IN (SELECT DISTINCT view_order.product_id FROM view_order WHERE view_order.status IN (2, 4))
         ORDER BY id DESC ";
         $product = getData($sql, FETCH_ALL);
         return $product;
     }
+    
     //themsp
     function themMoiSanPham(){
         $error = [];
@@ -161,7 +158,8 @@
 
     function hamthongKeSanPham() {
         $sql = " SELECT ca.id as id_category , 
-                        ca.name as name, COUNT(pr.id) as so_luong, 
+                        ca.name as name, 
+                        COUNT(pr.id) as so_luong, 
                         MIN(pr.price) gia_min, 
                         MAX(pr.price) gia_max, 
                         AVG(pr.price) gia_avg

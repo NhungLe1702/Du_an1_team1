@@ -139,3 +139,13 @@ function inHoaDon()
   }
   include('views/view_order/bill.php');
 }
+
+function thongKeDonXem() {
+  $tk = hamthongKeDonXem();
+  include('views/statistic/don_xem.php');
+}
+
+function thongKeDoanhThu() {
+  $tk = hamthongKeDoanhThu();
+  include('views/statistic/doanh_thu.php');
+}

@@ -14,6 +14,7 @@ $user = $_SESSION['user'] ?? false;
     <link rel="stylesheet" href="views/template/css/nivo-slider.css">
     <link rel="stylesheet" href="views/template/style.css">
     <link rel="stylesheet" href="views/template/css/responsive.css">
+    
 </head>
 
 <body>
@@ -119,8 +120,33 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=khach_Hang">Khách hàng</a></li>
                                                 <!-- <li><a href="index.php?url=khung_gio">Khung giờ</a></li> -->
                                                 <li><a href="index.php?url=don_xem_admin">Đơn Xem</a></li>
-                                                <li><a href="#">Bình luận</a></li>
-                                                <li><a href="index.php?url=thong_ke_san_pham">Thống kê</a></li>
+                                                <!-- <li><a href="index.php?url=thong_ke_san_pham">Thống kê</a></li> -->
+                                                <li class="mega_parent mega-item2"><a href="index.php?url=thong_ke_san_pham">Thống kê</a>
+                                                    <!-- <ul class="mega-menu" style="width: 25%;">
+                                                        <li style="width: 100% ;">
+                                                            <ul class="mega_submenu" > 
+                                                                <li style="padding-left:  20px; color: black!important; ">
+                                                                    <label for="Road">
+                                                                        <a  href="index.php?url=thong_ke_san_pham">Sản phẩm</a>
+                                                                    </label>
+                                                                </li>   
+
+                                                                <li style="padding-left:  20px; color: black!important;">
+                                                                    <label for="Road">
+                                                                        <a  href="index.php?url=thong_ke_don_xem">Đơn xem</a>
+                                                                    </label>
+                                                                </li> 
+
+                                                                <li style="padding-left:  20px; color: black!important;">
+                                                                    <label for="Road">
+                                                                        <a  href="index.php?url=thong_ke_doanh_thu">Doanh thu</a>
+                                                                    </label>
+                                                                </li> 
+                                                            </ul>
+                                                        </li>
+                                                    </ul> -->
+                                                </li>
+
                                             </ul>
                                         </nav>
                                     <?php } else { ?>
@@ -147,7 +173,7 @@ $user = $_SESSION['user'] ?? false;
 
                                             <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
                                                 <ul class="mega-menu">
-                                                    <!-- <li><a class="title" href="#">Feature pages</a> -->
+                                                    <!-- <li style="width: 100%; "> -->
                                                         <ul class="mega_submenu" >
                                                             <?php foreach(danhSachDanhMuc() as $key => $value) : ?>
                                                                 <li style="padding-left:  20px; color: black!important;">
@@ -158,7 +184,7 @@ $user = $_SESSION['user'] ?? false;
                                                                 </li>
                                                             <?php endforeach ?>    
                                                        </ul>
-                                                    </li>
+                                                    <!-- </li> -->
                                                 </ul>
                                             </li>
 

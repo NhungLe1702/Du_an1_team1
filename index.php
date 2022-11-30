@@ -47,6 +47,14 @@ switch ($url) {
         thongKeSanPham();
         break;
 
+    case 'thong_ke_don_xem':
+        thongKeDonXem();
+        break; 
+    
+    case 'thong_ke_doanh_thu':
+        thongKeDoanhThu();
+        break;
+
     case 'chi_tiet_san_pham':
         chiTietSanPham();
         break;
