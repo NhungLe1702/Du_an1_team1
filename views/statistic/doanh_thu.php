@@ -6,6 +6,18 @@
     '3' => 'Đã hủy đơn',
     '4' => 'Đã mua'
   ];
+  
+//   $sql_tong_doanh_thu = "SELECT SUM(product.price) as tong_doanh_thu 
+//   FROM product 
+//   JOIN view_order 
+//   ON view_order.product_id = product.id 
+//   WHERE view_order.status IN (4);"; 
+
+  
+// $tong_doanh_thu = getData($sql_tong_doanh_thu,FETCH_ALL);
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -130,17 +142,18 @@
                          
                           <tr>
                             <td><?= $value['product_name'] ?></td>
-                            <td><?= number_format( $value['doanh_thu']) ?></td>
-                            
-                            
-                            
-                            
-                            
-                          
+                            <td><?= number_format( $value['doanh_thu']) ?></td>        
                           </tr>
                         <?php endforeach ?>
-                        
+                       
                         </tbody>
+                        <?php foreach($tong_doanh_thu as $key => $value) :   ?>
+                         
+                         <tr>
+                           <td style="background-color:	#87CEEB ;">Tong</td>
+                           <td style="background-color:	#87CEEB ;"><?= number_format( $value['tong_doanh_thu']) ?></td>        
+                         </tr>
+                       <?php endforeach ?>
                     </table>
                   </div>
                 </div>

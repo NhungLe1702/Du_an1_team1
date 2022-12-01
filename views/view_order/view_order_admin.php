@@ -103,13 +103,13 @@
                       <form class="search_product" action="index.php?url=loc_don_xem_theo_status" method="post">
                          
                           <select name="id_status" id="">
-                            
+                              <option value="5" selected>Tất cả</option>
                               <option value="0">0. Chưa xem</option>
                               <option value="1">1. Đã xem</option>
                               <option value="2">2. Đã đặt cọc</option>
                               <option value="3">3. Đã Hủy</option>
                               <option value="4">4. Đã Mua</option>
-                              <option value="5" selected>Tất cả</option>
+                              
                           </select>
                           <input class="btn_submit" type="submit" name="listOk" value="GO">
                       </form>
@@ -135,42 +135,42 @@
                       <tbody>
                         <?php foreach($don_xem as $key => $value) :   ?>
                           <?php $mangStatus = getStatus( $value['status'])?>
-                            <tr style="background-color:<?php echo $mangStatus[1]?>;">
-                              
-                              <td><?= $value['id']?></td>
-                              <td><?= $value['customer_name']?></td>
-                              <td><?= $value['product_name']?></td>
-                              <td><?= $value['time']?></td>
-                              <td><?= $value['date']?></td>
-                              <td >
-                                <?= $mangStatus[0]  ?>
-                              <td><?= $value['created_at']?></td>
-                              <td >
-                                <button style="border: none;margin-top:6px ; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
-                                    <a href="index.php?url=update_view_order&id=<?= $value['id'] ?>">Sửa</a>
-                                </button>
-                              
-                                <button style="border: none;margin-top:6px ; padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                    <a href="index.php?url=xoa_don_xem&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a>
-                                </button>
-                                
-                                <?php if($mangStatus[0] == 'Đã đặt cọc' ) {?>
-                                  <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                      <a id='btn'  href="index.php?url=in_hoa_don&id=<?= $value['id'] ?>" >In hoá đơn </a>
-                                    
-                                      <!-- <input type='button' id='btn'  value='In hoá đơn' onclick='printDiv();'> -->
-                                  </button>
-                                <?php }?>
-
-                                <!-- <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
-                                    <a href="index.php?url=form_them_khung_gio&id=<?= $value['id'] ?>" >Thêm giờ </a>
-                                </button> -->
-                              </td>
+                          <tr style="background-color:<?php echo $mangStatus[1]?>;">
                             
-                            </tr>
-                          <?php endforeach ?>
+                            <td><?= $value['id']?></td>
+                            <td><?= $value['customer_name']?></td>
+                            <td><?= $value['product_name']?></td>
+                            <td><?= $value['time']?></td>
+                            <td><?= $value['date']?></td>
+                            <td >
+                              <?= $mangStatus[0]  ?>
+                            <td><?= $value['created_at']?></td>
+                            <td >
+                              <button style="border: none;margin-top:6px ; padding:4px 10px; border-radius: 5px; background-color: #9cd6ee; font-weight: bold;  ">
+                                  <a href="index.php?url=update_view_order&id=<?= $value['id'] ?>">Sửa</a>
+                              </button>
+                            
+                              <button style="border: none;margin-top:6px ; padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
+                                  <a href="index.php?url=xoa_don_xem&id=<?= $value['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')">Xoá</a>
+                              </button>
+                              
+                              <?php if($mangStatus[0] == 'Đã đặt cọc' ) {?>
+                                <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
+                                    <a id='btn'  href="index.php?url=in_hoa_don&id=<?= $value['id'] ?>" >In hoá đơn </a>
+                                  
+                                    <!-- <input type='button' id='btn'  value='In hoá đơn' onclick='printDiv();'> -->
+                                </button>
+                              <?php }?>
+
+                              <!-- <button style="border: none; margin-top:6px ;padding:4px 10px; background-color: #ffaa8e; border-radius: 5px; font-weight: bold; ">
+                                  <a href="index.php?url=form_them_khung_gio&id=<?= $value['id'] ?>" >Thêm giờ </a>
+                              </button> -->
+                            </td>
+                          
+                          </tr>
+                        <?php endforeach ?>
                         
-                      </tbody>
+                        </tbody>
                     </table>
                   </div>
                 </div>

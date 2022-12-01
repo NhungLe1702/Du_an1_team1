@@ -214,7 +214,7 @@
                                                 
                                                 <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
                                                     <div class="actions-log" style="float:left;">
-                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch" >
+                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch">
                                                     </div>
                                                 </div>
                                             </form>
@@ -240,27 +240,12 @@
                                         <div class="customer-register my-account">
                                             <form method="post" class="register" id="form-1">
                                                 <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
-                                                    <!-- <h2>Register</h2> -->
+                                                   
                                                    
                                                         <label for="name">Nội Dung </label>
                                                         <input id="name" placeholder="" type="text" class="input-text" name="cmt">
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
-                                                    </p>
-
-
-
-
-
-                                                    <!-- <p class="form-row form-row-wide">
-                                                        <label for="reg_email">User Name <span class="required">*</span></label>
-                                                        <input type="text" class="input-text" name="user_name" id="reg_email" value="">
-                                                    </p> -->
-                                               
-                                               
-                                                   
-
-                                                  
-                                                  
+                                        
                                                     <div style="left: -999em; position: absolute;">
                                                         <label for="trap">Anti-spam</label>
                                                         <input type="text" name="email_2" id="trap" tabindex="-1">
@@ -279,6 +264,10 @@
                                 </div>
                             </div>
                        </div>
+
+
+
+
 
                        <div class="related-product-area">
                            <div class="row">
@@ -351,9 +340,6 @@
     </div>
 
     <script>
-
-        const submitButton = document.getElementById("submit_btn");
-        
 
         function checkTen() {
             var name = document.querySelector('#name');
@@ -459,6 +445,8 @@
                 span.innerText = '';
             }
         }
+
+        
         
      </script>
 
