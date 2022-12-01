@@ -146,6 +146,14 @@
                         <?php endforeach ?>
                         
                         </tbody>
+
+                        <?php foreach($tong_don_xem as $key => $value) :   ?>
+                         
+                         <tr>
+                           <td style="background-color:	#87CEEB ;">Tong</td>
+                           <td style="background-color:	#87CEEB ;" ><?=  $value['tong']?></td>        
+                         </tr>
+                       <?php endforeach ?>
                     </table>
                   </div>
                 </div>

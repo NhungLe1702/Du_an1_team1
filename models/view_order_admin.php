@@ -109,7 +109,21 @@
                 FROM view_order GROUP BY  status ";
         $thong_ke_dx = getData($sql, FETCH_ALL);
         return $thong_ke_dx;
+    } 
+    
+    function demthongKeDonXem() {
+        $sql =" SELECT COUNT(view_order.id) as tong FROM view_order ";
+        $tong_don_xem = getData($sql, FETCH_ALL);
+        return  $tong_don_xem;
     }
+
+
+
+
+
+
+
+
 
     function hamthongKeDoanhThu() {
         $sql =" SELECT  product.name as product_name, 
@@ -122,8 +136,24 @@
                 WHERE view_order.status IN(4) 
                 GROUP BY product.name, view_order.product_id; ";
         $thong_ke_dt = getData($sql, FETCH_ALL);
-        return $thong_ke_dt;
+        
+      
+        //  echo '<pre>';
+        //  print_r($tong_doanh_thu);
+       
+          return $thong_ke_dt;
+        
     }
+    function tongDoanhThu(){
+        $sql_tong_doanh_thu = "SELECT SUM(product.price) as tong_doanh_thu 
+                               FROM product 
+                               JOIN view_order 
+                               ON view_order.product_id = product.id 
+                               WHERE view_order.status IN (4);";                        
+        $tong_doanh_thu = getData($sql_tong_doanh_thu,FETCH_ALL);
+        return $tong_doanh_thu;
+    }
+
 
 
 

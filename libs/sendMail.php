@@ -20,7 +20,7 @@ try {
     $mail->CharSet = 'UTF-8';
 
     //Recipients
-    $mail->setFrom('truong290803@gmail.com', 'Nhóm 1');
+    $mail->setFrom('truongnqph23748@fpt.edu.vn', 'Nhóm 1');
     $mail->addAddress($email, $name);     //Add a recipient
     // $mail->addAddress('ellen@example.com');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');

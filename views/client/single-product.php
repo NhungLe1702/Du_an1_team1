@@ -214,7 +214,7 @@
                                                 
                                                 <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
                                                     <div class="actions-log" style="float:left;">
-                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch" >
+                                                        <input id="submit_btn" type="submit" class="button" name="dat_lich" value="Đặt lịch">
                                                     </div>
                                                 </div>
                                             </form>
@@ -224,6 +224,50 @@
                                 </div>
                             </div>
                        </div>
+
+
+
+
+                       <div class="related-product-area" style="padding-top: 40;">
+                           <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="related-title">Bình Luận</h4>
+                                </div>
+                           </div>
+                           <div class="row">
+                                <div class="single-product-page-list">
+                                    <div class="single_product-list">
+                                        <div class="customer-register my-account">
+                                            <form method="post" class="register" id="form-1">
+                                                <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
+                                                   
+                                                   
+                                                        <label for="name">Nội Dung </label>
+                                                        <input id="name" placeholder="" type="text" class="input-text" name="cmt">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                        
+                                                    <div style="left: -999em; position: absolute;">
+                                                        <label for="trap">Anti-spam</label>
+                                                        <input type="text" name="email_2" id="trap" tabindex="-1">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
+                                                    <div class="actions-log" style="float:left;">
+                                                        <input id="submit_btn" type="submit" class="button" name="cmt" value="Gửi Bình Luận">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                       </div>
+
+
+
+
 
                        <div class="related-product-area">
                            <div class="row">
@@ -296,9 +340,6 @@
     </div>
 
     <script>
-
-        const submitButton = document.getElementById("submit_btn");
-        
 
         function checkTen() {
             var name = document.querySelector('#name');
@@ -404,6 +445,8 @@
                 span.innerText = '';
             }
         }
+
+        
         
      </script>
 

@@ -97,30 +97,30 @@
         include('views/client/dat_lich.php');
     }
 
-    function xuLyDatLich() {
-        if (isset($_POST['dat_lich'])) {
-            $name = $_POST['name'];
-            $address = $_POST['address'];
-            $phone = $_POST['phone'];
-            $email = $_POST['email'];
-            $product_id = $_POST['product_id'];
-            $time = $_POST['time'];
-            $date = $_POST['date'];
-            $customer = find_user_by_email($email);
-            if (empty($customer)) {
-                $data = [
-                    'name' => $name,
-                    'address' => $address,
-                    'phone' => $phone,
-                    'email' => $email,
-                ];
-                $customer_id = tao_customer($data);
-            } else {
-                $customer_id = $customer['id'];
-            }
-            them_don_xem($customer_id, $product_id, $time, $date);
-        }
-    }
+    // function xuLyDatLich() {
+    //     if (isset($_POST['dat_lich'])) {
+    //         $name = $_POST['name'];
+    //         $address = $_POST['address'];
+    //         $phone = $_POST['phone'];
+    //         $email = $_POST['email'];
+    //         $product_id = $_POST['product_id'];
+    //         $time = $_POST['time'];
+    //         $date = $_POST['date'];
+    //         $customer = find_user_by_email($email);
+    //         if (empty($customer)) {
+    //             $data = [
+    //                 'name' => $name,
+    //                 'address' => $address,
+    //                 'phone' => $phone,
+    //                 'email' => $email,
+    //             ];
+    //             $customer_id = tao_customer($data);
+    //         } else {
+    //             $customer_id = $customer['id'];
+    //         }
+    //         them_don_xem($customer_id, $product_id, $time, $date);
+    //     }
+    // }
 
     // function tao_don_xem() {
     //     if (isset($_POST['datlich'])) {

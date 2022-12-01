@@ -142,10 +142,13 @@ function inHoaDon()
 
 function thongKeDonXem() {
   $tk = hamthongKeDonXem();
+  $tong_don_xem =  demthongKeDonXem();
   include('views/statistic/don_xem.php');
 }
 
 function thongKeDoanhThu() {
   $tk = hamthongKeDoanhThu();
+  $tong_doanh_thu =  tongDoanhThu();
   include('views/statistic/doanh_thu.php');
 }
+
