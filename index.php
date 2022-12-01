@@ -205,8 +205,6 @@ switch ($url) {
         forget();
         break;
 
-    
-
     // quan li khach hang cua admin
 
     case 'khach_Hang':
@@ -220,9 +218,6 @@ switch ($url) {
         }
         hienThiKhachHang();
         break;
-
-         
-
     default:
         echo 'Đường dẫn không tồn tại';
         break;

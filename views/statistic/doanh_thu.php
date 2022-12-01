@@ -115,32 +115,23 @@
                       <thead>
                         <tr>
                           <th>Tên xe</th>
-                          <th>Tổng doanh thu</th>
-                          
-                          <!-- <th>Số lượng sản phẩm</th>
-                          <th>Giá thấp nhất</th>
-                          <th>Giá cao nhất</th>
-                          <th>Giá trung bình</th> -->
-                          
-                          
+                          <th>Doanh thu</th>
+                         
                         </tr>
+                        
                       </thead>
                       <tbody>
                         <?php foreach($tk as $key => $value) :   ?>
-                         
                           <tr>
                             <td><?= $value['product_name'] ?></td>
-                            <td><?= number_format( $value['doanh_thu']) ?></td>
+                            <td><?= number_format( $value['doanh_thu'] - $value['sale']   ) ?></td>
                             
-                            
-                            
-                            
-                            
-                          
                           </tr>
+                          
+                         
                         <?php endforeach ?>
-                        
-                        </tbody>
+                      </tbody>
+                         
                     </table>
                   </div>
                 </div>
