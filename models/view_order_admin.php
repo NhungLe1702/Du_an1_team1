@@ -93,7 +93,8 @@
                     customer.name as customer_name,
                     customer.phone as customer_phone,
                     product.name as product_name,
-                    product.price as price
+                    product.price as price,
+                    product.sale as sale
                 FROM view_order
                 join customer on customer.id = view_order.customer_id
                 join product on product.id = view_order.product_id
@@ -128,10 +129,12 @@
     function hamthongKeDoanhThu() {
         $sql =" SELECT  product.name as product_name, 
                         view_order.product_id, 
-                        product.price as doanh_thu
+                        product.sale as sale,
+                        product.price as doanh_thu,
+                        SUM(product.price) as tong_doanh_thu
                 FROM product 
                 INNER JOIN view_order ON product.id = view_order.product_id 
-                WHERE status in (4) 
+                WHERE view_order.status IN(4) 
                 GROUP BY product.name, view_order.product_id; ";
         $thong_ke_dt = getData($sql, FETCH_ALL);
         

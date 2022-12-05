@@ -128,22 +128,18 @@
                         <tr>
                           <th>Tên xe</th>
                           <th>Doanh thu</th>
-                          
-                          <!-- <th>Số lượng sản phẩm</th>
-                          <th>Giá thấp nhất</th>
-                          <th>Giá cao nhất</th>
-                          <th>Giá trung bình</th> -->
-                          
-                          
+                         
                         </tr>
+                        
                       </thead>
                       <tbody>
                         <?php foreach($tk as $key => $value) :   ?>
-                         
                           <tr>
                             <td><?= $value['product_name'] ?></td>
                             <td><?= number_format( $value['doanh_thu']) ?></td>        
                           </tr>
+                          
+                         
                         <?php endforeach ?>
                        
                         </tbody>

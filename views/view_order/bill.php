@@ -43,13 +43,13 @@
                     <i>This is test</i> -->
                 </td>
                 <td align="right">
-                    <?php echo number_format($hoa_don['price'])?>
+                    <?php echo number_format($hoa_don['price'] - $hoa_don['sale'])?>
                 </td>
             </tr>
             <tr class="total">
                 <td></td>
                 <td align="right">
-                <b>Tổng thanh toán :&nbsp;<?php echo number_format($hoa_don['price'])?></b>
+                <b>Tổng thanh toán :&nbsp;<?php echo number_format($hoa_don['price'] - $hoa_don['sale'])?></b>
                 </td>
             </tr>
             <tr><td colspan="2" align="center">Thank You ! Visit Again</td></tr>

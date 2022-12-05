@@ -53,7 +53,7 @@ switch ($url) {
     case 'thong_ke_doanh_thu':
         thongKeDoanhThu();
         break;
-
+        
     case 'chi_tiet_san_pham':
         chiTietSanPham();
         break;
@@ -204,8 +204,6 @@ switch ($url) {
         forget();
         break;
 
-    
-
     // quan li khach hang cua admin
 
     case 'khach_Hang':
@@ -219,9 +217,6 @@ switch ($url) {
         }
         hienThiKhachHang();
         break;
-
-         
-
     default:
         echo 'Đường dẫn không tồn tại';
         break;
