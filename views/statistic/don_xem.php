@@ -150,8 +150,8 @@
                         <?php foreach($tong_don_xem as $key => $value) :   ?>
                          
                          <tr>
-                           <td style="background-color:	#87CEEB ;">Tong</td>
-                           <td style="background-color:	#87CEEB ;" ><?=  $value['tong']?></td>        
+                           <td style="background-color:	#87CEEB; font-weight: bolder;">Tổng Số Đơn Xem</td>
+                           <td style="background-color:	#87CEEB ;font-weight: bolder; " ><?=  $value['tong']?></td>        
                          </tr>
                        <?php endforeach ?>
                     </table>

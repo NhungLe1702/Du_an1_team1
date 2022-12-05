@@ -127,7 +127,7 @@
                       <thead>
                         <tr>
                           <th>Tên xe</th>
-                          <th>Tổng doanh thu</th>
+                          <th>Doanh thu</th>
                           
                           <!-- <th>Số lượng sản phẩm</th>
                           <th>Giá thấp nhất</th>
@@ -150,8 +150,8 @@
                         <?php foreach($tong_doanh_thu as $key => $value) :   ?>
                          
                          <tr>
-                           <td style="background-color:	#87CEEB ;">Tong</td>
-                           <td style="background-color:	#87CEEB ;"><?= number_format( $value['tong_doanh_thu']) ?></td>        
+                           <td style="background-color:	#87CEEB ; font-weight: bolder;">Tổng Doanh Thu</td>
+                           <td style="background-color:	#87CEEB ;font-weight: bolder;"><?= number_format( $value['tong_doanh_thu']) ?></td>        
                          </tr>
                        <?php endforeach ?>
                     </table>

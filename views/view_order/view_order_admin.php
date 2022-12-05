@@ -111,7 +111,7 @@
                               <option value="4">4. Đã Mua</option>
                               
                           </select>
-                          <input class="btn_submit" type="submit" name="listOk" value="GO">
+                          <input class="btn_submit" type="submit" name="listOk" value="Lọc">
                       </form>
                     </div>
 

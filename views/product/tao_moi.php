@@ -63,18 +63,20 @@
                           class="form-control"
                           id="fname"
                           name="name"
+                          required
                         />
                       </div>
                     </div>
 
                     <div class="form-group row">
-                      <label
+                      <label 
                         for="lname"
                         class="col-sm-3 text-end control-label col-form-label"
                         >Hình ảnh</label
                       >
                       <div class="col-sm-9">
-                        <input
+                        <input 
+                        required
                           type="file"  name = "img_upload"
                           class="form-control"
                           id="lname"
@@ -90,6 +92,7 @@
                       >
                       <div class="col-sm-9">
                         <input
+                        required
                           type="file"  name = "images[]"
                           class="form-control"
                           id="lname"
@@ -106,6 +109,7 @@
                       >
                       <div class="col-sm-9">
                         <input
+                        required
                           type="number" name = "price"
                           class="form-control"
                           id="lname"
@@ -121,6 +125,7 @@
                       >
                       <div class="col-sm-9">
                         <input
+                        required
                           type="number" name = "sale"
                           class="form-control"
                           id="lname"
@@ -136,6 +141,7 @@
                       >
                       <div class="col-sm-9">
                         <input
+                        required
                           type="text" name = "origin"
                           class="form-control"
                           id="email1"
@@ -150,7 +156,7 @@
                         >Mô tả</label
                       >
                       <div class="col-sm-9">
-                        <textarea  class="form-control"  name="description" id="" cols="78" rows="6"></textarea>
+                        <textarea required  class="form-control"  name="description" id="" cols="78" rows="6"></textarea>
                       </div>
                     </div>
 
@@ -191,7 +197,7 @@
                   <div class="border-top">
                     <div class="card-body">
                       <button name="btn_save" type="submit" class="btn btn-primary">
-                        Submit
+                        Thêm Mới
                       </button>
                     </div>
                   </div>

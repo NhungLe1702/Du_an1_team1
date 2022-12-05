@@ -27,11 +27,11 @@ $user = $_SESSION['user'] ?? false;
                             <ul>
                                 <li>
                                     <a href="#">₫ VND <i class="fa fa-caret-down"></i></a>
-                                    <ul class="currency-menu">
+                                    <!-- <ul class="currency-menu">
                                         <li><a href="#">$ USD</a></li>
                                         <li><a href="#">€ EUR</a></li>
                                         <li><a href="#">£ PBP</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                             </ul>
                         </div>
@@ -39,12 +39,12 @@ $user = $_SESSION['user'] ?? false;
                             <ul>
                                 <li>
                                     <a href="#"><img src="views/template/img/currency/c5.png" alt="" style="width: 5%" > VIET NAM <i class="fa fa-caret-down"></i></a>
-                                    <ul class="language-menu">
+                                    <!-- <ul class="language-menu">
                                         <li><a href="#"><img src="views/template/img/currency/c1.png" alt=""> English</a></li>
                                         <li><a href="#"><img src="views/template/img/currency/c2.png" alt=""> Arabic</a></li>
                                         <li><a href="#"><img src="views/template/img/currency/c3.png" alt=""> French</a></li>
                                         <li><a href="#"><img src="views/template/img/currency/c4.png" alt=""> German</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                             </ul>
                         </div>
@@ -60,7 +60,7 @@ $user = $_SESSION['user'] ?? false;
                                     
                                     <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
                                 <?php else : ?>
-                                    <li><a href="index.php?url=register">My Account</a></li>
+                                    <li><a href="index.php?url=register">Tài Khoản</a></li>
                                 <?php endif; ?>
 
                             </ul>
@@ -81,7 +81,7 @@ $user = $_SESSION['user'] ?? false;
                         <div class="search-area">
                             <div class="search-box-inner">
                                 <form action="index.php?url=tim_kiem_SP" method="post">
-                                    <input type="text" placeholder="Search" name="kw">
+                                    <input type="text" placeholder="Tìm Kiếm" name="kw" required>
                                     <button type="submit" name="tim_kiem"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -158,7 +158,7 @@ $user = $_SESSION['user'] ?? false;
                                                 <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
                                                 
                                                 <!-- <li><a href="index.php?url=tao_don_xem_client">Đơn Xem</a></li> -->
-                                                <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
+                                                <!-- <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li> -->
                                                 <li><a href="index.php?url=lien_he">Liên hệ</a></li>
                                             </ul>   
                                         </nav>
@@ -190,7 +190,7 @@ $user = $_SESSION['user'] ?? false;
 
                                             <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                             <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
-                                            <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li>
+                                            <!-- <li><a href="index.php?url=hoi_dap">Hỏi đáp</a></li> -->
                                             <li><a href="index.php?url=lien_he">Liên hệ</a></li>
                                         </ul>
                                     </nav>
@@ -226,7 +226,7 @@ $user = $_SESSION['user'] ?? false;
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-9">
                                 <div class="call-us">
-                                    <span><i class="fa fa-phone"></i></span> Call Us: +00965888546-32
+                                    <span><i class="fa fa-phone"></i></span> Liên Hệ: +00965888546-32
                                 </div>
                             </div>
                         </div>

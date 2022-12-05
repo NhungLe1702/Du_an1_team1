@@ -48,7 +48,7 @@
                     <div class="shop-item-filter">
                         
                         <div class="toolber-form  middle">
-                           <p class="filter-title">Show: </p>
+                           <p class="filter-title">Xem: </p>
                             <div class="filter-form show-form">
                                 <form action="#">
                                     <select>
@@ -132,7 +132,7 @@
                                         <li><a href="#">next</a></li>
                                     </ul>
                                 </div>
-                                <div class="showing-page"><p>Showing 1 to 12 of 12 (1 Pages)</p></div>
+                                <div class="showing-page"><p>Hiển thị 1 đến 12 trên 12 (1 Trang)</p></div>
                             </div>
                         </div>
                     </div>

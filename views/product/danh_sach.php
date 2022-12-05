@@ -107,7 +107,7 @@
                                   <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                               <?php } ?>
                           </select>
-                          <input class="btn_submit" type="submit" name="listOk" value="GO">
+                          <input class="btn_submit" type="submit" name="listOk" value="Lọc">
                       </form>
                     </div>
                       

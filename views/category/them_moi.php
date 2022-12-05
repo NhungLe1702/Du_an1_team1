@@ -71,7 +71,7 @@
                   <div class="border-top">
                     <div class="card-body">
                       <button name="btn_submit" type="submit" class="btn btn-primary">
-                        Submit
+                        Thêm Mới
                       </button>
                     </div>
                   </div>

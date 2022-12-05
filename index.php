@@ -14,8 +14,7 @@ require('controllers/customer.php');
 require('controllers/product.php');
 require('controllers/view_order_admin.php');
 
-
-    include('views/template/header.php');
+ include('views/template/header.php');
 
 
 

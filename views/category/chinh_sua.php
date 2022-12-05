@@ -91,7 +91,7 @@
                   <div class="border-top">
                     <div class="card-body">
                       <button name="btn_submit" type="submit" class="btn btn-primary">
-                        Update
+                        Cập Nhật
                       </button>
                     </div>
                   </div>
