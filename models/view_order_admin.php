@@ -99,6 +99,7 @@
                 join customer on customer.id = view_order.customer_id
                 join product on product.id = view_order.product_id
                 where view_order.id = '{$id}'
+            
             ";
         return getData($sql, FETCH_ONE);
     }

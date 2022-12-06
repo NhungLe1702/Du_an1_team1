@@ -49,7 +49,7 @@ switch ($url) {
     case 'thong_ke_doanh_thu':
         thongKeDoanhThu();
         break;
-
+        
     case 'chi_tiet_san_pham':
         chiTietSanPham();
         break;

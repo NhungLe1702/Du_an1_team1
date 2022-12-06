@@ -23,10 +23,10 @@
 								<div class="form-action">
 									<p class="lost_password"> <a href="index.php?url=forget">Quên mật khẩu?</a></p>
 									<div class="actions-log">
-										<input type="submit" class="button" name="login" value="Đăng nhập">
+										<input type="submit" class="button" name="login" value="Đăng Nhập">
 									</div>
-									<!-- <label for="rememberme" class="inline"> 
-									<input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember me </label> -->
+									<label for="rememberme" class="inline"> 
+									<input name="rememberme" type="checkbox" id="rememberme" value="forever"> Lưu thông tin </label>
 								</div>
 								
 							</form>

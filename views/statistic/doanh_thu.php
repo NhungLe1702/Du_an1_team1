@@ -146,8 +146,8 @@
                         <?php foreach($tong_doanh_thu as $key => $value) :   ?>
                          
                          <tr>
-                           <td style="background-color:	#87CEEB ;">Tổng</td>
-                           <td style="background-color:	#87CEEB ;"><?= number_format( $value['tong_doanh_thu']) ?></td>        
+                           <td style="background-color:	#87CEEB ; font-weight: bolder;">Tổng Doanh Thu</td>
+                           <td style="background-color:	#87CEEB ;font-weight: bolder;"><?= number_format( $value['tong_doanh_thu']) ?></td>        
                          </tr>
                        <?php endforeach ?>
                     </table>

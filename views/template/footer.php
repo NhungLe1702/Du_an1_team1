@@ -22,11 +22,13 @@
                             <div class="footer-logo">
                                 <a href="#"><img src="views/template/img/logo/logo.png" alt=""></a>
                             </div>
-                            <p class="dec">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            <p class="dec" style="font-weight: bolder ; font-size: x-large ;">
+                               CÔNG TY TNHH DOTBIKE VIET NAM
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                              <b style="font-size: 17px ;"> Hà Nội:</b> Tòa nhà FPT Polytechnic, đường Trịnh Văn Bô, Phương Canh, Nam Từ Liêm <br> <br>
+                              <b style="font-size: 17px ;"> Đà Nẵng:</b> 137 Nguyễn Thị Thập, Phường Hòa Minh, Quận Liên Chiểu <br> <br>
+                              <b style="font-size: 17px ;"> Tây Nguyên:</b>  Tổ dân phố 8, P. Tân An, TP. Buôn Ma Thuột, Tỉnh Đắk Lắk <br> 
                             </p>
                             <div class="social-icon">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -41,16 +43,17 @@
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="single-footer">
                             <div class="footer-title">
-                                <h4>Pages</h4>
+                                <h4>MENU</h4>
                             </div>
                             <ul class="mainmenu">
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Home</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Blog</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> FAQs</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Delivery</a></li>
+                                <li><a href="index.php?url=trang_chu"><i class="fa fa-angle-right"></i> Trang Chủ</a></li>
+                                <li><a href="index.php?url=san_pham"><i class="fa fa-angle-right"></i> Thương Hiệu</a></li>
+                                <li><a href="index.php?url=san_pham"><i class="fa fa-angle-right"></i> Sản Phẩm</a></li>
+                                <li><a href="index.php?url=gioi_thieu"><i class="fa fa-angle-right"></i> Giới Thiệu</a></li>
+                                <li><a href="index.php?url=lien_he"><i class="fa fa-angle-right"></i> Liên Hệ</a></li>
                                 <li><a href="#"></a></li>
                                 <li><a href="#"></a></li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -58,13 +61,12 @@
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="single-footer">
                             <div class="footer-title">
-                                <h4>My Account</h4>
+                                <h4>Tài Khoản</h4>
                             </div>
                             <ul class="mainmenu">
-                                <li><a target="_blank" href="views/template/my-account.html"><i class="fa fa-angle-right"></i> My Account</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Wish List (3)</a></li>
-                                <li><a target="_blank" href="views/template/cart-page.html"><i class="fa fa-angle-right"></i> Shopping Cart</a></li>
-                                <li><a target="_blank" href="views/template/checkout.html"><i class="fa fa-angle-right"></i> Checkout</a></li>
+                                <li><a href="index.php?url=register"><i class="fa fa-angle-right"></i> Đăng Kí</a></li>
+                                <li><a href="index.php?url=register"><i class="fa fa-angle-right"></i> Đăng Nhập</a></li>
+                                <li><a href="index.php?url=forget"><i class="fa fa-angle-right"></i> Quên mật khẩu?</a></li>
                             </ul>
                         </div>
                     </div>
@@ -72,9 +74,15 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="single-footer newsletter">
                             <div class="footer-title">
-                                <h4>Newsletter</h4>
+                                <h4>Hỗ Trợ Khách Hàng</h4>
                             </div>
+<<<<<<< HEAD
                             <p>Subscibe to the Shaeng mailing list to receive updates on new arrivals,offers and other discount information</p>
+=======
+                            <p> <b>Hotline:</b>  0339770803</p>
+                            <p><b> Email:</b> dotbike.cskh@gmail.com</p>
+                            <p>Đăng ký danh sách gửi thư để nhận thông tin cập nhật về hàng mới, ưu đãi và thông tin giảm giá khác</p>
+>>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                             <!-- <form action="#">
                                 <input type="text" placeholder="Write your e-mail here">
                                 <button>Subscribe</button>

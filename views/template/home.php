@@ -91,38 +91,40 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center">
-                        <h2>Featured Sell</h2>
+                        <h2>Tin Nổi Bật</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="sigle-banner2">
-                       <span class="new">$320.00</span>
+                       <span class="new">120.000K</span>
                         <div class="banner-img2">
                             <img src="views/template/img/banner/bn5.jpg" alt="">
                         </div>
                         <div class="banner-cont">
                             <h3>Ride Motor</h3>
-                            <p>Sed ut perspiciatis unde omnis iste <br/> natus error sit voluptatem accusan.</p>
-                            <div class="view-det">
-                                <a href="#">View Details</a>
-                            </div>
+                            <p>Một chiếc xe mang đầy vẻ nam tính <br/> và có thể cân mọi địa hình.</p>
+                            <!-- <div class="view-det">
+                                <a href="#">Xem chi tiết</a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="sigle-banner2">
-                       <span class="new">$350.00</span>
+                       <span class="new">180.000K</span>
                         <div class="banner-img2">
                             <img src="views/template/img/banner/bn6.jpg" alt="">
                         </div>
                         <div class="banner-cont">
                             <h3>Mountain Motor</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus <br/> error sit voluptatem accusan.</p>
-                            <div class="view-det">
-                                <a href="#">View Details</a>
-                            </div>
+                            <p>Sự sang trọng, cuốn hút nhưng mang đầy <br/>  mạnh mẽ được gói gọn trong chiếc xe.</p>
+                            <!-- <div class="view-det">
+                                <a href="#">Xem chi tiết
+
+                                </a>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -139,9 +141,9 @@
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="featured-containet">
-                        <h2>The first all fat-tire, <br/>bullfrog trike is here.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies tesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, et a, venenatis enim justo, rhoncus ut, et a, venenatis.</p>
-                        <a href="index.php?url=san_pham">Shop Now</a>
+                        <h2>Royal Enfield  <br/>Himalayan Granite.</h2>
+                        <p> So với các mẫu adventure tầm 500cc đổ xuống khác hiện đang có mặt trên thị trường, Royal Enfield đã thiết kế Himalayan nhằm hướng tới các hành trình dài qua những địa hình hiểm trở một cách dễ dàng, bền bỉ và thoải mái nhất. Nó sử dụng cấu hình đường kính vành trước/sau 21 – 17 inch quen thuộc trên các mẫu mô tô “cào cào”. Phuộc trước của Himalayan có dạng ống lồng đường kính ti trong 41mm với khoảng hành trình lên tới 200mm, trong khi phuộc sau monoshock trên chiếc xe cũng có hành trình tới 180mm. Điều này đã giúp cho Himalayan có khoảng sáng gầm lên tới 220mm.</p>
+                        <!-- <a href="index.php?url=san_pham">Shop Now</a> -->
                     </div>
                 </div>
             </div>
@@ -370,7 +372,7 @@
     </div> -->
     <!--accessories-area end-->
     <!--brand-area start-->
-    <div class="brand-area">
+    <!-- <div class="brand-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -403,7 +405,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--brand-area end-->
     <!--footer start-->
     
