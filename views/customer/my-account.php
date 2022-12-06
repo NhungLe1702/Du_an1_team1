@@ -10,23 +10,23 @@
 						<div class="customer-login my-account">
 							<form method="post" class="login" action="index.php?url=login">
 								<div class="form-fields">
-									<h2>Login</h2>
+									<h2>Đăng nhập</h2>
 									<p class="form-row form-row-wide">
-										<label for="username">Username or email address <span class="required">*</span></label>
-										<input type="text" class="input-text" name="user_name" id="username" value="">
+										<label for="username">Tên đăng nhập <span class="required">*</span></label>
+										<input type="text" class="input-text" name="user_name" id="username" value="" required>
 									</p>
 									<p class="form-row form-row-wide">
-										<label for="password">Password <span class="required">*</span></label>
-										<input class="input-text" type="password" name="password" id="password">
+										<label for="password">Mật khẩu <span class="required">*</span></label>
+										<input class="input-text" type="password" name="password" id="password" required> 
 									</p>
 								</div>
 								<div class="form-action">
-									<p class="lost_password"> <a href="index.php?url=forget">Lost your password?</a></p>
+									<p class="lost_password"> <a href="index.php?url=forget">Quên mật khẩu?</a></p>
 									<div class="actions-log">
-										<input type="submit" class="button" name="login" value="Login">
+										<input type="submit" class="button" name="login" value="Đăng nhập">
 									</div>
-									<label for="rememberme" class="inline"> 
-									<input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember me </label>
+									<!-- <label for="rememberme" class="inline"> 
+									<input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember me </label> -->
 								</div>
 								
 							</form>
@@ -41,31 +41,31 @@
 						<div class="customer-register my-account">
 							<form method="post" class="register" action="index.php?url=register">
 								<div class="form-fields">
-									<h2>Register</h2>
+									<h2>Đăng kí</h2>
                                     
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Full Name <span class="required">*</span></label>
-										<input type="text" class="input-text" name="name" id="reg_email" value="">
+										<label for="reg_email">Họ tên <span class="required">*</span></label>
+										<input type="text" class="input-text" name="name" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">User Name <span class="required">*</span></label>
-										<input type="text" class="input-text" name="user_name" id="reg_email" value="">
+										<label for="reg_email">Tên đăng nhập <span class="required">*</span></label>
+										<input type="text" class="input-text" name="user_name" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Address <span class="required">*</span></label>
-										<input type="text" class="input-text" name="address" id="reg_email" value="">
+										<label for="reg_email">Địa chỉ <span class="required">*</span></label>
+										<input type="text" class="input-text" name="address" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Phone <span class="required">*</span></label>
-										<input type="number" class="input-text" name="phone" id="reg_email" value="">
+										<label for="reg_email">Số điện thoại <span class="required">*</span></label>
+										<input type="number" class="input-text" name="phone" id="reg_email" value="" required>
 									</p>
 									<p class="form-row form-row-wide">
-										<label for="reg_email">Email address <span class="required">*</span></label>
-										<input type="email" class="input-text" name="email" id="reg_email" value="">
+										<label for="reg_email">Email <span class="required">*</span></label>
+										<input type="email" class="input-text" name="email" id="reg_email" value="" required>
 									</p>
 									<p class="form-row form-row-wide">
-                                        <label for="reg_password">Password <span class="required">*</span></label>
-										<input type="password" class="input-text" name="password" id="reg_password">
+                                        <label for="reg_password">Mật khẩu <span class="required">*</span></label>
+										<input type="password" class="input-text" name="password" id="reg_password" required>
 									</p>
 									<div style="left: -999em; position: absolute;">
 										<label for="trap">Anti-spam</label>
@@ -74,7 +74,7 @@
 								</div>
 								<div class="form-action">
 									<div class="actions-log">
-										<input type="submit" class="button" name="register" value="Register">
+										<input type="submit" class="button" name="register" value="Đăng kí">
 									</div>
 								</div>
 							</form>

@@ -168,7 +168,7 @@
                                                     <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
                                                     <p class="form-row form-row-wide">
                                                         <label for="name">Họ tên </label>
-                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()">
+                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" >
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
@@ -177,29 +177,29 @@
                                                     </p> -->
                                                     <p class="form-row form-row-wide">
                                                         <label for="address">Địa chỉ </label>
-                                                        <input id="address" placeholder="Địa chỉ" type="text" class="input-text" name="address"  value="<?= $_SESSION['user']['address'] ?? '' ?>" onblur="checkDiaChi()">
+                                                        <input id="address" placeholder="Địa chỉ" type="text" class="input-text" name="address"  value="<?= $_SESSION['user']['address'] ?? '' ?>" onblur="checkDiaChi()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <p class="form-row form-row-wide">
                                                         <label for="phone">Số điện thoại </label>
-                                                        <input id="phone" placeholder="Số điện thoại" type="number" class="input-text" name="phone"  value="<?= $_SESSION['user']['phone'] ?? '' ?>" onblur="checkPhone()">
+                                                        <input id="phone" placeholder="Số điện thoại" type="number" class="input-text" name="phone"  value="<?= $_SESSION['user']['phone'] ?? '' ?>" onblur="checkPhone()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <p class="form-row form-row-wide">
                                                         <label for="email">Email </label>
-                                                        <input id="email" placeholder="Nhập địa chỉ email chính xác để nhận mail từ website" type="email" class="input-text" name="email"  value="<?= $_SESSION['user']['email'] ?? '' ?>" onblur="checkEmail()">
+                                                        <input id="email" placeholder="Nhập địa chỉ email chính xác để nhận mail từ website" type="email" class="input-text" name="email"  value="<?= $_SESSION['user']['email'] ?? '' ?>" onblur="checkEmail()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
 
                                                     <p class="form-row form-row-wide">
                                                         <label for="date">Ngày xem </label>
-                                                        <input id="date"  type="date" class="input-text" name="date"  value="" onblur="checkDate()">
+                                                        <input id="date"  type="date" class="input-text" name="date"  value="" onblur="checkDate()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
 
                                                     <p class="form-row form-row-wide">
                                                         <label for="time">Giờ xem </label>
-                                                        <input id="hour"  type="time" class="input-text" name="time"  value="" onblur="checkTime()">
+                                                        <input id="hour"  type="time" class="input-text" name="time"  value="" onblur="checkTime()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
@@ -226,9 +226,7 @@
                        </div>
 
 
-
-
-                       <div class="related-product-area" style="padding-top: 40;">
+                       <!-- <div class="related-product-area" style="padding-top: 40;">
                            <div class="row">
                                 <div class="col-md-12">
                                     <h4 class="related-title">Bình Luận</h4>
@@ -263,10 +261,7 @@
                                     
                                 </div>
                             </div>
-                       </div>
-
-
-
+                       </div> -->
 
 
                        <div class="related-product-area">
@@ -352,6 +347,7 @@
             if(ten == "" || ten == null) {
                 parent.classList.add('error');
                 span.innerText = 'Vui lòng nhập thông tin';
+                
             } else {
                 span.innerText = '';
             }
@@ -446,11 +442,13 @@
             }
         }
 
+       
         
         
      </script>
 
     <script src="views/template/js/validator.js"></script>
+
     <!-- All js plugins included in this file. -->
     <script src="views/template/js/vendor/jquery-1.12.0.min.js"></script>
     <script src="views/template/js/bootstrap.min.js"></script>

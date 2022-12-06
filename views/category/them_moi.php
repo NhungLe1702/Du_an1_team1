@@ -61,7 +61,7 @@
                           type="text"
                           class="form-control"
                           id="fname"
-                          name="name"
+                          name="name" required
                         />
                       </div>
                     </div>

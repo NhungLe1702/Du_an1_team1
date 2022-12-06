@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- Mirrored from web.dotthemes.com/html/dotbike-preview/dotbike/shop-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:55:33 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,15 +18,15 @@
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
+
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
 
 <body>
-    
-   
+
+
     <div class="breadcrumbs-area">
         <div class="container">
             <div class="row">
@@ -46,9 +47,9 @@
             <div class="row">
                 <div class="col-md-9 col-sm-8 col-xs-12">
                     <div class="shop-item-filter">
-                        
+
                         <div class="toolber-form  middle">
-                           <p class="filter-title">Show: </p>
+                            <p class="filter-title">Show: </p>
                             <div class="filter-form show-form">
                                 <form action="#">
                                     <select>
@@ -60,31 +61,31 @@
                                 </form>
                             </div>
                         </div>
-                        
+
                     </div>
-                    
+
                     <div class="row">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="grid-view">
 
                                 <!-- Đổ ra sản phẩm người dùng -->
-                               <?php foreach( $ds_sp as $key => $value) :   ?>
+                                <?php foreach ($ds_sp as $key => $value) :   ?>
                                     <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="single-product text-center">
-                                            
+
                                             <div class="single-product-inner">
                                                 <div class="product-img" style="height: 190px ;">
-                                                    <img src="views/template/image/product/<?=$value['image'] ?>" alt="">
+                                                    <img src="views/template/image/product/<?= $value['image'] ?>" alt="">
                                                 </div>
                                                 <div class="product-details">
                                                     <div class="name" style="height: 50px ; margin-bottom: 10px ;">
                                                         <h3>
-                                                            <a href="index.php?url=chi_tiet_san_pham&id=<?php echo $value['id']?>&id_category=<?php echo $value['id_category']?>">
-                                                                <?=$value['name'] ?>
+                                                            <a href="index.php?url=chi_tiet_san_pham&id=<?php echo $value['id'] ?>&id_category=<?php echo $value['id_category'] ?>">
+                                                                <?= $value['name'] ?>
                                                             </a>
                                                         </h3>
                                                     </div>
-                                                    
+
                                                     <div class="revew">
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                         <a href="#"><i class="fa fa-star"></i></a>
@@ -93,11 +94,12 @@
                                                         <a href="#"><i class="fa fa-star-o"></i></a>
                                                     </div>
                                                     <div class="price-box">
-                                                        <div class="old-price"><span><?= number_format($value['price'])?></span></div>
+                                                        <div class="old-price"><span><?= number_format($value['price']) ?></span></div>
                                                         <div class="new-price">
                                                             <span>
-                                                                <?php echo number_format(($value['price'] - $value['sale'] ))  ?>
-                                                            </span></div>
+                                                                <?php echo number_format(($value['price'] - $value['sale']))  ?>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="product-hover">
@@ -114,7 +116,7 @@
                                 <?php endforeach ?>
                             </div>
 
-                           
+
 
                         </div>
                     </div>
@@ -132,19 +134,28 @@
                                         <li><a href="#">next</a></li>
                                     </ul>
                                 </div>
-                                <div class="showing-page"><p>Showing 1 to 12 of 12 (1 Pages)</p></div>
+                                <div class="showing-page">
+                                    <p>Showing 1 to 12 of 12 (1 Pages)</p>
+                                </div>
                             </div>
                         </div>
+
+                       
                     </div>
 
                 </div>
-                
+
                 <?php include('views/template/aside.php'); ?>
             </div>
         </div>
     </div>
+
     
-    
+    <script> </script>
+
+    <script>
+       
+    </script>
     <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- All js plugins included in this file. -->
@@ -156,8 +167,10 @@
     <script src="js/plugins.js"></script>
     <script src="js/active.js"></script>
 
+
 </body>
 
 
 <!-- Mirrored from web.dotthemes.com/html/dotbike-preview/dotbike/shop-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:55:33 GMT -->
+
 </html>

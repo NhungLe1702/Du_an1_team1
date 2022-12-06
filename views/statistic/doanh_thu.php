@@ -142,11 +142,11 @@
                          
                         <?php endforeach ?>
                        
-                        </tbody>
+                       </tbody>
                         <?php foreach($tong_doanh_thu as $key => $value) :   ?>
                          
                          <tr>
-                           <td style="background-color:	#87CEEB ;">Tong</td>
+                           <td style="background-color:	#87CEEB ;">Tổng</td>
                            <td style="background-color:	#87CEEB ;"><?= number_format( $value['tong_doanh_thu']) ?></td>        
                          </tr>
                        <?php endforeach ?>

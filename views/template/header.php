@@ -60,7 +60,7 @@ $user = $_SESSION['user'] ?? false;
                                     
                                     <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
                                 <?php else : ?>
-                                    <li><a href="index.php?url=register">My Account</a></li>
+                                    <li><a href="index.php?url=register">Tài khoản</a></li>
                                 <?php endif; ?>
 
                             </ul>
@@ -81,7 +81,7 @@ $user = $_SESSION['user'] ?? false;
                         <div class="search-area">
                             <div class="search-box-inner">
                                 <form action="index.php?url=tim_kiem_SP" method="post">
-                                    <input type="text" placeholder="Search" name="kw">
+                                    <input type="text" placeholder="Search" name="kw" required>
                                     <button type="submit" name="tim_kiem"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -226,7 +226,7 @@ $user = $_SESSION['user'] ?? false;
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-9">
                                 <div class="call-us">
-                                    <span><i class="fa fa-phone"></i></span> Call Us: +00965888546-32
+                                    <span><i class="fa fa-phone"></i></span> Liên hệ: +00965888546-32
                                 </div>
                             </div>
                         </div>

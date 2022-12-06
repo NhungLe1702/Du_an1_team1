@@ -16,6 +16,7 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
+
                     <div class="col-md-5 col-sm-6 col-xs-12">
                         <div class="single-footer footer-dec">
                             <div class="footer-logo">
@@ -36,6 +37,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="single-footer">
                             <div class="footer-title">
@@ -47,11 +49,12 @@
                                 <li><a href="#"><i class="fa fa-angle-right"></i> Blog</a></li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i> FAQs</a></li>
                                 <li><a href="#"><i class="fa fa-angle-right"></i> Delivery</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> delivery</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i> Contact</a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="single-footer">
                             <div class="footer-title">
@@ -65,22 +68,24 @@
                             </ul>
                         </div>
                     </div>
+                    
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="single-footer newsletter">
                             <div class="footer-title">
                                 <h4>Newsletter</h4>
                             </div>
                             <p>Subscibe to the Shaeng mailing list to receive updates on new arrivals,offers and other discount information</p>
-                            <form action="#">
+                            <!-- <form action="#">
                                 <input type="text" placeholder="Write your e-mail here">
                                 <button>Subscribe</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-        <div class="footer-botton">
+        <!-- <div class="footer-botton">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-xs-12 col-sm-12">
@@ -93,7 +98,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <script>
         function confirmLogOut() {
