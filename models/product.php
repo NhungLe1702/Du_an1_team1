@@ -114,8 +114,6 @@
             $year = $_POST['year'];
             $id_category = $_POST['id_category'];
 
-            
-
             if (!$error) {
                 
                 $sql = "UPDATE product SET
@@ -128,11 +126,8 @@
                      id_category = $id_category 
                     WHERE id = $id";
                 $update_sp = pdo_execute($sql);
-                
-
-                
             }
-            // echo ('<script>window.location.href="index.php?url=hien_thi_san_pham"</script>');
+            echo ('<script>window.location.href="index.php?url=hien_thi_san_pham"</script>');
         
         }
        

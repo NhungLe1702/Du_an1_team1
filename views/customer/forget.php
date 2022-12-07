@@ -12,41 +12,24 @@
 						<div class="customer-register my-account" >
 							<form method="post" class="register" action="index.php?url=forget" >
 								<div class="form-fields">
-<<<<<<< HEAD
 									<h2>Quên mật khẩu?</h2>
-=======
-									<h2>Quên Mật Khẩu?</h2>
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                                     
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Email <span class="required">*</span></label>
 										<input type="text" class="input-text" name="email" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-<<<<<<< HEAD
 										<label for="reg_email">Tên đăng nhập <span class="required">*</span></label>
 										<input type="text" class="input-text" name="user_name" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Mật khẩu mới <span class="required">*</span></label>
 										<input type="text" class="input-text" name="password" id="reg_email" value="" required>
-=======
-										<label for="reg_email">Tên Đăng Nhập <span class="required">*</span></label>
-										<input type="text" class="input-text" name="user_name" id="reg_email" value="">
-									</p>
-                                    <p class="form-row form-row-wide">
-										<label for="reg_email">Mật Khẩu Mới <span class="required">*</span></label>
-										<input type="text" class="input-text" name="password" id="reg_email" value="">
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
 									</p>
 								</div>
 								<div class="form-action">
 									<div class="actions-log">
-<<<<<<< HEAD
 										<input type="submit" class="button" name="forget" value="Thay đổi">
-=======
-										<input type="submit" class="button" name="forget" value="Thay Đổi">
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
 									</div>
 								</div>
 							</form>

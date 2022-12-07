@@ -26,7 +26,7 @@ $user = $_SESSION['user'] ?? false;
                         <div class="currency">
                             <ul>
                                 <li>
-                                    <a href="#">₫ VND <i class="fa fa-caret-down"></i></a>
+                                    <a href="#">₫ VND </a>
                                     <!-- <ul class="currency-menu">
                                         <li><a href="#">$ USD</a></li>
                                         <li><a href="#">€ EUR</a></li>
@@ -38,7 +38,7 @@ $user = $_SESSION['user'] ?? false;
                         <div class="language">
                             <ul>
                                 <li>
-                                    <a href="#"><img src="views/template/img/currency/c5.png" alt="" style="width: 5%" > VIET NAM <i class="fa fa-caret-down"></i></a>
+                                    <a href="#"><img src="views/template/img/currency/c5.png" alt="" style="width: 5%" > VIET NAM</i></a>
                                     <!-- <ul class="language-menu">
                                         <li><a href="#"><img src="views/template/img/currency/c1.png" alt=""> English</a></li>
                                         <li><a href="#"><img src="views/template/img/currency/c2.png" alt=""> Arabic</a></li>
@@ -55,10 +55,10 @@ $user = $_SESSION['user'] ?? false;
                             <ul>
                                 <?php if (!empty($user)) : ?>
                                     <li>
-                                       <a href="index.php?url=edit_thongtin&id=<?= $user['id'] ?>"> Hello <?= $user['name'] ?> </a>
+                                       <a href="index.php?url=edit_thongtin&id=<?= $user['id'] ?>"> Xin chào <?= $user['name'] ?> </a>
                                     </li>
                                     
-                                    <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
+                                    <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Đăng xuất</button></li>
                                 <?php else : ?>
                                     <li><a href="index.php?url=register">Tài khoản</a></li>
                                 <?php endif; ?>
@@ -154,6 +154,22 @@ $user = $_SESSION['user'] ?? false;
                                             <ul>
                                                 <li><a  href="index.php?url=trang_chu"><i class="fa fa-home"></i></a></li>
                                                 <li><a href="index.php?url=trang_chu">Trang chủ</a></li>
+                                                <li class="mega_parent mega-item2"><a href="#">Thương hiệu</a>
+                                                    <ul class="mega-menu">
+                                                        <!-- <li style="width: 100%; "> -->
+                                                            <ul class="mega_submenu" >
+                                                                <?php foreach(danhSachDanhMuc() as $key => $value) : ?>
+                                                                    <li style="padding-left:  20px; color: black!important;">
+                                                                        <!-- <input id="Road" type="checkbox" name="Road"> -->
+                                                                        <label for="Road">
+                                                                            <a  href="index.php?url=ds_san_pham_theo_dm&id=<?php echo $value['id'] ?>"><?=$value['name']?></a>
+                                                                        </label>
+                                                                    </li>
+                                                                <?php endforeach ?>    
+                                                        </ul>
+                                                        <!-- </li> -->
+                                                    </ul>
+                                                </li>
                                                 <li><a href="index.php?url=san_pham">Sản Phẩm </a></li>
                                                 <li><a href="index.php?url=gioi_thieu">Giới thiệu  </a></li>
                                                 

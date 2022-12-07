@@ -155,7 +155,19 @@
                         >Mô tả</label
                       >
                       <div class="col-sm-9">
-                        <textarea required  class="form-control"  name="description" id="" cols="78" rows="6"></textarea>
+                        <textarea required  class="form-control"  name="description" id="ykien" cols="78" rows="6"></textarea>
+                        <script src="views/template/js/ckeditor.js"></script>
+                        <script>
+                            ClassicEditor
+                            .create(document.querySelector('#ykien'))
+                            .then( editor => {
+                              editor.ui.view.editable.element.style.height = '200px';
+                              editor.ui.view.editable.element.style.width = '518px';
+                              } )
+                            .catch(error =>  {
+                                console.error(error)
+                            });
+                        </script>
                       </div>
                     </div>
 

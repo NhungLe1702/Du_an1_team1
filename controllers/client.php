@@ -14,6 +14,7 @@
     }
 
     function chiTietSanPham() {
+        
         if (isset($_POST['dat_lich'])) {
            if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
             echo "

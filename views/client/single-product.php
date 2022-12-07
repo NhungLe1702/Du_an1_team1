@@ -168,7 +168,7 @@
                                                     <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
                                                     <p class="form-row form-row-wide">
                                                         <label for="name">Họ tên </label>
-                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" >
+                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
@@ -224,45 +224,6 @@
                                 </div>
                             </div>
                        </div>
-
-
-                       <!-- <div class="related-product-area" style="padding-top: 40;">
-                           <div class="row">
-                                <div class="col-md-12">
-                                    <h4 class="related-title">Bình Luận</h4>
-                                </div>
-                           </div>
-                           <div class="row">
-                                <div class="single-product-page-list">
-                                    <div class="single_product-list">
-                                        <div class="customer-register my-account">
-                                            <form method="post" class="register" id="form-1">
-                                                <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
-                                                   
-                                                   
-                                                        <label for="name">Nội Dung </label>
-                                                        <input id="name" placeholder="" type="text" class="input-text" name="cmt">
-                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
-                                        
-                                                    <div style="left: -999em; position: absolute;">
-                                                        <label for="trap">Anti-spam</label>
-                                                        <input type="text" name="email_2" id="trap" tabindex="-1">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
-                                                    <div class="actions-log" style="float:left;">
-                                                        <input id="submit_btn" type="submit" class="button" name="cmt" value="Gửi Bình Luận">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                       </div> -->
-
 
                        <div class="related-product-area">
                            <div class="row">
@@ -373,7 +334,7 @@
             // Kiểm tra số điện thoại
             var phone = document.querySelector('#phone');
             var sdt = document.getElementById("phone").value;
-            var sdt_l = document.getElementById("phone");
+        
             let parent = phone.parentElement;
             let span = parent.querySelector('span');
 
@@ -388,6 +349,7 @@
         function checkEmail() {
             var email = document.querySelector('#email');
             var dc_email = document.getElementById("email").value;
+
             let parent = email.parentElement;
             let span = parent.querySelector('span');
             ktEmail = /^\w(\.?[\w+])*@\w(\.?[\w+])*\.[a-z]{2,4}$/i;
@@ -401,7 +363,6 @@
                 } else {
                     span.innerText = '';
                 }
-               
             } 
         }
 
@@ -413,7 +374,8 @@
             let span = parent.querySelector('span');
 
             var today = new Date();
-            var date_now = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var date_now = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
             if(ngay < date_now) {
                 parent.classList.add('error');
                 span.innerText = 'Ngày không hợp lệ';
@@ -434,7 +396,7 @@
             // span.innerText = time;
             // span.innerText = gio;
 
-            if(gio <= time) {
+            if(gio < time) {
                 parent.classList.add('error');
                 span.innerText = 'Giờ không hợp lệ';
             } else {
@@ -445,7 +407,7 @@
        
         
         
-     </script>
+    </script>
 
     <script src="views/template/js/validator.js"></script>
 
