@@ -16,6 +16,12 @@
     function chiTietSanPham() {
         
         if (isset($_POST['dat_lich'])) {
+           if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
+            echo "
+            <script> alert('Thông tin chưa đúng định dạng') </script>
+            ";
+        }   
+           else{
             $name = $_POST['name'];
             $address = $_POST['address'];
             $phone = $_POST['phone'];
@@ -49,7 +55,42 @@
                     alert('Đặt lịch thành công, vui lòng kiểm tra email');
                 </script>
             ";
+        //    }
+        //     $name = $_POST['name'];
+        //     $address = $_POST['address'];
+        //     $phone = $_POST['phone'];
+        //     $email = $_POST['email'];
+        //     $product_id = $_POST['product_id'];
+        //     $time = $_POST['time'];
+        //     $date = $_POST['date'];
+        //     $customer = find_user_by_email($email);
+        //     if (empty($customer)) {
+        //         $data = [
+        //             'name' => $name,
+        //             'address' => $address,
+        //             'phone' => $phone,
+        //             'email' => $email,
+        //         ];
+        //         $customer_id = tao_customer($data);
+        //     } else {
+        //         $customer_id = $customer['id'];
+        //     }
+        //     them_don_xem($customer_id, $product_id, $time, $date);
+        //     $title = "Đặt lịch thành công";
+        //     $content = "
+        //     <h2>Xin chào {$name}</h2>
+        //     <p>Lịch xem của bạn đã được khởi tạo thành công trên hệ thống.</p>
+        //     <p>Thời gian: {$time} - {$date}</p>
+        //     <p>Xin cảm ơn bạn đã đặt lịch!</p>
+        //     ";
+        //     sendMail($email, $name, $title, $content);
+        //     echo "
+        //         <script>
+        //             alert('Đặt lịch thành công, vui lòng kiểm tra email');
+        //         </script>
+        //     ";
         }
+    }
         if (isset($_GET['id'])) {
 
             $id = $_GET['id'];
