@@ -1,3 +1,7 @@
+<?php
+  require_once('models/category.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,11 +65,14 @@
                           type="text"
                           class="form-control"
                           id="fname"
-                          name="name" required
+                          name="name" 
                         />
                       </div>
                     </div>
-
+                          <?php
+                            echo "<br>";
+                            echo isset($error['name']) ? $error['name'] : "";
+                          ?>
                   </div>
 
                   <div class="border-top">

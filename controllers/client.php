@@ -14,6 +14,7 @@
     }
 
     function chiTietSanPham() {
+        
         if (isset($_POST['dat_lich'])) {
             $name = $_POST['name'];
             $address = $_POST['address'];

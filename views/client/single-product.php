@@ -168,11 +168,7 @@
                                                     <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
                                                     <p class="form-row form-row-wide">
                                                         <label for="name">Họ tên </label>
-<<<<<<< HEAD
                                                         <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" >
-=======
-                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" required>
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
@@ -229,8 +225,6 @@
                             </div>
                        </div>
 
-<<<<<<< HEAD
-
                        <!-- <div class="related-product-area" style="padding-top: 40;">
                            <div class="row">
                                 <div class="col-md-12">
@@ -269,8 +263,6 @@
                        </div> -->
 
 
-=======
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                        <div class="related-product-area">
                            <div class="row">
                                 <div class="col-md-12">
@@ -380,7 +372,7 @@
             // Kiểm tra số điện thoại
             var phone = document.querySelector('#phone');
             var sdt = document.getElementById("phone").value;
-            var sdt_l = document.getElementById("phone");
+        
             let parent = phone.parentElement;
             let span = parent.querySelector('span');
 
@@ -395,6 +387,7 @@
         function checkEmail() {
             var email = document.querySelector('#email');
             var dc_email = document.getElementById("email").value;
+
             let parent = email.parentElement;
             let span = parent.querySelector('span');
             ktEmail = /^\w(\.?[\w+])*@\w(\.?[\w+])*\.[a-z]{2,4}$/i;
@@ -408,7 +401,6 @@
                 } else {
                     span.innerText = '';
                 }
-               
             } 
         }
 
@@ -420,7 +412,8 @@
             let span = parent.querySelector('span');
 
             var today = new Date();
-            var date_now = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var date_now = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
             if(ngay < date_now) {
                 parent.classList.add('error');
                 span.innerText = 'Ngày không hợp lệ';
@@ -441,7 +434,7 @@
             // span.innerText = time;
             // span.innerText = gio;
 
-            if(gio <= time) {
+            if(gio < time) {
                 parent.classList.add('error');
                 span.innerText = 'Giờ không hợp lệ';
             } else {
@@ -452,7 +445,7 @@
        
         
         
-     </script>
+    </script>
 
     <script src="views/template/js/validator.js"></script>
 

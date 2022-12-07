@@ -13,15 +13,20 @@
     }
 
     function themDanhMuc() {
+        $error = [];
         if(isset($_POST['btn_submit'])) {
             $name = $_POST['name'];
-            $sql = "INSERT INTO category(name) VALUES('$name') ";
-            $add = pdo_execute($sql);
-            // $thong_bao = 'Thêm thành công';
             
-        }
-        
-        // if (isset($thong_bao))  echo $thong_bao;
+            if(empty($name)) {
+                $error['name'] = "Vui lòng nhập tên thương hiệu";
+            }
+
+            if(!$error) {
+                $sql = "INSERT INTO category(name) VALUES('$name') ";
+                $add = pdo_execute($sql);
+                echo ('<script>window.location.href="index.php?url=danh_muc"</script>');
+            }
+        }   
     }
 
     function layMotDanhMuc($id) {
