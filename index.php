@@ -77,9 +77,9 @@ switch ($url) {
     // case 'xu_ly_dat_lich':
     //     xuLyDatLich();
     //     break;
-    case 'dat_lich_client':
-        formDatLich();
-        break;
+    // case 'dat_lich_client':
+    //     formDatLich();
+    //     break;
 
     // case 'tao_don_xem_client':
     //     tao_don_xem();
