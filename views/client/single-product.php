@@ -168,11 +168,7 @@
                                                     <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
                                                     <p class="form-row form-row-wide">
                                                         <label for="name">Họ tên </label>
-<<<<<<< HEAD
                                                         <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" >
-=======
-                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" required>
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
@@ -229,7 +225,6 @@
                             </div>
                        </div>
 
-<<<<<<< HEAD
 
                        <!-- <div class="related-product-area" style="padding-top: 40;">
                            <div class="row">
@@ -269,8 +264,6 @@
                        </div> -->
 
 
-=======
->>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                        <div class="related-product-area">
                            <div class="row">
                                 <div class="col-md-12">
