@@ -16,6 +16,7 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
+
                     <div class="col-md-5 col-sm-6 col-xs-12">
                         <div class="single-footer footer-dec">
                             <div class="footer-logo">
@@ -38,6 +39,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="single-footer">
                             <div class="footer-title">
@@ -55,6 +57,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="single-footer">
                             <div class="footer-title">
@@ -67,20 +70,26 @@
                             </ul>
                         </div>
                     </div>
+                    
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="single-footer newsletter">
                             <div class="footer-title">
                                 <h4>Hỗ Trợ Khách Hàng</h4>
                             </div>
+<<<<<<< HEAD
+                            <p>Subscibe to the Shaeng mailing list to receive updates on new arrivals,offers and other discount information</p>
+=======
                             <p> <b>Hotline:</b>  0339770803</p>
                             <p><b> Email:</b> dotbike.cskh@gmail.com</p>
                             <p>Đăng ký danh sách gửi thư để nhận thông tin cập nhật về hàng mới, ưu đãi và thông tin giảm giá khác</p>
+>>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                             <!-- <form action="#">
                                 <input type="text" placeholder="Write your e-mail here">
                                 <button>Subscribe</button>
                             </form> -->
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

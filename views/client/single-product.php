@@ -168,7 +168,11 @@
                                                     <input type="hidden" name="product_id" value="<?=$lay_sp['id']?>">
                                                     <p class="form-row form-row-wide">
                                                         <label for="name">Họ tên </label>
+<<<<<<< HEAD
+                                                        <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" >
+=======
                                                         <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name"  value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" required>
+>>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                                                         <span style="margin-top: 10px ; color: red;" class="form-message"></span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
@@ -225,6 +229,48 @@
                             </div>
                        </div>
 
+<<<<<<< HEAD
+
+                       <!-- <div class="related-product-area" style="padding-top: 40;">
+                           <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="related-title">Bình Luận</h4>
+                                </div>
+                           </div>
+                           <div class="row">
+                                <div class="single-product-page-list">
+                                    <div class="single_product-list">
+                                        <div class="customer-register my-account">
+                                            <form method="post" class="register" id="form-1">
+                                                <div class="form-fields" style="border: 1px solid #d7d0d0; border-bottom: none;">
+                                                   
+                                                   
+                                                        <label for="name">Nội Dung </label>
+                                                        <input id="name" placeholder="" type="text" class="input-text" name="cmt">
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                        
+                                                    <div style="left: -999em; position: absolute;">
+                                                        <label for="trap">Anti-spam</label>
+                                                        <input type="text" name="email_2" id="trap" tabindex="-1">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-action" style="border: 1px solid #d7d0d0; border-top: none;">
+                                                    <div class="actions-log" style="float:left;">
+                                                        <input id="submit_btn" type="submit" class="button" name="cmt" value="Gửi Bình Luận">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                       </div> -->
+
+
+=======
+>>>>>>> dc8e5f6fc6e708890dbc1122f315e23ff1a37b4c
                        <div class="related-product-area">
                            <div class="row">
                                 <div class="col-md-12">
@@ -308,6 +354,7 @@
             if(ten == "" || ten == null) {
                 parent.classList.add('error');
                 span.innerText = 'Vui lòng nhập thông tin';
+                
             } else {
                 span.innerText = '';
             }
@@ -402,11 +449,13 @@
             }
         }
 
+       
         
         
      </script>
 
     <script src="views/template/js/validator.js"></script>
+
     <!-- All js plugins included in this file. -->
     <script src="views/template/js/vendor/jquery-1.12.0.min.js"></script>
     <script src="views/template/js/bootstrap.min.js"></script>

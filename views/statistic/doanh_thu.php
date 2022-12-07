@@ -142,7 +142,7 @@
                          
                         <?php endforeach ?>
                        
-                        </tbody>
+                       </tbody>
                         <?php foreach($tong_doanh_thu as $key => $value) :   ?>
                          
                          <tr>

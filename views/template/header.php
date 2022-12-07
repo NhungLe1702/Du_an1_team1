@@ -60,7 +60,7 @@ $user = $_SESSION['user'] ?? false;
                                     
                                     <li><button onclick="confirmLogOut()" style="border-radius: 5px ; border: none; background-color: #008dc7; color: white; ">Log Out</button></li>
                                 <?php else : ?>
-                                    <li><a href="index.php?url=register">Tài Khoản</a></li>
+                                    <li><a href="index.php?url=register">Tài khoản</a></li>
                                 <?php endif; ?>
 
                             </ul>
@@ -226,7 +226,7 @@ $user = $_SESSION['user'] ?? false;
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-9">
                                 <div class="call-us">
-                                    <span><i class="fa fa-phone"></i></span> Liên Hệ: +00965888546-32
+                                    <span><i class="fa fa-phone"></i></span> Liên hệ: +00965888546-32
                                 </div>
                             </div>
                         </div>

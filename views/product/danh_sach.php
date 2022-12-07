@@ -101,10 +101,10 @@
                     <div class="col-sm-12 col-md-6">
                       <form class="search_product" action="index.php?url=loc_san_pham_theo_dm" method="post">
                          
-                          <select name="id_category" id="">
-                              <option value="0" selected>Tất cả</option>
+                          <select name="id_category" id="" style="width: 150px ; height: 31px ; border: 1px solid #cccccc; border-radius: 5px; ">
+                              <option value="0" selected >Tất cả</option>
                               <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
-                                  <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
+                                  <option  value="<?php echo $value["id"] ?>" > <?php echo $value["name"] ?> </option>
                               <?php } ?>
                           </select>
                           <input class="btn_submit" type="submit" name="listOk" value="Lọc">
@@ -181,7 +181,7 @@
       </div>
       
     </div>
-    
+
     
     <script src="views/template/css/assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->

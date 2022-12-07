@@ -10,14 +10,14 @@
 						<div class="customer-login my-account">
 							<form method="post" class="login" action="index.php?url=login">
 								<div class="form-fields">
-									<h2>Đăng Nhập</h2>
+									<h2>Đăng nhập</h2>
 									<p class="form-row form-row-wide">
-										<label for="username">Tên Đăng Nhập <span class="required">*</span></label>
+										<label for="username">Tên đăng nhập <span class="required">*</span></label>
 										<input type="text" class="input-text" name="user_name" id="username" value="" required>
 									</p>
 									<p class="form-row form-row-wide">
-										<label for="password">Mật Khẩu <span class="required">*</span></label>
-										<input class="input-text" type="password" name="password" id="password" required>
+										<label for="password">Mật khẩu <span class="required">*</span></label>
+										<input class="input-text" type="password" name="password" id="password" required> 
 									</p>
 								</div>
 								<div class="form-action">
@@ -41,22 +41,22 @@
 						<div class="customer-register my-account">
 							<form method="post" class="register" action="index.php?url=register">
 								<div class="form-fields">
-									<h2>Đăng Kí</h2>
+									<h2>Đăng kí</h2>
                                     
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Họ Tên <span class="required">*</span></label>
+										<label for="reg_email">Họ tên <span class="required">*</span></label>
 										<input type="text" class="input-text" name="name" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Tên Đăng Nhập <span class="required">*</span></label>
+										<label for="reg_email">Tên đăng nhập <span class="required">*</span></label>
 										<input type="text" class="input-text" name="user_name" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Địa Chỉ <span class="required">*</span></label>
+										<label for="reg_email">Địa chỉ <span class="required">*</span></label>
 										<input type="text" class="input-text" name="address" id="reg_email" value="" required>
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Số Điện Thoại <span class="required">*</span></label>
+										<label for="reg_email">Số điện thoại <span class="required">*</span></label>
 										<input type="number" class="input-text" name="phone" id="reg_email" value="" required>
 									</p>
 									<p class="form-row form-row-wide">
@@ -64,7 +64,7 @@
 										<input type="email" class="input-text" name="email" id="reg_email" value="" required>
 									</p>
 									<p class="form-row form-row-wide">
-                                        <label for="reg_password">Mật Khẩu <span class="required">*</span></label>
+                                        <label for="reg_password">Mật khẩu <span class="required">*</span></label>
 										<input type="password" class="input-text" name="password" id="reg_password" required>
 									</p>
 									<div style="left: -999em; position: absolute;">
@@ -74,7 +74,7 @@
 								</div>
 								<div class="form-action">
 									<div class="actions-log">
-										<input type="submit" class="button" name="register" value="Đăng Kí">
+										<input type="submit" class="button" name="register" value="Đăng kí">
 									</div>
 								</div>
 							</form>

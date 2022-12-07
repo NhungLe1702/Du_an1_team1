@@ -8,9 +8,9 @@ define('NOT_FETCH', 0);
 if(!function_exists('getConnect')) {
     function getConnect() {
         $connect = new PDO(
-            'mysql:host=localhost;dbname=duan1;',
-            'root',
-            ''
+            'mysql:host=localhost;dbname=Team1_web17309;',
+            'nhunglt',
+            '123456'
         );
         return $connect;
     }
@@ -55,7 +55,6 @@ function pdo_execute_get_last_id($sql){
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         return $conn->lastInsertId();
-    
     }
     catch(PDOException $e){
         throw $e;

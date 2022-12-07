@@ -91,8 +91,6 @@
           <div class="row">
             <div class="col-12">
               
-            
-
               <div class="card">
                 <div class="card-body">
                   <!-- <h5 class="card-title">Basic Datatable</h5> -->
@@ -102,7 +100,7 @@
                     <div class="col-sm-12 col-md-6">
                       <form class="search_product" action="index.php?url=loc_don_xem_theo_status" method="post">
                          
-                          <select name="id_status" id="">
+                          <select name="id_status" id="" style="width: 150px ; height: 31px ; border: 1px solid #cccccc; border-radius: 5px; ">
                               <option value="5" selected>Tất cả</option>
                               <option value="0">0. Chưa xem</option>
                               <option value="1">1. Đã xem</option>
@@ -111,7 +109,7 @@
                               <option value="4">4. Đã Mua</option>
                               
                           </select>
-                          <input class="btn_submit" type="submit" name="listOk" value="Lọc">
+                          <input class="btn_submit" type="submit" name="listOk" value="Lọc" style="width: 50px ; height: 31px ; border: 1px solid #cccccc; border-radius: 5px; ">
                       </form>
                     </div>
 

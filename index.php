@@ -2,7 +2,6 @@
 session_start();
 require_once('models/db.php');
 
-
 require 'libs/PHPMailer/src/Exception.php';
 require 'libs/PHPMailer/src/PHPMailer.php';
 require 'libs/PHPMailer/src/SMTP.php';
@@ -14,10 +13,7 @@ require('controllers/customer.php');
 require('controllers/product.php');
 require('controllers/view_order_admin.php');
 
- include('views/template/header.php');
-
-
-
+include('views/template/header.php');
 
 // Dùng để quản lý đường dẫn và điều hướng đến màn hình phù hợp
 $url = isset($_GET['url']) ? $_GET['url'] : '/';

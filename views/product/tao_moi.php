@@ -62,8 +62,7 @@
                           type="text"
                           class="form-control"
                           id="fname"
-                          name="name"
-                          required
+                          name="name" required
                         />
                       </div>
                     </div>
@@ -79,7 +78,7 @@
                         required
                           type="file"  name = "img_upload"
                           class="form-control"
-                          id="lname"
+                          id="lname" required
                         />
                       </div>
                     </div>
@@ -96,7 +95,7 @@
                           type="file"  name = "images[]"
                           class="form-control"
                           id="lname"
-                          multiple="multiple"
+                          multiple="multiple" required
                         />
                       </div>
                     </div>
@@ -112,7 +111,7 @@
                         required
                           type="number" name = "price"
                           class="form-control"
-                          id="lname"
+                          id="lname" required
                         />
                       </div>
                     </div>
@@ -128,7 +127,7 @@
                         required
                           type="number" name = "sale"
                           class="form-control"
-                          id="lname"
+                          id="lname" required
                         />
                       </div>
                     </div>
@@ -144,7 +143,7 @@
                         required
                           type="text" name = "origin"
                           class="form-control"
-                          id="email1"
+                          id="email1" required
                         />
                       </div>
                     </div>
@@ -170,7 +169,7 @@
                         <input
                           type="number" name ="year"
                           class="form-control"
-                          id="cono1"
+                          id="cono1" required
                         />
                       </div>
                     </div>   
@@ -184,6 +183,7 @@
                       <div class="col-sm-9">
                         
                           <select id = "cono1" class="form-control" name="id_category">
+                            <option value="">Chọn thương hiệu </option>
                             <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
                                 <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                             <?php } ?>
