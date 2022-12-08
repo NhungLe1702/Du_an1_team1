@@ -36,31 +36,31 @@
 						<div class="customer-register my-account">
 							<form method="post" class="register" action="">
 								<div class="form-fields">
-									<h2>EDIT </h2>
+									<h2>Chỉnh sửa </h2>
                                     <input type="hidden" name="id" value="<?= $user['id'] ?>">
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Full Name <span class="required">*</span></label>
+										<label for="reg_email">Họ và tên <span class="required">*</span></label>
 										<input type="text" class="input-text" name="name" id="reg_email" value="<?= $user['name'] ?>">
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">User Name <span class="required">*</span></label>
+										<label for="reg_email">Tên đăng nhập <span class="required">*</span></label>
 										<input type="text" class="input-text" name="user_name" id="reg_email" value="<?= $user['user_name'] ?>">
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Address <span class="required">*</span></label>
+										<label for="reg_email">Địa chỉ <span class="required">*</span></label>
 										<input type="text" class="input-text" name="address" id="reg_email" value="<?= $user['address'] ?>">
 									</p>
                                     <p class="form-row form-row-wide">
-										<label for="reg_email">Phone <span class="required">*</span></label>
+										<label for="reg_email">Số điện thoại <span class="required">*</span></label>
 										<input type="number" class="input-text" name="phone" id="reg_email" value="<?= $user['phone'] ?>">
 									</p>
 									<p class="form-row form-row-wide">
-										<label for="reg_email">Email address <span class="required">*</span></label>
+										<label for="reg_email">Email  <span class="required">*</span></label>
 										<input type="email" class="input-text" name="email" id="reg_email" value="<?= $user['email'] ?>">
 									</p>
 									<p class="form-row form-row-wide">
-                                        <label for="reg_password">Password <span class="required">*</span></label>
-										<input type="text" class="input-text" name="password" id="reg_password" value="<?= $user['password'] ?>">
+                                        <label for="reg_password">Mật khẩu <span class="required">*</span></label>
+										<input type="password" class="input-text" name="password" id="reg_password" value="<?= $user['password'] ?>">
 									</p>
 									<div style="left: -999em; position: absolute;">
 										<label for="trap">Anti-spam</label>
