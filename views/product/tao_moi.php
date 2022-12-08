@@ -162,7 +162,7 @@
                             .create(document.querySelector('#ykien'))
                             .then( editor => {
                               editor.ui.view.editable.element.style.height = '200px';
-                              editor.ui.view.editable.element.style.width = '578px';
+                              editor.ui.view.editable.element.style.width = '518px';
                               } )
                             .catch(error =>  {
                                 console.error(error)
