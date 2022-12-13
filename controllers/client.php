@@ -17,7 +17,6 @@ function sanPhamClient()
 
 function chiTietSanPham()
 {
-
     if (isset($_POST['dat_lich'])) {
         $hasError = false;
         $errors = [];
@@ -29,9 +28,7 @@ function chiTietSanPham()
         if ($thoiGianDatLichTs < $thoiGianHienTaiTs) {
             $hasError = true;
             $errors['date_time'][] = 'Thời gian xem không được bé hơn thời gian hiện tại';
-            // echo "
-            // <script> alert('Thời gian xem không được bé hơn thời gian hiện tại') </script>
-            // ";
+          
         }
         if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
             $hasError = true;

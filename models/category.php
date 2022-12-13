@@ -44,6 +44,6 @@
             $update = pdo_execute($sql);
             $thong_bao = 'Cập nhật thành công';
         }
-        if (isset($thong_bao))  echo $thong_bao;
+        echo ('<script>window.location.href="index.php?url=danh_muc"</script>');
     }
 ?>

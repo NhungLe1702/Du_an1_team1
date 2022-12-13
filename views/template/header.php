@@ -73,8 +73,8 @@ $user = $_SESSION['user'] ?? false;
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="logo">
-                            <a href="index.php?url=trang_chu"><img src="views/template/img/logo/logo.png" alt=""></a>
+                        <div class="logo" >
+                            <a href="index.php?url=trang_chu"><img style="width: 50%;"  src="views/template/img/logo/logo-3.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">

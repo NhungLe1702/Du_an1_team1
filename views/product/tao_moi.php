@@ -156,7 +156,7 @@
                       >
                       <div class="col-sm-9">
                         <textarea required  class="form-control"  name="description" id="ykien" cols="78" rows="6"></textarea>
-                        <script src="views/template/js/ckeditor.js"></script>
+                        <!-- <script src="views/template/js/ckeditor.js"></script>
                         <script>
                             ClassicEditor
                             .create(document.querySelector('#ykien'))
@@ -167,7 +167,7 @@
                             .catch(error =>  {
                                 console.error(error)
                             });
-                        </script>
+                        </script> -->
                       </div>
                     </div>
 

@@ -84,7 +84,7 @@
                     </div>
                     
 
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                       <label
                         for="fname"
                         class="col-sm-3 text-end control-label col-form-label" 
@@ -94,7 +94,7 @@
                         
                         <img name="img_upload" src="views/template/image/product/<?= $lay_mot['image'] ?>" alt="">
                       </div>
-                    </div>
+                    </div> -->
 
                    
 
@@ -156,20 +156,19 @@
                         >Mô tả</label
                       >
                       <div class="col-sm-9">
-                        <!-- <textarea  class="form-control" name="description" id="" cols="78" rows="4" ></textarea> -->
                         <textarea required  class="form-control"  name="description" id="ykien" cols="78" rows="6"><?= $lay_mot['description']?></textarea>
-                        <script src="views/template/js/ckeditor.js"></script>
+                        <!-- <script src="views/template/js/ckeditor.js"></script>
                         <script>
                             ClassicEditor
                             .create(document.querySelector('#ykien'))
                             .then( editor => {
                               editor.ui.view.editable.element.style.height = '200px';
-                              editor.ui.view.editable.element.style.width = '518px';
+                              editor.ui.view.editable.element.style.width = '578px';
                               } )
                             .catch(error =>  {
                                 console.error(error)
                             });
-                        </script>
+                        </script> -->
                       </div>
                     </div>
                     

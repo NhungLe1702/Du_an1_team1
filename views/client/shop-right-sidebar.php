@@ -121,7 +121,7 @@
                         </div>
                     </div>
 
-                    <div class="pagination-box">
+                    <!-- <div class="pagination-box">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="pagination-inner">
@@ -139,7 +139,7 @@
                         </div>
 
                        
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -148,12 +148,7 @@
         </div>
     </div>
 
-    
-    <script> </script>
 
-    <script>
-       
-    </script>
     <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- All js plugins included in this file. -->

@@ -316,7 +316,7 @@ if (!empty($_SESSION['errors'])) {
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         function checkTen() {
             var name = document.querySelector('#name');
 
@@ -423,7 +423,7 @@ if (!empty($_SESSION['errors'])) {
         //         span.innerText = '';
         //     }
         // }
-    </script>
+    </script> -->
 
     <script src="views/template/js/validator.js"></script>
 

@@ -118,14 +118,6 @@
         return  $tong_don_xem;
     }
 
-
-
-
-
-
-
-
-
     function hamthongKeDoanhThu() {
         $sql =" SELECT  product.name as product_name, 
                         view_order.product_id, 
