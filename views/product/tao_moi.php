@@ -195,13 +195,22 @@
                       <div class="col-sm-9">
                         
                           <select id = "cono1" class="form-control" name="id_category">
-                            <option value="">Chọn thương hiệu </option>
+                            <option value="0">Chọn thương hiệu </option>
                             <?php foreach (danhSachDanhMuc() as $key => $value) { ?>
                                 <option value="<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                             <?php } ?>
                           </select>
 
+                          
+
                       </div>
+                        <span style="margin-top: 10px ; color: red;" class="form-message">
+                              <?php
+                                  if (!empty($errors['category'])) {
+                                      echo $errors['category'];
+                                  }
+                              ?>
+                          </span>
                     </div>   
                       
                   </div>

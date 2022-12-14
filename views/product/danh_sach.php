@@ -111,7 +111,7 @@
                       </form>
                     </div>
                       
-                  
+                    
                   
                 
                     <table
@@ -123,7 +123,7 @@
                           <th>ID</th>
                           <th>Tên</th>
                           <th>Hình ảnh</th>
-                          <th>Hình ảnh mô tả</th>
+                          <!-- <th>Hình ảnh mô tả</th> -->
                           <th>Đơn giá</th>
                           <th>sale</th>
                           <th>nguồn gốc</th>
@@ -140,7 +140,13 @@
                             <td><?= $value['id']?></td>
                             <td><?= $value['name']?></td>
                             <td style="padding:10px 0;"><img src="views/template/image/product/<?php echo $value['image'] ?>" alt="" style ="width:50%"></td>
-                            <td></td>
+
+                            <?php /*foreach($lay_anh as $key => $value) : ?>
+                              <td>
+                                <img src="views/template/image/Anh_phu/<?php echo $value['image'] ?>" alt="" style ="width:50%">
+                              </td>
+                            <?php endforeach */ ?>
+
                             <td><?= number_format($value['price'])?></td>
                             <td><?= number_format($value['sale'])?></td>
                             <td><?= $value['origin']?></td>

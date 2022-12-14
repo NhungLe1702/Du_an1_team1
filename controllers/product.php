@@ -4,6 +4,7 @@
     function hienThiSanPham()
     {
         $ds_sp = layDSSanPham();
+        $lay_anh = layAnhMoTaAdmin();
         include('views/product/danh_sach.php');
     }
 
@@ -12,6 +13,8 @@
         $them_sp = themMoiSanPham();
         include('views/product/tao_moi.php');
     }
+
+    
 
     function formSuaSanPham() {
         if(isset($_GET['id'])) {

@@ -177,7 +177,13 @@ if (!empty($_SESSION['errors'])) {
                                                     <p class="form-row form-row-wide">
                                                         <label for="name">Họ tên </label>
                                                         <input id="name" placeholder="Họ và tên" type="text" class="input-text" name="name" value="<?= $_SESSION['user']['name'] ?? '' ?>" onblur="checkTen()" required>
-                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message">
+                                                            <?php
+                                                                if (!empty($errors['name'])) {
+                                                                    echo $errors['name'];
+                                                                }
+                                                            ?>
+                                                        </span>
                                                     </p>
                                                     <!-- <p class="form-row form-row-wide">
                                                         <label for="reg_email">User Name <span class="required">*</span></label>
@@ -191,7 +197,13 @@ if (!empty($_SESSION['errors'])) {
                                                     <p class="form-row form-row-wide">
                                                         <label for="phone">Số điện thoại </label>
                                                         <input id="phone" placeholder="Số điện thoại" type="number" class="input-text" name="phone" value="<?= $_SESSION['user']['phone'] ?? '' ?>" onblur="checkPhone()" required>
-                                                        <span style="margin-top: 10px ; color: red;" class="form-message"></span>
+                                                        <span style="margin-top: 10px ; color: red;" class="form-message">
+                                                            <?php
+                                                                if (!empty($errors['phone'])) {
+                                                                    echo $errors['phone'];
+                                                                }
+                                                            ?>
+                                                        </span>
                                                     </p>
                                                     <p class="form-row form-row-wide">
                                                         <label for="email">Email </label>
@@ -204,9 +216,9 @@ if (!empty($_SESSION['errors'])) {
                                                         <input id="date" type="date" class="input-text" name="date" value="" onblur="checkDate()" required>
                                                         <span style="margin-top: 10px ; color: red;" class="form-message">
                                                             <?php
-                                                            if (!empty($errors['date_time'])) {
-                                                                echo $errors['date_time'][0];
-                                                            }
+                                                                if (!empty($errors['date_time'])) {
+                                                                    echo $errors['date_time'];
+                                                                }
                                                             ?>
                                                         </span>
                                                     </p>
@@ -217,7 +229,7 @@ if (!empty($_SESSION['errors'])) {
                                                         <span style="margin-top: 10px ; color: red;" class="form-message">
                                                             <?php
                                                                 if (!empty($errors['date_time'])) {
-                                                                    echo $errors['date_time'][0];
+                                                                    echo $errors['date_time'];
                                                                 }
                                                             ?>
                                                         </span>

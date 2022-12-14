@@ -3,18 +3,30 @@
 // include_once('models/db.php');
 
     function register(){
-        // die();
+        
         if (isset($_POST['register'])) {
-            $name = $_POST['name'];
-            $user_name = $_POST['user_name'];
-            $address = $_POST['address'];
-            $phone = $_POST['phone'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $sql = "INSERT INTO customer(name,user_name,address,phone,email,password)
-                            VALUE('$name','$user_name','$address',$phone,'$email','$password')";
-            $register = pdo_execute($sql);
-            echo "<script> alert('Đăng kí tài khoản thành công')</script>";
+
+            $hasError = false;
+            $errors = [];
+
+            if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
+                $hasError = true;
+                $errors['name']= 'Thông tin chưa đúng định dạng';
+            }
+
+            if(!$hasError) {
+                $name = $_POST['name'];
+                $user_name = $_POST['user_name'];
+                $address = $_POST['address'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $sql = "INSERT INTO customer(name,user_name,address,phone,email,password)
+                                VALUE('$name','$user_name','$address',$phone,'$email','$password')";
+                $register = pdo_execute($sql);
+                echo "<script> alert('Đăng kí tài khoản thành công')</script>";
+            }
+            
         }
         
     }

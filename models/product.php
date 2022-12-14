@@ -9,6 +9,14 @@
         $product = getData($sql, FETCH_ALL);
         return $product;
     }
+
+    function layAnhMoTaAdmin() {
+        $sql = "SELECT image_product.image FROM image_product JOIN product ON image_product.id_product = product.id  ";
+
+
+        $imgMT = getData($sql, FETCH_ALL);
+        return $imgMT;
+    }
     
     //themsp
     function themMoiSanPham(){
@@ -23,9 +31,9 @@
             $year = $_POST['year'];
             $id_category = $_POST['id_category'];
 
-            // echo '<pre>';
-            // print_r($_FILES);
-            // die();
+            if(!$id_category) {
+                $error['category'] = "Bạn chưa chọn thương hiệu";
+            }
 
             if (isset($_FILES["img_upload"])) {
                 $target_dir = "views/template/image/product/";
@@ -38,11 +46,6 @@
 
                 $allowUpload = true;
 
-                if (!in_array($file_type, $arr_type)) {
-                    $error["type_error"] = "Không được upload file khác định dạng jpg, jpeg, png, gif";
-                    $allowUpload = false;
-                }
-
                 if ($allowUpload == true) {
                     move_uploaded_file($_FILES["img_upload"]["tmp_name"], $target_file);
                 }
@@ -53,10 +56,7 @@
                 $images_name = $images["name"];
 
                 $target_dir = "views/template/image/Anh_phu/";
-                // $target_file = $target_dir . $images_name;
-                // echo '<pre>';
-                // var_dump($_FILES["images"]["tmp_name"]);
-                // die();
+               
                 foreach($images_name as $key => $value) {
                     move_uploaded_file($_FILES["images"]["tmp_name"][$key], $target_dir.$value);
                 }
@@ -64,25 +64,18 @@
             }
 
             if (!$error) {
-              //$conn = getConnect();
                 
                 $sql = "INSERT INTO product(name, image, price, sale, origin, description, year, id_category) 
                         VALUES('$name', '$image', $price, $sale, '$origin', '$description', '$year', $id_category)";
                 $last_id = pdo_execute_get_last_id($sql) ;
-              
-                // $query = $conn -> prepare($sql);
-                // $query -> execute();
-                // $last_id = $conn->lastInsertId();
-                // echo $last_id;
-                // echo '<pre>';
-                // var_dump($images_name);
-                // die();
+            
                 foreach($images_name as $key => $value) {
                     $sql = "INSERT INTO image_product(id_product, image) VALUES($last_id, '$value')";
                     $add_img = pdo_execute($sql);
                 }
+                echo ('<script>window.location.href="index.php?url=hien_thi_san_pham"</script>');
             }
-            echo ('<script>window.location.href="index.php?url=hien_thi_san_pham"</script>');
+            
         }
 
        

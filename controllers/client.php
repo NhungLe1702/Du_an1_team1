@@ -22,19 +22,24 @@ function chiTietSanPham()
         $errors = [];
         $date = $_POST['date'];
         $time = $_POST['time'];
+        $length = strlen($_POST['phone']);
 
         $thoiGianDatLichTs = strtotime($date . ' ' . $time);
         $thoiGianHienTaiTs = time();
+        
         if ($thoiGianDatLichTs < $thoiGianHienTaiTs) {
             $hasError = true;
-            $errors['date_time'][] = 'Thời gian xem không được bé hơn thời gian hiện tại';
-          
+            $errors['date_time'] = 'Thời gian xem không được bé hơn thời gian hiện tại'; 
         }
+
         if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
             $hasError = true;
-            echo "
-                <script> alert('Thông tin chưa đúng định dạng') </script>
-                ";
+            $errors['name']= 'Thông tin chưa đúng định dạng';
+        }
+
+        if($length != 10) {
+            $hasError = true;
+            $errors['phone']= 'Số điện thoại phải có 10 số';
         }
         if (!$hasError) {
             $name = $_POST['name'];

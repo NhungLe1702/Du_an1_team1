@@ -46,6 +46,13 @@
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Họ tên <span class="required">*</span></label>
 										<input type="text" class="input-text" name="name" id="reg_email" value="" required>
+										<span style="margin-top: 10px ; color: red;" class="form-message">
+											<?php
+												if (!empty($errors['name'])) {
+													echo $errors['name'];
+												}
+											?>
+										</span>
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Tên đăng nhập <span class="required">*</span></label>
