@@ -81,6 +81,7 @@
                           id="fname"
                           name="name"
                           value="<?= $lay_mot['name']?>"
+                          required
                         />
                       </div>
                     </div>

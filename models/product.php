@@ -11,9 +11,9 @@
     }
 
     function layAnhMoTaAdmin() {
-        $sql = "SELECT image_product.image FROM image_product JOIN product ON image_product.id_product = product.id  ";
-
-
+        $sql = "SELECT image_product.image 
+                FROM image_product JOIN product 
+                                   ON image_product.id_product = product.id";
         $imgMT = getData($sql, FETCH_ALL);
         return $imgMT;
     }
@@ -21,7 +21,7 @@
     //themsp
     function themMoiSanPham(){
         $error = [];
-        if (isset($_POST["btn_save"])) {
+        // if (isset($_POST["btn_save"])) {
             $name = $_POST['name'];
             $image = $_FILES['img_upload']['name'];
             $price = $_POST['price'];
@@ -60,7 +60,6 @@
                 foreach($images_name as $key => $value) {
                     move_uploaded_file($_FILES["images"]["tmp_name"][$key], $target_dir.$value);
                 }
-               
             }
 
             if (!$error) {
@@ -75,14 +74,8 @@
                 }
                 echo ('<script>window.location.href="index.php?url=hien_thi_san_pham"</script>');
             }
-            
-        }
-
-       
+        // }
     }
-
-
-
     function xoaSanPham($id){
         $sql = "DELETE FROM product WHERE id = '$id'";
         $xoa_sp = pdo_execute($sql);

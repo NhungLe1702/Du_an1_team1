@@ -79,6 +79,7 @@
                           id="fname"
                           name="name"
                           value="<?= $lay_mot['name'];?>"
+                          required
                         />
                       </div>
                     </div>
@@ -111,6 +112,7 @@
                           id="fname"
                           name="price"
                           value="<?= $lay_mot['price']?>"
+                          required
                         />
                       </div>
                     </div>
@@ -128,6 +130,7 @@
                           id="fname"
                           name="sale"
                           value="<?= $lay_mot['sale']?>"
+                          required
                         />
                       </div>
                     </div>
@@ -145,6 +148,7 @@
                           id="fname"
                           name="origin"
                           value="<?= $lay_mot['origin']?>"
+                          required
                         />
                       </div>
                     </div>
@@ -185,6 +189,7 @@
                           id="fname"
                           name="year"
                           value="<?= $lay_mot['year']?>"
+                          required
                         />
                       </div>
                     </div>

@@ -4,13 +4,34 @@
     function hienThiSanPham()
     {
         $ds_sp = layDSSanPham();
-        $lay_anh = layAnhMoTaAdmin();
+        // $lay_anh = layAnhMoTaAdmin();
         include('views/product/danh_sach.php');
     }
 
-    function formTaoSanPham()
-    {
-        $them_sp = themMoiSanPham();
+    // function formTaoSanPham()
+    // {
+    //     $them_sp = themMoiSanPham();
+    //     include('views/product/tao_moi.php');
+    // }
+
+    function formTaoSanPham(){
+        $errors = [];
+        if (isset($_POST["btn_save"])) {
+
+            if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
+                $errors['name']= 'Thông tin chưa đúng định dạng';
+            }
+
+            if(!$_POST['id_category']) {
+                $errors['category'] = "Bạn chưa chọn thương hiệu";
+            }
+
+            if (!$errors) {
+                $them_sp = themMoiSanPham();
+                echo ('<script>window.location.href="index.php?url=hien_thi_san_pham"</script>');
+            }
+            
+        }
         include('views/product/tao_moi.php');
     }
 

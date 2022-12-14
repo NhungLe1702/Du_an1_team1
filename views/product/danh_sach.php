@@ -84,8 +84,6 @@
           </div>
         </div>
 
-        
-
         <div class="container-fluid">
           
           <div class="row">
@@ -111,9 +109,6 @@
                       </form>
                     </div>
                       
-                    
-                  
-                
                     <table
                       id="zero_config"
                       class="table table-striped table-bordered">
@@ -139,14 +134,7 @@
                           <tr>
                             <td><?= $value['id']?></td>
                             <td><?= $value['name']?></td>
-                            <td style="padding:10px 0;"><img src="views/template/image/product/<?php echo $value['image'] ?>" alt="" style ="width:50%"></td>
-
-                            <?php /*foreach($lay_anh as $key => $value) : ?>
-                              <td>
-                                <img src="views/template/image/Anh_phu/<?php echo $value['image'] ?>" alt="" style ="width:50%">
-                              </td>
-                            <?php endforeach */ ?>
-
+                            <td style="padding:10px 0;"><img src="views/template/image/product/<?php echo $value['image'] ?>" alt="" style ="width:80%"></td>
                             <td><?= number_format($value['price'])?></td>
                             <td><?= number_format($value['sale'])?></td>
                             <td><?= $value['origin']?></td>

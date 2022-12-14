@@ -57,22 +57,41 @@
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Tên đăng nhập <span class="required">*</span></label>
 										<input type="text" class="input-text" name="user_name" id="reg_email" value="" required>
+										<span style="margin-top: 10px ; color: red;" class="form-message">
+											
+										</span>
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Địa chỉ <span class="required">*</span></label>
 										<input type="text" class="input-text" name="address" id="reg_email" value="" required>
+										<span style="margin-top: 10px ; color: red;" class="form-message">
+											
+										</span>
 									</p>
                                     <p class="form-row form-row-wide">
 										<label for="reg_email">Số điện thoại <span class="required">*</span></label>
 										<input type="number" class="input-text" name="phone" id="reg_email" value="" required>
+										<span style="margin-top: 10px ; color: red;" class="form-message">
+											<?php
+												if (!empty($errors['phone'])) {
+													echo $errors['phone'];
+												}
+											?>
+										</span>
 									</p>
 									<p class="form-row form-row-wide">
 										<label for="reg_email">Email <span class="required">*</span></label>
 										<input type="email" class="input-text" name="email" id="reg_email" value="" required>
+										<span style="margin-top: 10px ; color: red;" class="form-message">
+											
+										</span>
 									</p>
 									<p class="form-row form-row-wide">
                                         <label for="reg_password">Mật khẩu <span class="required">*</span></label>
 										<input type="password" class="input-text" name="password" id="reg_password" required>
+										<span style="margin-top: 10px ; color: red;" class="form-message">
+											
+										</span>
 									</p>
 									<div style="left: -999em; position: absolute;">
 										<label for="trap">Anti-spam</label>

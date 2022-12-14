@@ -4,17 +4,9 @@
 
     function register(){
         
-        if (isset($_POST['register'])) {
+        // if (isset($_POST['register'])) {
 
-            $hasError = false;
-            $errors = [];
-
-            if ($_POST['name'] == "" || is_numeric($_POST['name'])) {
-                $hasError = true;
-                $errors['name']= 'Thông tin chưa đúng định dạng';
-            }
-
-            if(!$hasError) {
+            // if(!$hasError) {
                 $name = $_POST['name'];
                 $user_name = $_POST['user_name'];
                 $address = $_POST['address'];
@@ -25,9 +17,9 @@
                                 VALUE('$name','$user_name','$address',$phone,'$email','$password')";
                 $register = pdo_execute($sql);
                 echo "<script> alert('Đăng kí tài khoản thành công')</script>";
-            }
+            // }
             
-        }
+        // }
         
     }
 

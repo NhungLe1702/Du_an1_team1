@@ -66,6 +66,7 @@
                           class="form-control"
                           id="fname"
                           name="name" 
+                          required
                         />
                       </div>
                     </div>

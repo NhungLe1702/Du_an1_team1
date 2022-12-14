@@ -64,6 +64,14 @@
                           id="fname"
                           name="name" required
                         />
+                        <span style="margin-top: 10px ; color: red;" class="form-message">
+                          <?php
+                              if (!empty($errors['name'])) {
+                                  echo $errors['name'];
+                              }
+                          ?>
+                        </span>
+
                       </div>
                     </div>
 
@@ -201,16 +209,14 @@
                             <?php } ?>
                           </select>
 
-                          
-
-                      </div>
-                        <span style="margin-top: 10px ; color: red;" class="form-message">
+                          <span style="margin-top: 10px ; color: red;" class="form-message">
                               <?php
                                   if (!empty($errors['category'])) {
                                       echo $errors['category'];
                                   }
                               ?>
                           </span>
+                      </div>
                     </div>   
                       
                   </div>
